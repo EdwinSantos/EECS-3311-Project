@@ -22,7 +22,7 @@ feature {NONE} -- Initialization
 		do
 			create s.make_empty
 			create state.make
-			--create history.make
+			create history.make
 			i := 0
 		end
 
@@ -30,7 +30,7 @@ feature -- model attributes
 	s : STRING
 	i : INTEGER
 	state : STATE
-	-- history : HISTORY
+	history : HISTORY
 feature -- model operations
 	default_update
 			-- Perform update to the model state.
