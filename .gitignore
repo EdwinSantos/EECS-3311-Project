@@ -4,3 +4,6 @@ EIFGENs
 
 # Windows file
 tracker.rc
+
+# session file generated from manual testing
+session.txt
