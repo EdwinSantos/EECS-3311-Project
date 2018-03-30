@@ -16,23 +16,21 @@ create
 feature
 	pid: STRING
 	phase_name : STRING
-	capacity : INTEGER_64
-	expected_materials: ARRAY[STRING]
-	containers : HASH_TABLE[MATERIAL_CONTAINER, STRING]
-	currentValue : VALUE
-	count : INTEGER_64
+	container_capacity : INTEGER_64
+	expected_materials: ARRAY[INTEGER_64]
+	containers : ARRAY[STRING]
+	currentRad : VALUE
 
 
 feature {NONE}
-	make (phase_id : STRING; phase_nm : STRING; cap : INTEGER_64 ; expected_mat : ARRAY[STRING])
+	make (phase_id : STRING; phase_nm : STRING; cap : INTEGER_64 ; expected_mat : ARRAY[INTEGER_64])
 		do
 			pid := phase_id
 			phase_name := phase_nm
-			capacity := cap
+			container_capacity := cap
 			create	expected_materials.make_from_array (expected_mat)
-			create currentValue.make_from_int (0)
-			count := 0
-			create containers.make(0)
+			create currentRad.make_from_int (0)
+			create containers.make_empty
 		end
 
 
@@ -40,13 +38,33 @@ feature
 	out: STRING
 		do
 			create Result.make_empty
-			Result.append(pid + "->" + phase_name + ":" + capacity.out)
-			Result.append("," + count.out + "," + currentValue.out + ",{")
+			Result.append(pid + "->" + phase_name + ":" + container_capacity.out)
+			Result.append("," + containers.count.out + "," + currentRad.out + ",{")
+			Result.append (phase_materials_out)
+		end
+
+feature
+	phase_materials_out : STRING
+		local
+			materialType : STRING
+		do
+			create Result.make_empty
+			materialType := ""
 			across expected_materials as material loop
+				if material.item.as_integer_32 = 1 then
+					materialType := "glass"
+				elseif material.item.as_integer_32 = 2 then
+					materialType := "metal"
+				elseif material.item.as_integer_32 = 3 then
+					materialType := "plastic"
+				elseif material.item.as_integer_32 = 4 then
+					materialType := "liquid"
+				end
+
 				if material.is_last then
-					Result.append(material.item+ "}" + "%N")
+					Result.append(materialType+ "}" + "%N")
 				else
-					Result.append(material.item+ ",")
+					Result.append(materialType+ ",")
 				end
 
 			end
