@@ -29,11 +29,23 @@ feature
 	phases : HASH_TABLE[PHASE, STRING]
 	containers : HASH_TABLE[MATERIAL_CONTAINER, STRING]
 
-feature
+feature -- commands
+	new_tracker (max_p, max_c : VALUE)
+		do
+			phases.wipe_out
+			containers.wipe_out
+			tracker.new_maximums(max_p, max_c)
+		end
+
+feature -- output
 	out : STRING
 		do
-			create Result.make_from_string("  ")
-			Result.append(tracker.out)
+			create Result.make_from_string("")
+			-- if error this next append outputs the error
+			-- else output ok
+			Result.append("ok" + "%N")
+			-- if no error then output the following
+			Result.append("  " +tracker.out)
 			Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
 			phases.start
 			across phases as phase loop

@@ -48,7 +48,7 @@ feature -- queries
 	out : STRING
 		do
 			create Result.make_from_string ("  ")
-			Result.append ("state " + i.out + " ok")
+			Result.append ("state " + i.out + " ")
 			Result.append (state.out)
 		end
 
