@@ -20,6 +20,8 @@ feature {NONE}
 			max_phase := max_ph
 			max_cont := max_c
 			error_string := ""
+
+			create errors.make
 		end
 feature -- attributes
 	errors : ERRORS
@@ -34,7 +36,7 @@ feature -- commands
 			-- check here and change error_string
 			-- to the relevant error msg
 
-			if true then
+			if FALSE then
 			-- Condition TBD
 			-- Tracker already in use
 			-- Check if it has more than one container
@@ -45,7 +47,7 @@ feature -- commands
 			elseif max_cont < 0.000 then
 			-- Radiation is a negative value	
 				error_string := errors.E3
-			elseif max_cont > max.phase then
+			elseif max_cont > max_phase then
 			-- Container cant have a higher max than the phase
 				error_string := errors.E4
 			else

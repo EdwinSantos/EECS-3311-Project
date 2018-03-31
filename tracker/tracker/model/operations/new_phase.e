@@ -23,6 +23,8 @@ feature {NONE}
 			create expected_materials.make_from_array(expec)
 			item := msg
 			error_string := ""
+
+			create errors.make
 		end
 
 feature
@@ -49,14 +51,14 @@ feature
 				error_string := errors.E5
 			elseif phase_name.at (1).is_alpha_numeric then
 			-- name starts with an odd character
-				error_strign := errors.E5
+				error_string := errors.E5
 			elseif FALSE then
 			-- phase id already exists
 			-- condition TBD
 				error_string := errors.E6
 			elseif capacity < 1 then
 			-- phase capacity must be positive	
-				error_sting := errors.E7
+				error_string := errors.E7
 			elseif expected_materials.count < 1 then
 			-- needs atleast one expected material
 				error_string := errors.E8
