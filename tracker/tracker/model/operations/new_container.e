@@ -12,15 +12,20 @@ create
 	make
 
 feature {NONE}
-	make (command_name, msg : STRING)
+
+	make (cid: STRING; cont: TUPLE[material: INTEGER_64; rad: VALUE]; pid: STRING; msg: STRING)
 	do
-		item := command_name
+		cont_id.make_from_string(cid)
+		con.material = cont.material
+		con.radioacitivity = cont.rad
+		ph_id:= pid
+		-- item := command_name
 		new_message := msg
 		error_string := ""
 	end
 
+
 feature
-	new_message: STRING
 
 	error_check
 		do

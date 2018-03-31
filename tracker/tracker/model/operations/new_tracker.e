@@ -21,6 +21,8 @@ feature {NONE}
 			max_cont := max_c
 			error_string := ""
 		end
+feature -- attributes
+	errors : ERRORS
 
 feature -- queries
 	max_phase : VALUE
@@ -31,6 +33,26 @@ feature -- commands
 		do
 			-- check here and change error_string
 			-- to the relevant error msg
+
+			if true then
+			-- Condition TBD
+			-- Tracker already in use
+			-- Check if it has more than one container
+				error_string := errors.E1
+			elseif max_phase < 0.000 then
+			-- Phase Radiation is negative E2
+				error_string := errors.E2
+			elseif max_cont < 0.000 then
+			-- Radiation is a negative value	
+				error_string := errors.E3
+			elseif max_cont > max.phase then
+			-- Container cant have a higher max than the phase
+				error_string := errors.E4
+			else
+			-- there were no errors
+				error_string := errors.OK
+			end
+
 		end
 
 	execute
