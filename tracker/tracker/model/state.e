@@ -22,14 +22,28 @@ feature {NONE}
 			create tracker.make
 			create phases.make (1)
 			create containers.make(1)
+			state_message := "ok"
+
 		end
 
 feature
 	tracker : TRACKER
 	phases : HASH_TABLE[PHASE, STRING]
 	containers : HASH_TABLE[MATERIAL_CONTAINER, STRING]
+	state_message : STRING
+
+feature -- queries
+	get_state_msg : STRING
+		do
+			Result := state_message
+		end
 
 feature -- commands
+	state_msg_update(msg : STRING)
+		do
+			state_message := msg
+		end
+
 	new_tracker (max_p, max_c : VALUE)
 		do
 			phases.wipe_out
@@ -37,13 +51,22 @@ feature -- commands
 			tracker.new_maximums(max_p, max_c)
 		end
 
+	new_phase (ph_id: STRING ; name: STRING ; cap: INTEGER_64 ; expec: ARRAY[INTEGER_64])
+		local
+			n_phase : PHASE
+		do
+			create n_phase.make (ph_id,name,cap,expec)
+			phases.put (n_phase, ph_id)
+		end
+
+
 feature -- output
 	out : STRING
 		do
 			create Result.make_from_string("")
 			-- if error this next append outputs the error
 			-- else output ok
-			Result.append("ok" + "%N")
+			Result.append(state_message + "%N")
 			-- if no error then output the following
 			Result.append("  " +tracker.out)
 			Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
