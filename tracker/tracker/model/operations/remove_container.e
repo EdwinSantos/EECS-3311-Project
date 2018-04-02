@@ -12,18 +12,26 @@ create
 	make
 
 feature {NONE}
-	make (command_name, msg : STRING)
+	make (cid_given: STRING , msg : STRING)
 	do
-		item := command_name
-		new_message := msg
+		cid := cid_given
 		error_string := ""
+		create error.make
 	end
 
 feature
-	new_message: STRING
-
+	cid: STRING
+	error_string: STRING
+	error : ERRORS
+	
 	error_check
 		do
+			if FALSE then
+				-- Check if the container exists
+				error_string := error.E15
+			else
+				error_string := error.OK
+			end
 
 		end
 

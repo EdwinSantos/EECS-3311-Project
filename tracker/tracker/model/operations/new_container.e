@@ -13,20 +13,27 @@ create
 
 feature {NONE}
 
-	make (cid: STRING; cont: TUPLE[material: INTEGER_64; rad: VALUE]; pid: STRING; msg: STRING)
+	make (cid_given: STRING; cont_given: TUPLE[material_given: INTEGER_64; rad_given: VALUE]; pid_given: STRING ; msg: STRING)
 	do
-		cont_id.make_from_string(cid)
-		con.material = cont.material
-		con.radioacitivity = cont.rad
-		ph_id:= pid
-		-- item := command_name
-		new_message := msg
+		cid.make_from_string(cid_given)
+		con.material = cont_given.material_given
+		con.radioacitivity = cont_given.rad_given
+		pid:= pid_given
+
+		item := msg
 		error_string := ""
+
+		create error.make
 	end
 
 
 feature
-
+	cid := STRING
+	pid := STRING
+	container : TUPLE[material :INTEGER_64; rad :VALUE]
+	error : ERRORS
+	new_message : STRING
+	
 	error_check
 		do
 

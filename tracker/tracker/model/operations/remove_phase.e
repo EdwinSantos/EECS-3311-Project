@@ -12,15 +12,18 @@ create
 	make
 
 feature {NONE}
-	make (command_name, msg : STRING)
+	make (pid_given)
 	do
-		item := command_name
-		new_message := msg
+		pid := pid
+		create errors.make
 		error_string := ""
 	end
 
 feature
-	new_message: STRING
+	error : ERRORS
+	pid : STRING
+	error_string : STRING
+	--new_message: STRING
 
 	error_check
 		do
@@ -39,7 +42,7 @@ feature
 
 	redo
 		do
-			
+
 		end
 
 end

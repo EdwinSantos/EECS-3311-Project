@@ -15,24 +15,25 @@ create
 	make
 
 feature {NONE}
-	make (ph_id: STRING ; name: STRING ; cap: INTEGER_64 ; expec: ARRAY[INTEGER_64]; msg : STRING)
+	make (ph_id: STRING ; name: STRING ; cap: INTEGER_64 ; expec: ARRAY[INTEGER_64] ; msg: STRING)
 		do
 			pid := ph_id
 			phase_name := name
 			capacity := cap
 			create expected_materials.make_from_array(expec)
 			item := msg
-			error_string := ""
 
-			create errors.make
+			error_string := ""
+			create error.make
 		end
 
 feature
+
 	pid:STRING
 	phase_name:STRING
 	capacity:INTEGER_64
-	expected_materials :ARRAY[INTEGER_64]
-	errors : ERRORS
+	expected_materials : ARRAY[INTEGER_64]
+	error : ERRORS
 
 	error_check
 		do
@@ -45,27 +46,27 @@ feature
 			-- Condition TBD
 			-- Tracker already in use
 			-- Check if it has more than one container
-				error_string := errors.E1
+				error_string := error.E1
 			elseif pid.at (1).is_alpha_numeric then
 			-- name starts with an odd character
-				error_string := errors.E5
+				error_string := error.E5
 			elseif phase_name.at (1).is_alpha_numeric then
 			-- name starts with an odd character
-				error_string := errors.E5
+				error_string := error.E5
 			elseif FALSE then
 			-- phase id already exists
 			-- condition TBD
-				error_string := errors.E6
+				error_string := error.E6
 			elseif capacity < 1 then
 			-- phase capacity must be positive	
-				error_string := errors.E7
+				error_string := error.E7
 			elseif expected_materials.count < 1 then
 			-- needs atleast one expected material
-				error_string := errors.E8
+				error_string := error.E8
 			else
 			-- CREATE PHASE
 			-- no errors found
-				error_string := errors.OK
+				error_string := error.OK
 			end
 		end
 

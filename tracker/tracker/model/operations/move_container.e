@@ -12,15 +12,21 @@ create
 	make
 
 feature {NONE}
-	make (command_name, msg : STRING)
+	make (cid_given : STRING ; pid_old_given : STRING ; pid_new_given : STRING)
 	do
-		item := command_name
-		new_message := msg
+		cid := cid_given
+		pid_old := pid_old_given
+		pid_new := pid_new_given
 		error_string := ""
+		create error.make
 	end
 
 feature
-	new_message: STRING
+	cid: STRING
+	pid_old : STRING
+	pid_new : STRING
+	error_string: STRING
+	error : ERRORS
 
 	error_check
 		do
