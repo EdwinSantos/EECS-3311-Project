@@ -10,9 +10,6 @@ inherit
 	ANY
 		redefine out end
 
--- Hold tracker for reference
--- Should the tracker hold a phase hashtable
--- ''  phase hashtable hold the container hashtable?
 create
 	make
 
@@ -22,6 +19,7 @@ feature {NONE}
 			create tracker.make
 			create phases.make (1)
 			create containers.make(1)
+			create errors.make
 			state_message := "ok"
 
 		end
@@ -30,6 +28,7 @@ feature
 	tracker : TRACKER
 	phases : HASH_TABLE[PHASE, STRING]
 	containers : HASH_TABLE[MATERIAL_CONTAINER, STRING]
+	errors : ERRORS
 	state_message : STRING
 
 feature -- queries
@@ -67,20 +66,24 @@ feature -- output
 			-- if error this next append outputs the error
 			-- else output ok
 			Result.append(state_message + "%N")
+			if state_message.is_equal (errors.OK) then
+				Result.append("  " +tracker.out)
+				Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
+				phases.start
+				across phases as phase loop
+					Result.append ("    ")
+					Result.append (phase.item.out)
+				end
+				Result.append ("  containers: cid->pid->material,radioactivity"+"%N")
+				containers.start
+				across containers as container loop
+					Result.append("    ")
+					Result.append(container.item.out)
+				end
+			end
+
 			-- if no error then output the following
-			Result.append("  " +tracker.out)
-			Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
-			phases.start
-			across phases as phase loop
-				Result.append ("    ")
-				Result.append (phase.item.out)
-			end
-			Result.append ("  containers: cid->pid->material,radioactivity"+"%N")
-			containers.start
-			across containers as container loop
-				Result.append("    ")
-				Result.append(container.item.out)
-			end
+
 		end
 
 end

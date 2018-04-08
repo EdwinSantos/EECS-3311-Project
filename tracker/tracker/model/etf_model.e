@@ -45,6 +45,14 @@ feature -- model operations
 		end
 
 feature -- queries
+	get_i : INTEGER
+		do
+			-- for passing the value of i to the command used
+			-- (for undo/redo, "state x (to y)")
+			-- TODO: add this functionality to the operations
+			Result := i
+		end
+
 	out : STRING
 		do
 			create Result.make_from_string ("  ")
