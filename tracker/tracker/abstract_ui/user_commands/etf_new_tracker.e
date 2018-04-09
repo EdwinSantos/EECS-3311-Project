@@ -19,14 +19,14 @@ feature -- command
     	do
 			-- perform some update on the model state
 			model.default_update
-			create new_tracker_oper.make (max_phase_radiation, max_container_radiation)
+			create new_tracker_oper.make (max_phase_radiation, max_container_radiation, model.get_i)
 
 			if not new_tracker_oper.is_invalid then
 			model.history.clear
 			new_tracker_oper.execute
 			else
 				new_tracker_oper.error_check
-				create message_oper.make(model.state.get_state_msg, new_tracker_oper.get_error)
+				create message_oper.make(model.state.get_state_msg, new_tracker_oper.get_error,model.get_i)
 				message_oper.execute
 			end
 			etf_cmd_container.on_change.notify ([Current])

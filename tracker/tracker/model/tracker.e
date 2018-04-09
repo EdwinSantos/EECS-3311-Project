@@ -23,7 +23,6 @@ feature {NONE}
 		do
 			create max_phase_radiation.make_from_int(0)
 			create max_container_radiation.make_from_int(0)
-
 			create errors.make
 		end
 

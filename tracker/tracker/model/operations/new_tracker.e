@@ -14,13 +14,13 @@ create
 	make
 
 feature {NONE}
-	make (max_ph, max_c : VALUE)
+	make (max_ph, max_c : VALUE; st_id: INTEGER)
 		do
 			item := ""
 			max_phase := max_ph
 			max_cont := max_c
 			error_string := ""
-
+			state_id := st_id
 			create errors.make
 		end
 feature -- attributes
@@ -37,7 +37,7 @@ feature -- queries
 
 	is_already_in_use : BOOLEAN
 		do
-			-- E1 check
+			-- E1 check TODO
 			Result := FALSE
 		end
 
@@ -85,7 +85,7 @@ feature -- commands
 
 	execute
 		do
-			--state.command_msg_update(ERRORS.OK)
+			state.state_msg_update(ERRORS.OK)
 			state.new_tracker(max_phase, max_cont)
 		end
 

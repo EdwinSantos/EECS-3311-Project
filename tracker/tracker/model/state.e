@@ -58,13 +58,22 @@ feature -- commands
 			phases.put (n_phase, ph_id)
 		end
 
+	remove_phase (ph_id: STRING)
+		do
+			phases.remove (ph_id)
+		end
+
 
 feature -- output
 	out : STRING
 		do
 			create Result.make_from_string("")
-			-- if error this next append outputs the error
-			-- else output ok
+
+			-- need check for undo/redo state
+			-- Result.append("(to "+ the model.i corresponding to the undo/redo command +") ")
+
+			-- this next append outputs the error or ok
+			-- if no error output the rest of the state
 			Result.append(state_message + "%N")
 			if state_message.is_equal (errors.OK) then
 				Result.append("  " +tracker.out)
@@ -81,8 +90,6 @@ feature -- output
 					Result.append(container.item.out)
 				end
 			end
-
-			-- if no error then output the following
 
 		end
 
