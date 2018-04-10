@@ -20,7 +20,13 @@ feature
 	expected_materials: ARRAY[INTEGER_64]
 	containers : ARRAY[STRING]
 	currentRad : VALUE
+	containers_in_phase : INTEGER
 
+	remove_container(radioactivity:VALUE)
+    	do
+    		currentRad := currentRad - radioactivity
+			containers_in_phase := containers_in_phase - 1
+    	end
 
 feature {NONE}
 	make (phase_id : STRING; phase_nm : STRING; cap : INTEGER_64 ; expected_mat : ARRAY[INTEGER_64])

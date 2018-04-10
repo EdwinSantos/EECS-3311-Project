@@ -58,11 +58,28 @@ feature -- commands
 			phases.put (n_phase, ph_id)
 		end
 
-	remove_phase (ph_id: STRING)
+	remove_phase (pid: STRING)
 		do
-			phases.remove (ph_id)
+			phases.remove (pid)
 		end
 
+	new_container (cid: STRING; cont: TUPLE[material: INTEGER_64; rad: VALUE]; pid: STRING)
+		local
+			n_container : MATERIAL_CONTAINER
+		do
+			create n_container.make (cid, cont, pid)
+			containers.put (n_container, pid)
+		end
+	remove_container (cid: STRING)
+		do
+			-- NEEDS MORE TESTING
+			if attached containers.item (cid) as cont then
+				if attached phases.item (cont.pid) as target_phase then
+					target_phase.remove_container(cont.radioac)
+					containers.remove (cid)
+				end
+			end
+		end
 
 feature -- output
 	out : STRING

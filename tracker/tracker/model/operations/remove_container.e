@@ -12,7 +12,7 @@ create
 	make
 
 feature {NONE}
-	make (cid_given: STRING , msg : STRING)
+	make (cid_given: STRING)
 	do
 		cid := cid_given
 		error_string := ""
@@ -23,11 +23,15 @@ feature
 	cid: STRING
 	error_string: STRING
 	error : ERRORS
-	
+
+	does_container_exist : BOOLEAN
+		do
+			Result := FALSE
+		end
+
 	error_check
 		do
-			if FALSE then
-				-- Check if the container exists
+			if does_container_exist then
 				error_string := error.E15
 			else
 				error_string := error.OK
@@ -37,7 +41,8 @@ feature
 
 	execute
 		do
-
+			state.state_msg_update(error.OK)
+			state.remove_container(cid)
 		end
 
 	undo

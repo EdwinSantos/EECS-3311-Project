@@ -103,7 +103,7 @@ feature -- commands
 
 	execute
 		do
-			state.state_msg_update(ERRORS.OK)
+			state.state_msg_update(error.OK)
 			state.new_phase(pid,phase_name,capacity,expected_materials)
 		end
 
