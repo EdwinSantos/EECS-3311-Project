@@ -27,6 +27,11 @@ feature
     		currentRad := currentRad - radioactivity
 			containers_in_phase := containers_in_phase - 1
     	end
+	accepts_material(material: INTEGER_64) : BOOLEAN
+		do
+			Result := expected_materials.has (material)
+		end
+
 
 feature {NONE}
 	make (phase_id : STRING; phase_nm : STRING; cap : INTEGER_64 ; expected_mat : ARRAY[INTEGER_64])

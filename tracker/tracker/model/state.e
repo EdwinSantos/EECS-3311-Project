@@ -80,6 +80,10 @@ feature -- commands
 				end
 			end
 		end
+	move_container (cid: STRING; pid1:STRING; pid2:STRING)
+		do
+
+		end
 
 feature -- output
 	out : STRING

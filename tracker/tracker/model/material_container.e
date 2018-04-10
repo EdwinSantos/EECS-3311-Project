@@ -19,6 +19,11 @@ feature
 	radioac : VALUE
 	pid : STRING
 
+	moveToPhase(p:STRING)
+		do
+			pid := p
+		end
+
 feature {NONE}
 	make (cont_id: STRING; con: TUPLE[material: INTEGER_64; radioacitivity:VALUE]; ph_id : STRING)
 		do
