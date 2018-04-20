@@ -63,11 +63,11 @@ feature -- commands
 			phases.remove (pid)
 		end
 
-	new_container (cid: STRING; cont: TUPLE[material: INTEGER_64; rad: VALUE]; pid: STRING)
+	new_container (cid: STRING; material: INTEGER_64; rad: VALUE; pid: STRING)
 		local
 			n_container : MATERIAL_CONTAINER
 		do
-			create n_container.make (cid, cont, pid)
+			create n_container.make (cid, material, rad, pid)
 			containers.put (n_container, pid)
 		end
 	remove_container (cid: STRING)

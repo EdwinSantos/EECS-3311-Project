@@ -13,15 +13,16 @@ create
 
 feature {NONE}
 
-	make (cid_given: STRING; cont_given: TUPLE[material_given: INTEGER_64; rad_given: VALUE]; pid_given: STRING ; st_id : INTEGER)
+	make (cid_given: STRING; material_given: INTEGER_64; rad_given: VALUE; pid_given: STRING ; msg : STRING; st_id : INTEGER;)
 	do
-		cid.make_from_string(cid_given)
-		container.material = cont_given.material_given
-		container.rad = cont_given.rad_given
-		pid:= pid_given
+		cid := cid_given
+
+		material := material_given
+		rad := rad_given
+		pid := pid_given
 		state_id := st_id
 		error_string := ""
-
+		item := msg
 		create error.make
 	end
 
@@ -29,9 +30,16 @@ feature {NONE}
 feature
 	cid : STRING
 	pid : STRING
-	container : TUPLE[material :INTEGER_64; rad :VALUE]
+	material :INTEGER_64
+	rad :VALUE
+
 	error : ERRORS
-	new_message : STRING
+	--new_message : STRING
+
+	is_invalid : BOOLEAN
+		do
+			Result := is_not_alphanumeric_start or does_pid_exist or does_cid_exist or is_container_rad_positive
+		end
 
 	is_not_alphanumeric_start : BOOLEAN
 		do
@@ -48,7 +56,7 @@ feature
 		end
 	is_container_rad_positive : BOOLEAN
 		do
-			Result := container.rad < 0.000
+			Result := rad < 0.000
 		end
 	error_check
 		do
@@ -68,7 +76,7 @@ feature
 	execute
 		do
 			state.state_msg_update(error.OK)
-			state.new_container(cid, container, pid)
+			state.new_container(cid, material, rad, pid)
 		end
 
 	undo

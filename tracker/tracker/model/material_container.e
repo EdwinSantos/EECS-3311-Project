@@ -11,7 +11,7 @@ inherit
 		redefine out end
 
 create
-	make
+	make	
 
 feature
 	cid : STRING
