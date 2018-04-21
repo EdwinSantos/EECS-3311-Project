@@ -25,6 +25,11 @@ feature -- command
 			if not new_container_oper.is_invalid then
 				model.history.extend_history (new_container_oper)
 				new_container_oper.execute
+			else
+				new_container_oper.error_check
+				create message_oper.make (model.state.get_state_msg, new_container_oper.get_error, model.get_i)
+				model.history.extend_history (message_oper)
+				message_oper.execute
 			end
 
 			etf_cmd_container.on_change.notify ([Current])

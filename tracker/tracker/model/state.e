@@ -67,9 +67,11 @@ feature -- commands
 		local
 			n_container : MATERIAL_CONTAINER
 		do
+
 			create n_container.make (cid, material, rad, pid)
 			containers.put (n_container, pid)
 		end
+
 	remove_container (cid: STRING)
 		do
 			-- NEEDS MORE TESTING
@@ -80,6 +82,7 @@ feature -- commands
 				end
 			end
 		end
+		
 	move_container (cid: STRING; pid1:STRING; pid2:STRING)
 		do
 

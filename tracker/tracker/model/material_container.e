@@ -11,7 +11,7 @@ inherit
 		redefine out end
 
 create
-	make	
+	make
 
 feature
 	cid : STRING
@@ -34,7 +34,7 @@ feature {NONE}
 		end
 
 feature
-	out : STRING
+	out : STRING 
 		local
 			materialType :STRING
 		do

@@ -1,0 +1,10 @@
+Error messages and their associations (not definitive, tested from oracle):
+
+New tracker: E1 (new_tracker on tracker with *containers*),E2,E3,E4
+New phase: E5,E6,E7,E8
+New container: E5,E9,E10,E11,E12,E13,E14,E18
+Move container: E13, E15, E16
+Remove container: E15
+Remove Phase: E1 (if there are containers),E9
+
+new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state

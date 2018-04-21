@@ -63,7 +63,7 @@ feature -- commands
 			-- to the relevant error msg
 
 			if is_already_in_use then
-			-- Condition TBD
+			-- Condition TODO
 			-- Tracker already in use
 			-- Check if it has more than one container
 				error_string := errors.E1

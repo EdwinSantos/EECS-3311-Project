@@ -49,7 +49,7 @@ feature -- queries
 	is_not_alphanumeric_start : BOOLEAN
 		do
 			-- checking both in one
-			Result := pid.at (1).is_alpha_numeric or phase_name.at (1).is_alpha_numeric
+			Result := not pid.at (1).is_alpha_numeric or not phase_name.at (1).is_alpha_numeric
 		end
 
 	does_phase_exist : BOOLEAN
@@ -77,7 +77,7 @@ feature -- commands
 			-- modify error_string if the queries find errors
 
 			if is_already_in_use then
-				-- Condition TBD
+				-- Condition TODO
 				-- Tracker already in use
 				-- Check if it has more than one container
 				error_string := error.E1
