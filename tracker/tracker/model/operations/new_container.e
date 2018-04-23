@@ -8,6 +8,7 @@ class
 	NEW_CONTAINER
 inherit
 	OPERATION
+		redefine out end
 create
 	make
 
