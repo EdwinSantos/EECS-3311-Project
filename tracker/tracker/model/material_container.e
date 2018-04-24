@@ -34,7 +34,7 @@ feature {NONE}
 		end
 
 feature
-	out : STRING 
+	out : STRING
 		local
 			materialType :STRING
 		do

@@ -17,7 +17,6 @@ feature {NONE}
 	make (cid_given: STRING; material_given: INTEGER_64; rad_given: VALUE; pid_given: STRING ; msg : STRING; st_id : INTEGER;)
 	do
 		cid := cid_given
-
 		material := material_given
 		rad := rad_given
 		pid := pid_given
