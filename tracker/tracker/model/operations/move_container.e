@@ -29,19 +29,19 @@ feature {NONE}
 		if attached state.containers.at(cid_given) as cnatt then
 			create cn.make(cnatt.cid, [cnatt.mat,cnatt.radioac], cnatt.pid)
 		else
-			create cn.make ("1", [fillernum.to_integer_64, filler2], "1")
+			create cn.make ("-1", [fillernum.to_integer_64, filler2], "-1")
 			-- TODO fix this or create some kind of void comparison
 		end
 		if attached state.phases.at (pid_old_given) as pold then
 			create ph1.make (pold.pid, pold.phase_name, pold.container_capacity, pold.expected_materials)
 		else
-			create ph1.make ("1", "1", fillernum.to_integer_64, fillerarr)
+			create ph1.make ("-1", "-1", fillernum.to_integer_64, fillerarr)
 			-- TODO fix this or create some kind of void comparison
 		end
 		if attached state.phases.at (pid_new_given) as pnew then
 			create ph2.make (pnew.pid, pnew.phase_name, pnew.container_capacity, pnew.expected_materials)
 		else
-			create ph2.make ("1", "1", fillernum.to_integer_64, fillerarr)
+			create ph2.make ("-1", "-1", fillernum.to_integer_64, fillerarr)
 			-- TODO fix this or create some kind of void comparison
 		end
 	end
