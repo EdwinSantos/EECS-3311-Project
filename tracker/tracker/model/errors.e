@@ -31,6 +31,8 @@ feature {NONE}
 			create E16.make_from_string("e16: source and target phase identifier must be different")
 			create E17.make_from_string("e17: this container identifier is not in the source phase")
 			create E18.make_from_string("e18: this container radiation must not be negative")
+			create E19.make_from_string("e19: there is no more to undo")
+			create E20.make_from_string("e20: there is no more to redo")
 		end
 
 feature {ANY}
@@ -53,4 +55,6 @@ feature {ANY}
 	E16 : STRING
 	E17 : STRING
 	E18 : STRING
+	E19 : STRING
+	E20 : STRING
 end

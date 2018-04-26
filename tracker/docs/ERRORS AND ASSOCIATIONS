@@ -8,3 +8,7 @@ Remove container: E15
 Remove Phase: E1 (if there are containers),E9
 
 new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state
+
+note: on program start tracker should already exist with values 0,0
+
+new_tracker still has to wipe history
