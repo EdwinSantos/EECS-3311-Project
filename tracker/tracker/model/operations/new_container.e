@@ -32,6 +32,7 @@ feature
 	pid : STRING
 	material :INTEGER_64
 	rad :VALUE
+	containers_phase : detachable PHASE
 
 	errors : ERRORS
 
@@ -55,10 +56,18 @@ feature
 			Result := FALSE
 		end
 
+	is_phase_capacity_exceeded : BOOLEAN
+		do -- TODO
+			-- Target of the call might be void. Fix Thursday
+			-- Result := containers_phase.containers_in_phase + 1 > containers_phase.container_capacity
+			Result := FALSE
+		end
 
-	-- TODO check via state this container doesnt exceed minimum
-
-	-- TODO check via state this container doesnt exceed capacity
+	is_max_phase_rad_exceeded : BOOLEAN
+		do -- TODO
+			-- This is held in the tracker
+			Result := FALSE
+		end
 
 	is_container_rad_neg : BOOLEAN
 		do
@@ -67,15 +76,20 @@ feature
 
 	error_check
 		do
+			containers_phase := state.get_phase_with_pid(pid)
+
 			if not is_not_alphanumeric_start then
 				error_string := errors.E5
 			elseif does_pid_exist then
 				error_string := errors.E9
 			elseif does_cid_exist then
 				error_string := errors.E10
+			elseif is_max_phase_rad_exceeded then
+				error_string := errors.e11
+			elseif is_max_phase_rad_exceeded then
+				error_string := errors.e12
 			elseif is_container_rad_neg then
 				error_string := errors.E18
-			--TODO  elseif E11, E12
 			else
 				error_string := errors.OK
 			end

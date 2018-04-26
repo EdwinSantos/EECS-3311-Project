@@ -36,6 +36,21 @@ feature -- queries
 		do
 			Result := state_message
 		end
+	--NOTE: We already know pid exists so we shouldnt need to check that again when returning the phase. Might be safer to check again inb4 code not through enough
+	get_phase_with_pid (pid : STRING) : PHASE
+		local
+			target_phase : detachable PHASE
+		do
+			across phases as current_phase
+			loop
+				if current_phase.item.pid ~ pid then
+					target_phase := current_phase.item
+				end
+			end
+			check attached target_phase as target then
+				Result := target_phase
+			end
+		end
 
 feature -- commands
 	state_msg_update(msg : STRING)
@@ -82,7 +97,7 @@ feature -- commands
 				end
 			end
 		end
-		
+
 	move_container (cid: STRING; pid1:STRING; pid2:STRING)
 		do
 

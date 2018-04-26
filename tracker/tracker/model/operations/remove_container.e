@@ -35,6 +35,7 @@ feature
 	error : ERRORS
 	cn : MATERIAL_CONTAINER
 
+
 	-- "filler" objects with illegal values if the cid/pids given don't exist
 	fillernum: INTEGER
 	filler2 : VALUE
