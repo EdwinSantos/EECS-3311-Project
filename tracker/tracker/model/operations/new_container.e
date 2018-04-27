@@ -37,7 +37,14 @@ feature
 
 	is_invalid : BOOLEAN
 		do
-			Result := is_not_alphanumeric_start or does_pid_exist or does_cid_exist or is_container_rad_neg
+			Result := is_not_alphanumeric_start
+			Result := Result or not does_pid_exist
+			Result := Result or not does_cid_exist
+			Result := Result or is_container_rad_neg
+			Result := Result or is_phase_capacity_exceeded
+			Result := Result or is_max_phase_rad_exceeded
+			Result := Result or not does_phase_expect_material
+			Result := Result or is_container_rad_over_limit
 		end
 
 	is_not_alphanumeric_start : BOOLEAN
@@ -65,6 +72,24 @@ feature
 			Result := rad + state.get_phase_with_pid(pid).currentrad >= state.tracker.max_phase_radiation
 		end
 
+	does_phase_expect_material: BOOLEAN
+		do
+			if attached state.phases.at (pid) as ph_mat then
+				if ph_mat.accepts_material (material) then
+					Result := TRUE
+				else
+					Result := FALSE
+				end
+			else
+				Result := FALSE
+			end
+		end
+
+	is_container_rad_over_limit :BOOLEAN
+		do
+			Result := rad > state.tracker.max_container_radiation
+		end
+
 	is_container_rad_neg : BOOLEAN
 		do
 			Result := rad < 0.000
@@ -72,19 +97,22 @@ feature
 
 	error_check
 		do
-			if not is_not_alphanumeric_start then
+			if is_not_alphanumeric_start then
 				error_string := errors.E5
 			elseif not does_pid_exist then
 				error_string := errors.E9
 			elseif not does_cid_exist then
 				error_string := errors.E10
 			elseif is_phase_capacity_exceeded then
-				error_string := errors.e11
+				error_string := errors.E11
 			elseif is_max_phase_rad_exceeded then
-				error_string := errors.e12
+				error_string := errors.E12
+			elseif not does_phase_expect_material then
+				error_string := errors.E13
+			elseif is_container_rad_over_limit then
+				error_string := errors.E14
 			elseif is_container_rad_neg then
 				error_string := errors.E18
-				--Check if phase can accept the material e13
 			else
 				error_string := errors.OK
 			end

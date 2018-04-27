@@ -37,8 +37,11 @@ feature -- queries
 
 	is_already_in_use : BOOLEAN
 		do
-			-- E1 check TODO
-			Result := FALSE
+			if state.containers.count >= 1 then
+				Result := TRUE
+			else
+				Result := FALSE
+			end
 		end
 
 	is_max_phase_neg : BOOLEAN

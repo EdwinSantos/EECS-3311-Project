@@ -1,14 +1,26 @@
 Error messages and their associations (not definitive, tested from oracle):
 
+Implemented/tested:
+
+Implemented/not tested:
 New tracker: E1 (new_tracker on tracker with *containers*),E2,E3,E4
-New phase: E5,E6,E7,E8
+New phase: E1,E5,E6,E7,E8
 New container: E5,E9,E10,E11,E12,E13,E14,E18
-Move container: E9?, E13, E15, E16
 Remove container: E15
+
+In progress:
+Move container: E9?, E13, E15, E16
 Remove Phase: E1 (if there are containers),E9
+Undo/Redo for each operation
 
-new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state
+Other todo:
+- check each execution function
 
-note: on program start tracker should already exist with values 0,0
+Notes:
+- new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state
 
-new_tracker still has to wipe history
+- on program start tracker should already exist with values 0,0
+
+- new_tracker still has to wipe history
+
+- when editing error check make sure to check is_invalid

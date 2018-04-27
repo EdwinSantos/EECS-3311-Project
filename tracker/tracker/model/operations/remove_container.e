@@ -42,17 +42,17 @@ feature
 
 	is_invalid : BOOLEAN
 		do
-			Result := does_container_exist
+			Result := not does_container_exist
 		end
 
 	does_container_exist : BOOLEAN
 		do
-			Result := FALSE
+			Result := across state.containers as target_container some target_container.item.cid ~ cid  end
 		end
 
 	error_check
 		do
-			if does_container_exist then
+			if not does_container_exist then
 				error_string := error.E15
 			else
 				error_string := error.OK
@@ -73,7 +73,7 @@ feature
 
 	redo
 		do
-
+			execute
 		end
 
 feature

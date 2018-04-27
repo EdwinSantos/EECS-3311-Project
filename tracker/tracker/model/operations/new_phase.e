@@ -41,9 +41,13 @@ feature -- queries
 		end
 
 	is_already_in_use : BOOLEAN
+		-- phases cannot be added when there exist containers
 		do
-			-- E1 check TODO
-			Result := FALSE
+			if state.containers.count >= 1 then
+				Result := TRUE
+			else
+				Result := FALSE
+			end
 		end
 
 	is_not_alphanumeric_start : BOOLEAN
@@ -54,8 +58,13 @@ feature -- queries
 
 	does_phase_exist : BOOLEAN
 		do
-			-- TODO E6
-			Result := FALSE
+			-- only compare pids, names can be duplicated
+			if attached state.phases.at (pid) as ph_exists then
+				Result := TRUE
+
+			else
+				Result := FALSE
+			end
 		end
 
 	is_capacity_neg : BOOLEAN
@@ -77,7 +86,6 @@ feature -- commands
 			-- modify error_string if the queries find errors
 
 			if is_already_in_use then
-				-- Condition TODO
 				-- Tracker already in use
 				-- Check if it has more than one container
 				error_string := error.E1
@@ -86,7 +94,6 @@ feature -- commands
 				error_string := error.E5
 			elseif does_phase_exist then
 				-- phase id already exists
-				-- condition TBD
 				error_string := error.E6
 			elseif is_capacity_neg then
 				-- phase capacity must be positive	
