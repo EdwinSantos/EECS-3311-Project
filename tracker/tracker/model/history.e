@@ -83,6 +83,11 @@ feature -- history
 			Result := not history.is_empty and not history.islast
 		end
 
+	is_last : BOOLEAN
+		do
+			Result := history.islast
+		end
+
 	is_first: BOOLEAN
 		do
 			Result := history.isfirst
