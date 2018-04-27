@@ -30,6 +30,7 @@ feature
 	containers : HASH_TABLE[MATERIAL_CONTAINER, STRING]
 	errors : ERRORS
 	state_message : STRING
+	model_access : ETF_MODEL_ACCESS
 
 feature -- queries
 	get_state_msg : STRING
@@ -66,9 +67,11 @@ feature -- commands
 
 	new_tracker (max_p, max_c : VALUE)
 		do
-			phases.wipe_out
-			containers.wipe_out
+			-- doesnt wipe phases
+			-- there should be no containers for this
+			-- to be called
 			tracker.new_maximums(max_p, max_c)
+			model_access.m.history.clear
 		end
 
 	new_phase (ph_id: STRING ; name: STRING ; cap: INTEGER_64 ; expec: ARRAY[INTEGER_64])

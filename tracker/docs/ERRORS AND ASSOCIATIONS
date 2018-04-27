@@ -3,23 +3,26 @@ Error messages and their associations (not definitive, tested from oracle):
 Implemented/tested:
 
 Implemented/not tested:
-New tracker: E1 (new_tracker on tracker with *containers*),E2,E3,E4
-New phase: E1,E5,E6,E7,E8
+New tracker: Functionality, Undo,E1 (new_tracker on tracker with *containers*),E2,E3,E4
+New phase: Functionality, Undo,E1,E5,E6,E7,E8
 New container: E5,E9,E10,E11,E12,E13,E14,E18
-Remove container: E15
+Remove container: Functionality, E15
 Remove Phase: E1 (if there are containers),E9
 
 In progress:
+New Container: functionality, adding rad and capacity+1 to the phase it was directed to.
+Undo for: new container, move container, remove phase, remove container
 Move container: E9?, E13, E15, E16
 Move container also needs its basic functionality still 
 Undo for each operation (Redo should ultimately just call the execute method for the respective operation)
 
 Other todo:
-- check each execution function
-- check each undo function
-- check each error
+- does state.remove_container access containers and phases correctly? need to test
+- test each valid case
+- test each error case
 - check the logic against the oracle
-
+- assuming the "if attached" statements in the make functions for removeph and removecont work then the undo should be a simple call to new[object] using that saved object from the if attached
+- need to review move container logic still 
 
 Notes:
 - new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state

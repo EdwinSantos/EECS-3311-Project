@@ -39,7 +39,7 @@ feature
 		do
 			Result := is_not_alphanumeric_start
 			Result := Result or not does_pid_exist
-			Result := Result or not does_cid_exist
+			Result := Result or does_cid_exist
 			Result := Result or is_container_rad_neg
 			Result := Result or is_phase_capacity_exceeded
 			Result := Result or is_max_phase_rad_exceeded
@@ -101,7 +101,7 @@ feature
 				error_string := errors.E5
 			elseif not does_pid_exist then
 				error_string := errors.E9
-			elseif not does_cid_exist then
+			elseif does_cid_exist then
 				error_string := errors.E10
 			elseif is_phase_capacity_exceeded then
 				error_string := errors.E11
