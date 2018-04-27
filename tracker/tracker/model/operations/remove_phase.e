@@ -39,24 +39,34 @@ feature
 
 	is_invalid : BOOLEAN
 		do
-			Result := does_tracker_exist or does_tracker_contain_phase
+			Result := does_tracker_exist or not does_phase_exist
 		end
 
 	does_tracker_exist : BOOLEAN
 		do
-			Result := FALSE
+			-- any containers even if the phase being removed
+			-- doesnt have containers
+			if state.containers.count >= 1 then
+				Result := TRUE
+			else
+				Result := FALSE
+			end
 		end
 
-	does_tracker_contain_phase: BOOLEAN
+	does_phase_exist: BOOLEAN
 		do
-			Result := FALSE
+			if attached state.phases.at (pid) as ph_exists then
+				Result := TRUE
+			else
+				Result := FALSE
+			end
 		end
 
 	error_check
 		do
 			if does_tracker_exist then
 				error_string :=	error.e1
-			elseif does_tracker_contain_phase then
+			elseif not does_phase_exist then
 				error_string := error.e9
 			else
 				error_string := error.OK
@@ -76,7 +86,7 @@ feature
 
 	redo
 		do
-
+			execute
 		end
 
 feature
