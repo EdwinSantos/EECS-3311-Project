@@ -33,6 +33,7 @@ feature
 	material :INTEGER_64
 	rad :VALUE
 	containers_phase : detachable PHASE
+	tracker : detachable TRACKER
 
 	errors : ERRORS
 
@@ -48,7 +49,7 @@ feature
 
 	does_pid_exist : BOOLEAN
 		do -- TODO
-			Result := FALSE
+			Result := state.does_phase_exist(pid)
 		end
 
 	does_cid_exist : BOOLEAN
@@ -59,8 +60,9 @@ feature
 	is_phase_capacity_exceeded : BOOLEAN
 		do -- TODO
 			-- Target of the call might be void. Fix Thursday
-			-- Result := containers_phase.containers_in_phase + 1 > containers_phase.container_capacity
+		--	Result := containers_phase.
 			Result := FALSE
+		--	Result := containers_phase.containers_in_phase + 1 > containers_phase.container_capacity
 		end
 
 	is_max_phase_rad_exceeded : BOOLEAN
@@ -84,7 +86,7 @@ feature
 				error_string := errors.E9
 			elseif does_cid_exist then
 				error_string := errors.E10
-			elseif is_max_phase_rad_exceeded then
+			elseif is_phase_capacity_exceeded then
 				error_string := errors.e11
 			elseif is_max_phase_rad_exceeded then
 				error_string := errors.e12

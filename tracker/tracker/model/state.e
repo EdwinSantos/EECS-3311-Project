@@ -36,6 +36,12 @@ feature -- queries
 		do
 			Result := state_message
 		end
+
+	does_phase_exist(pid : STRING) : BOOLEAN
+		do
+			Result := across phases as target_phase some target_phase.item.pid ~ pid  end
+		end
+
 	--NOTE: We already know pid exists so we shouldnt need to check that again when returning the phase. Might be safer to check again inb4 code not through enough
 	get_phase_with_pid (pid : STRING) : PHASE
 		local
