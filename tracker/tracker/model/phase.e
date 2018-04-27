@@ -22,12 +22,18 @@ feature
 	currentRad : VALUE
 	containers_in_phase : INTEGER
 
+	is_full : BOOLEAN
+		do
+			Result := containers_in_phase >= container_capacity
+		end
+
 	remove_container(radioactivity:VALUE)
     	do
     		currentRad := currentRad - radioactivity
 			containers_in_phase := containers_in_phase - 1
     	end
     	
+
 	accepts_material(material: INTEGER_64) : BOOLEAN
 		do
 			Result := expected_materials.has (material)

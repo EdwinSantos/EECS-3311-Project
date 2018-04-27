@@ -32,8 +32,6 @@ feature
 	pid : STRING
 	material :INTEGER_64
 	rad :VALUE
-	containers_phase : detachable PHASE
-	tracker : detachable TRACKER
 
 	errors : ERRORS
 
@@ -48,27 +46,23 @@ feature
 		end
 
 	does_pid_exist : BOOLEAN
-		do -- TODO
+		do
 			Result := state.does_phase_exist(pid)
 		end
 
 	does_cid_exist : BOOLEAN
-		do -- TODO
-			Result := FALSE
+		do
+			Result := across state.containers as current_container some current_container.item.cid ~ cid end
 		end
 
 	is_phase_capacity_exceeded : BOOLEAN
-		do -- TODO
-			-- Target of the call might be void. Fix Thursday
-		--	Result := containers_phase.
-			Result := FALSE
-		--	Result := containers_phase.containers_in_phase + 1 > containers_phase.container_capacity
+		do
+			Result := state.get_phase_with_pid(pid).is_full
 		end
 
 	is_max_phase_rad_exceeded : BOOLEAN
-		do -- TODO
-			-- This is held in the tracker
-			Result := FALSE
+		do
+			Result := rad + state.get_phase_with_pid(pid).currentrad >= state.tracker.max_phase_radiation
 		end
 
 	is_container_rad_neg : BOOLEAN
@@ -78,13 +72,11 @@ feature
 
 	error_check
 		do
-			containers_phase := state.get_phase_with_pid(pid)
-
 			if not is_not_alphanumeric_start then
 				error_string := errors.E5
-			elseif does_pid_exist then
+			elseif not does_pid_exist then
 				error_string := errors.E9
-			elseif does_cid_exist then
+			elseif not does_cid_exist then
 				error_string := errors.E10
 			elseif is_phase_capacity_exceeded then
 				error_string := errors.e11
@@ -92,6 +84,7 @@ feature
 				error_string := errors.e12
 			elseif is_container_rad_neg then
 				error_string := errors.E18
+				--Check if phase can accept the material e13
 			else
 				error_string := errors.OK
 			end
