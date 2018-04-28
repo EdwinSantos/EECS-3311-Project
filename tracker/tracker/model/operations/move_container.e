@@ -65,20 +65,19 @@ feature
 			Result := is_container_in_tracker or are_pids_same or does_phase_exist or does_new_phase_exceeds_capacity or does_radiation_exceed_capacity
 		end
 
+	does_phase_exist: BOOLEAN
+		do
+			Result := state.does_phase_exist(pid_old) AND state.does_phase_exist(pid_new)
+		end
+
 	is_container_in_tracker : BOOLEAN
 		do
-			Result := FALSE
+			Result := state.containers.has (cid)
 		end
 
 	are_pids_same: BOOLEAN
 		do
 			Result := pid_old ~ pid_new
-		end
-
-	does_phase_exist: BOOLEAN
-		do
-			Result := FALSE
-			-- Check both pid's
 		end
 
 	does_new_phase_exceeds_capacity: BOOLEAN
@@ -93,11 +92,11 @@ feature
 
 	error_check
 		do
-			if does_phase_exist then
+			if not does_phase_exist then
 				error_string := error.e9
-			elseif are_pids_same then
+			elseif not is_container_in_tracker then
 				error_string := error.e15
-			elseif is_container_in_tracker then
+			elseif are_pids_same then
 				error_string := error.e16
 			else
 				if

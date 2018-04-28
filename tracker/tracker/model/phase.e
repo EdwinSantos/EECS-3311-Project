@@ -32,7 +32,6 @@ feature
     		currentRad := currentRad - radioactivity
 			containers_in_phase := containers_in_phase - 1
     	end
-    	
 
 	accepts_material(material: INTEGER_64) : BOOLEAN
 		do
