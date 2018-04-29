@@ -34,8 +34,6 @@ feature
 	cid: STRING
 	error : ERRORS
 	cn : MATERIAL_CONTAINER
-
-
 	-- "filler" objects with illegal values if the cid/pids given don't exist
 	fillernum: INTEGER
 	filler2 : VALUE
@@ -68,7 +66,8 @@ feature
 
 	undo
 		do
-
+			state.new_container (cn.cid, cn.mat, cn.radioac, cn.pid)
+			state.state_msg_update (item)
 		end
 
 	redo

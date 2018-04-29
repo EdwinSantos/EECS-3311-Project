@@ -116,7 +116,6 @@ feature
 				error_string := error.e12
 			elseif not new_phase_accepts_mat then
 				error_string := error.e13
-			-- elseif ERROR.E14 TODO
 			elseif not is_container_in_tracker then
 				error_string := error.e15
 			elseif are_pids_same then

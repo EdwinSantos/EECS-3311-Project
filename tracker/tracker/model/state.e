@@ -91,9 +91,11 @@ feature -- commands
 		local
 			n_container : MATERIAL_CONTAINER
 		do
-
 			create n_container.make (cid, material, rad, pid)
 			containers.put (n_container, pid)
+			if attached phases.at (pid) then
+				phases.at (pid).add_container(n_container.radioac)
+			end
 		end
 
 	remove_container (cid: STRING)

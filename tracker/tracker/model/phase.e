@@ -13,32 +13,6 @@ inherit
 create
 	make
 
-feature
-	pid: STRING
-	phase_name : STRING
-	container_capacity : INTEGER_64
-	expected_materials: ARRAY[INTEGER_64]
-	containers : ARRAY[STRING]
-	currentRad : VALUE
-	containers_in_phase : INTEGER
-
-	is_full : BOOLEAN
-		do
-			Result := containers_in_phase >= container_capacity
-		end
-
-	remove_container(radioactivity:VALUE)
-    	do
-    		currentRad := currentRad - radioactivity
-			containers_in_phase := containers_in_phase - 1
-    	end
-
-	accepts_material(material: INTEGER_64) : BOOLEAN
-		do
-			Result := expected_materials.has (material)
-		end
-
-
 feature {NONE}
 	make (phase_id : STRING; phase_nm : STRING; cap : INTEGER_64 ; expected_mat : ARRAY[INTEGER_64])
 		do
@@ -47,8 +21,39 @@ feature {NONE}
 			container_capacity := cap
 			create	expected_materials.make_from_array (expected_mat)
 			create currentRad.make_from_int (0)
-			create containers.make_empty
 		end
+
+feature
+	pid: STRING
+	phase_name : STRING
+	container_capacity : INTEGER_64
+	expected_materials: ARRAY[INTEGER_64]
+	currentRad : VALUE
+	containers_in_phase : INTEGER
+
+	is_full : BOOLEAN
+		do
+			Result := containers_in_phase >= container_capacity
+		end
+
+	accepts_material(material: INTEGER_64) : BOOLEAN
+		do
+			Result := expected_materials.has (material)
+		end
+
+feature
+	remove_container(radioactivity:VALUE)
+    	do
+    		currentRad := currentRad - radioactivity
+			containers_in_phase := containers_in_phase - 1
+    	end
+
+	add_container(radioactivity: VALUE)
+		do
+			containers_in_phase := containers_in_phase + 1
+			currentRad := currentRad + radioactivity
+		end
+
 
 
 feature

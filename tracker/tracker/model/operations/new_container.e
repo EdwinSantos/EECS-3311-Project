@@ -126,7 +126,8 @@ feature
 
 	undo
 		do
-
+			state.remove_container (cid)
+			state.state_msg_update (item)
 		end
 
 	redo
