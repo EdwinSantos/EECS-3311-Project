@@ -62,7 +62,13 @@ feature
 
 	is_invalid : BOOLEAN
 		do
-			Result := is_container_in_tracker or are_pids_same or does_phase_exist or does_new_phase_exceeds_capacity or does_radiation_exceed_capacity
+			Result := is_container_in_tracker
+			Result := Result or are_pids_same
+			Result := Result or does_phase_exist
+			Result := Result or does_new_phase_exceeds_capacity
+			Result := Result or does_radiation_exceed_capacity
+			Result := Result or not_new_phase_accepts_mat
+			Result := Result or is_container_in_source
 		end
 
 	does_phase_exist: BOOLEAN
@@ -90,30 +96,34 @@ feature
 			Result := ph2.currentRad + cn.radioac > state.tracker.max_phase_radiation
 		end
 
+	new_phase_accepts_mat : BOOLEAN
+		do
+			Result := ph2.accepts_material(cn.mat)
+		end
+
+	is_container_in_source : BOOLEAN
+		do
+			Result := cn.pid.is_equal(pid_old)
+		end
+
 	error_check
 		do
 			if not does_phase_exist then
 				error_string := error.e9
+			elseif does_new_phase_exceeds_capacity then
+				error_string := error.e11
+			elseif  does_radiation_exceed_capacity then
+				error_string := error.e12
+			elseif not new_phase_accepts_mat then
+				error_string := error.e13
+			-- elseif ERROR.E14 TODO
 			elseif not is_container_in_tracker then
 				error_string := error.e15
 			elseif are_pids_same then
 				error_string := error.e16
+			elseif not is_container_in_source then
+				error_string := error.e17
 			else
-				if
-					attached state.phases.item (pid_old) as phold1 and
-					attached state.phases.item (pid_new) as phnew2 and
-					attached state.containers.item (cid) as cncomp
-				then
-					if does_new_phase_exceeds_capacity then
-						error_string := error.e11
-					elseif does_radiation_exceed_capacity then
-						error_string := error.e12
-					elseif not phnew2.accepts_material(cn.mat) then
-						error_string := error.e13
-					elseif not cncomp.pid.is_equal(pid_old) then
-						error_string := error.e17
-					end
-				end
 				error_string := error.OK
 			end
 		end
