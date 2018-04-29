@@ -10,6 +10,8 @@ Remove container: Functionality, undo , E15
 Remove Phase: Functionality, undo, E1 (if there are containers),E9
 Move container: Functionality, undo, E9, E11, E12, E13, E14, E15, E16, E17
 
+Todo: set state_i under undo and redo 
+
 In progress:
 - Testing and bug fixing
 - does state.remove_container access containers and phases correctly? need to test

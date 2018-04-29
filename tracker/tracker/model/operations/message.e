@@ -37,11 +37,13 @@ feature
 	undo
 		do
 			state.state_msg_update(item)
+			state.set_state_i(state_id)
 		end
 
 	redo
 		do
 			execute
+			state.set_state_i(state_id)
 		end
 
 end

@@ -61,7 +61,7 @@ feature
 		do
 			create Result.make_empty
 			Result.append(pid + "->" + phase_name + ":" + container_capacity.out)
-			Result.append("," + containers.count.out + "," + currentRad.out + ",{")
+			Result.append("," + containers_in_phase.out + "," + currentRad.out + ",{")
 			Result.append (phase_materials_out)
 		end
 

@@ -118,11 +118,13 @@ feature -- commands
 		do
 			state.remove_phase(pid)
 			state.state_msg_update(item)
+			state.set_state_i(state_id)
 		end
 
 	redo
 		do
 			execute
+			state.set_state_i(state_id)
 		end
 
 feature

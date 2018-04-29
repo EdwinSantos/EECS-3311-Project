@@ -82,12 +82,14 @@ feature
 	undo
 		do
 			state.new_phase (ph.pid, ph.phase_name,ph.container_capacity, ph.expected_materials)
-			state.state_msg_update (itemB)
+			state.state_msg_update (item)
+			state.set_state_i(state_id)
 		end
 
 	redo
 		do
 			execute
+			state.set_state_i(state_id)
 		end
 
 feature

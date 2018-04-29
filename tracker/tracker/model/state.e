@@ -22,6 +22,7 @@ feature {NONE}
 			create errors.make
 			state_message := "ok"
 			undo_redo := FALSE
+			state_i := 0
 		end
 
 feature
@@ -32,8 +33,14 @@ feature
 	state_message : STRING
 	model_access : ETF_MODEL_ACCESS
 	undo_redo : BOOLEAN
+	state_i : INTEGER
 
 feature -- queries
+	get_state_i : INTEGER
+		do
+			Result := state_i
+		end
+
 	get_state_msg : STRING
 		do
 			Result := state_message
@@ -71,6 +78,11 @@ feature -- commands
 			undo_redo := setter
 		end
 
+	set_state_i(setter : INTEGER)
+		do
+			state_i := setter
+		end
+
 	new_tracker (max_p, max_c : VALUE)
 		do
 			-- doesnt wipe phases
@@ -99,8 +111,8 @@ feature -- commands
 		do
 			create n_container.make (cid, material, rad, pid)
 			containers.put (n_container, pid)
-			if attached phases.at (pid) then
-				phases.at (pid).add_container(n_container.radioac)
+			if attached phases.at (pid) as phase_at then
+				phase_at.add_container(n_container.radioac)
 			end
 		end
 
@@ -122,7 +134,7 @@ feature -- output
 			-- this next append outputs the error or ok
 			-- if no error output the rest of the state
 			if undo_redo then
-				Result.append("(to "+ model.i +") ")
+				Result.append("(to "+ state_i.out +") ")
 			end
 			Result.append(state_message + "%N")
 			if state_message.is_equal (errors.OK) then

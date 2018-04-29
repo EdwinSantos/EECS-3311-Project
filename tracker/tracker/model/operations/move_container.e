@@ -62,13 +62,13 @@ feature
 
 	is_invalid : BOOLEAN
 		do
-			Result := is_container_in_tracker
+			Result := not is_container_in_tracker
 			Result := Result or are_pids_same
-			Result := Result or does_phase_exist
+			Result := Result or not does_phase_exist
 			Result := Result or does_new_phase_exceeds_capacity
 			Result := Result or does_radiation_exceed_capacity
-			Result := Result or not_new_phase_accepts_mat
-			Result := Result or is_container_in_source
+			Result := Result or not new_phase_accepts_mat
+			Result := Result or not is_container_in_source
 		end
 
 	does_phase_exist: BOOLEAN
@@ -139,11 +139,13 @@ feature
 			cn.moveToPhase(pid_old)
 			state.remove_container (cid)
 			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
+			state.set_state_i(state_id)
 		end
 
 	redo
 		do
 			execute
+			state.set_state_i(state_id)
 		end
 
 feature
