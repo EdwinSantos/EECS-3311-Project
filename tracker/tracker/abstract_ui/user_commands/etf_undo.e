@@ -23,8 +23,10 @@ feature -- command
 			etf_cmd_container.on_change.notify ([Current])
 
 			if model.history.is_empty or model.history.is_first then
+				model.state.set_undo_redo(FALSE)
 				model.state.state_msg_update (errors.e19)
 			elseif model.history.on_item then
+				model.state.set_undo_redo(TRUE)
 				model.history.item.undo
 				model.state.state_msg_update ("to " + model.get_i.out + ") " + model.history.item.item)
 				model.history.back

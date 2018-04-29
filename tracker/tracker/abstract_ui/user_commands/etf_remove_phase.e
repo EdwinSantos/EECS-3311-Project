@@ -21,6 +21,7 @@ feature -- command
     	do
 			-- perform some update on the model state
 			model.default_update
+			model.state.set_undo_redo(FALSE)
 			create remove_ph_oper.make(pid , model.state.get_state_msg,model.get_i)
 			if not remove_ph_oper.is_invalid then
 				model.history.extend_history (remove_ph_oper)

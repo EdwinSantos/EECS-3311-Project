@@ -130,15 +130,15 @@ feature
 	execute
 		do
 			cn.moveToPhase(pid_new)
-		--	ph1.remove_material(cn.radioac)
-		--	ph2.add_material(cn.radoiac)
+			state.remove_container (cid)
+			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
 		end
 
 	undo
 		do
 			cn.moveToPhase(pid_old)
-		--	ph2.remove_material(cn.radioac)
-		--	ph1.add_material(cn.radoiac)
+			state.remove_container (cid)
+			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
 		end
 
 	redo

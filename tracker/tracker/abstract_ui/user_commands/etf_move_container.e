@@ -21,7 +21,7 @@ feature -- command
     	do
 			-- perform some update on the model state
 			model.default_update
-
+			model.state.set_undo_redo(FALSE)
 			create move_container_oper.make(cid, pid1, pid2, model.state.get_state_msg, model.get_i)
 			if not move_container_oper.is_invalid then
 				model.history.extend_history (move_container_oper)

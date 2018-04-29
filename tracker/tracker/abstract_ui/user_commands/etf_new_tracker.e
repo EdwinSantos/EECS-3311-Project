@@ -19,6 +19,7 @@ feature -- command
     	do
 			-- perform some update on the model state
 			model.default_update
+			model.state.set_undo_redo(FALSE)
 			create new_tracker_oper.make (max_phase_radiation, max_container_radiation, model.get_i)
 
 			if not new_tracker_oper.is_invalid then

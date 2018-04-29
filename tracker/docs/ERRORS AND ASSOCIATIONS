@@ -7,20 +7,16 @@ New tracker: Functionality, Undo,E1 (new_tracker on tracker with *containers*),E
 New phase: Functionality, Undo,E1,E5,E6,E7,E8
 New container: Functionality, undo, E5,E9,E10,E11,E12,E13,E14,E18
 Remove container: Functionality, undo , E15
-Remove Phase: E1 (if there are containers),E9
-Move container: E9, E11, E12, E13, E14, E15, E16, E17
+Remove Phase: Functionality, undo, E1 (if there are containers),E9
+Move container: Functionality, undo, E9, E11, E12, E13, E14, E15, E16, E17
 
 In progress:
-Undo for: move container, remove phase
-Undo for each operation (Redo should ultimately just call the execute method for the respective operation)
-
-Other todo:
+- Testing and bug fixing
 - does state.remove_container access containers and phases correctly? need to test
 - test each valid case
 - test each error case
 - check the logic against the oracle
 - assuming the "if attached" statements in the make functions for removeph and removecont work then the undo should be a simple call to new[object] using that saved object from the if attached
-- need to review move container logic still 
 
 Notes:
 - new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state

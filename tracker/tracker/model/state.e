@@ -21,7 +21,7 @@ feature {NONE}
 			create containers.make(1)
 			create errors.make
 			state_message := "ok"
-
+			undo_redo := FALSE
 		end
 
 feature
@@ -31,6 +31,7 @@ feature
 	errors : ERRORS
 	state_message : STRING
 	model_access : ETF_MODEL_ACCESS
+	undo_redo : BOOLEAN
 
 feature -- queries
 	get_state_msg : STRING
@@ -63,6 +64,11 @@ feature -- commands
 	state_msg_update(msg : STRING)
 		do
 			state_message := msg
+		end
+
+	set_undo_redo (setter : BOOLEAN)
+		do
+			undo_redo := setter
 		end
 
 	new_tracker (max_p, max_c : VALUE)
@@ -109,21 +115,15 @@ feature -- commands
 			end
 		end
 
-	move_container (cid: STRING; pid1:STRING; pid2:STRING)
-		do
-
-		end
-
 feature -- output
 	out : STRING
 		do
 			create Result.make_from_string("")
-
-			-- need check for undo/redo state
-			-- Result.append("(to "+ the model.i corresponding to the undo/redo command +") ")
-
 			-- this next append outputs the error or ok
 			-- if no error output the rest of the state
+			if undo_redo then
+				Result.append("(to "+ model.i +") ")
+			end
 			Result.append(state_message + "%N")
 			if state_message.is_equal (errors.OK) then
 				Result.append("  " +tracker.out)
