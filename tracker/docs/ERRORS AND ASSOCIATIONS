@@ -10,18 +10,16 @@ Remove container: Functionality, undo , E15
 Remove Phase: Functionality, undo, E1 (if there are containers),E9
 Move container: Functionality, undo, E9, E11, E12, E13, E14, E15, E16, E17
 
-Todo: set state_i under undo and redo 
-
 In progress:
 - Testing and bug fixing
-- does state.remove_container access containers and phases correctly? need to test
-- test each valid case
+- test each valid case (with an undo and redo)
 - test each error case
-- check the logic against the oracle
 - assuming the "if attached" statements in the make functions for removeph and removecont work then the undo should be a simple call to new[object] using that saved object from the if attached
+
 
 Notes:
 - new_tracker doesnt wipe the board (existing phases stayed), but new_tracker does prevent undo to previous state
 - on program start tracker should already exist with values 0,0
 - new_tracker still has to wipe history
 - when editing error_check make sure to check is_invalid matches with the results of error_check
+- phases and containers...have to be sorted alphabetically.....
