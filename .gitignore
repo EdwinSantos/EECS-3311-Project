@@ -2,6 +2,10 @@
 # The compilation directory
 EIFGENs
 
+#haskell log folders
+regression-testing/log
+luca
+
 # Windows file
 tracker.rc
 
