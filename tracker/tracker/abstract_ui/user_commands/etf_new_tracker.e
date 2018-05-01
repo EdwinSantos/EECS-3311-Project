@@ -23,11 +23,13 @@ feature -- command
 			create new_tracker_oper.make (max_phase_radiation, max_container_radiation, model.get_i)
 
 			if not new_tracker_oper.is_invalid then
-			model.history.clear
-			new_tracker_oper.execute
+				model.history.clear
+				model.history.extend_history(new_tracker_oper)
+				new_tracker_oper.execute
 			else
 				new_tracker_oper.error_check
 				create message_oper.make(model.state.get_state_msg, new_tracker_oper.get_error,model.get_i)
+				model.history.extend_history (message_oper)
 				message_oper.execute
 			end
 			etf_cmd_container.on_change.notify ([Current])

@@ -94,7 +94,7 @@ feature -- commands
 
 	undo
 		do
-			-- nothing
+			state.state_msg_update(ERRORS.OK)
 		end
 
 	redo

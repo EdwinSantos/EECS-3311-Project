@@ -31,5 +31,5 @@ executable Linux  = "../tracker/EIFGENs/tracker/W_code/tracker"
 log_dir = "./log"
 
 -- Specify the list of (relative or absolute) paths of the acceptance test files.
-acceptance_tests = 
-    [ "../at1.txt", "../at2.txt" ]
+ --   [ "../at1.txt", "../at2.txt" ]
+acceptance_tests =  [ "../luca/at1.txt" ,"../luca/at2.txt" ,"../luca/at3.txt" ,"../luca/at4.txt" ,"../luca/at5.txt" ,"../luca/at6.txt" ,"../luca/at7.txt" ,"../luca/at8.txt" ,"../luca/at9.txt" ,"../luca/at10.txt" ,"../luca/at11.txt" ,"../luca/at12.txt" ,"../luca/at13.txt" ]

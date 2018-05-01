@@ -78,6 +78,11 @@ feature -- history
 			history.back
 		end
 
+	get_first : OPERATION
+		do
+			Result := history.first
+		end
+
 	not_last: BOOLEAN
 		do
 			Result := not history.is_empty and not history.islast

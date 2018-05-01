@@ -18,11 +18,19 @@ feature -- command
     	local
     		new_phase_oper: NEW_PHASE
     		message_oper : MESSAGE
+    		errors : ERRORS
     	do
+    		create errors.make
 			-- perform some update on the model state
 			model.default_update
 			model.state.set_undo_redo(FALSE)
-			create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.state.get_state_msg, model.get_i)
+
+--			if model.history.is_first then
+--				create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.history.get_first.error_string , model.history.get_first.state_id)
+--			else
+				create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.state.get_state_msg, model.get_i)
+--			end
+
 			if not new_phase_oper.is_invalid then
 				model.history.extend_history(new_phase_oper)
 				new_phase_oper.execute
