@@ -11,6 +11,7 @@ Remove Phase: Functionality, undo, E1 (if there are containers),E9
 Move container: Functionality, undo, E9, E11, E12, E13, E14, E15, E16, E17
 
 In progress:
+- some issue with redo where expected is error message then valid command but actual is reversed
 - Testing and bug fixing
 - test each valid case (with an undo and redo)
 - test each error case
