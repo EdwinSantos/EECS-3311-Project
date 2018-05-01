@@ -22,7 +22,7 @@ feature -- command
 			-- either undo or "there is nothing left to undo"
 
 
-			if model.history.is_empty or model.history.is_first then
+			if model.history.is_empty or model.history.is_back_invalid then
 				model.state.set_undo_redo(FALSE)
 				model.state.state_msg_update (errors.e19)
 			elseif model.history.on_item then

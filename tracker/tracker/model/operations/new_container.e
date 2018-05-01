@@ -127,14 +127,13 @@ feature
 	undo
 		do
 			state.remove_container (cid)
-			--state.state_msg_update ("THIS IS AN UNDO NEW CONTAINER")
 			state.set_state_i(state_id)
 		end
 
 	redo
 		do
 			execute
-			state.set_state_i(state_id)
+			state.set_state_i(state_id + 1)
 		end
 
 feature

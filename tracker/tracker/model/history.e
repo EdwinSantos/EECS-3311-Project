@@ -88,6 +88,11 @@ feature -- history
 			Result := history.islast
 		end
 
+	is_back_invalid : BOOLEAN
+		do
+			Result := history.before
+		end
+
 	is_first: BOOLEAN
 		do
 			Result := history.isfirst
