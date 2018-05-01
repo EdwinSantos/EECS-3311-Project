@@ -20,7 +20,7 @@ feature {NONE}
 		material := material_given
 		rad := rad_given
 		pid := pid_given
-		state_id := st_id
+		state_id := st_id-1
 		error_string := ""
 		item := msg
 		create errors.make
@@ -127,7 +127,7 @@ feature
 	undo
 		do
 			state.remove_container (cid)
-			state.state_msg_update (item)
+			--state.state_msg_update ("THIS IS AN UNDO NEW CONTAINER")
 			state.set_state_i(state_id)
 		end
 

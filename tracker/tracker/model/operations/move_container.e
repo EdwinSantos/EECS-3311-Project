@@ -20,7 +20,7 @@ feature {NONE}
 		pid_old := pid_old_given
 		pid_new := pid_new_given
 		item := msg
-		state_id := st_id
+		state_id := st_id-1
 		error_string := ""
 		fillernum := -1
 		create filler2.make_from_int (-1)

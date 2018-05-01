@@ -20,7 +20,7 @@ feature {NONE}
 			max_phase := max_ph
 			max_cont := max_c
 			error_string := ""
-			state_id := st_id
+			state_id := st_id-1
 			create errors.make
 		end
 feature -- attributes

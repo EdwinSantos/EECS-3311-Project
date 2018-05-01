@@ -49,6 +49,6 @@ feature
 				materialType := "liquid"
 			end
 			create Result.make_empty
-			Result.append(cid+"->"+pid+"->"+materialType+","+radioac.out + "%N")
+			Result.append(cid+"->"+pid+"->"+materialType+","+radioac.out)
 		end
 end

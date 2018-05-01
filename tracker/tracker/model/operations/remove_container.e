@@ -19,7 +19,7 @@ feature {NONE}
 		cid := cid_given
 		error_string := ""
 		item := msg
-		state_id := st_id
+		state_id := st_id-1
 		fillernum := -1
 		create filler2.make_from_int (-1)
 		if attached state.containers.at(cid_given) as cnat then

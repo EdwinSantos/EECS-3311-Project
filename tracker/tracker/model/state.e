@@ -222,9 +222,9 @@ feature -- output
 			if undo_redo then
 				Result.append("(to "+ state_i.out +") ")
 			end
-			Result.append(state_message + "%N")
+			Result.append(state_message)
 			if state_message.is_equal (errors.OK) then
-				Result.append("  " +tracker.out)
+				Result.append("%N" + tracker.out)
 				Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
 				across phaselist as ph_string loop
 					if attached phases.at (ph_string.item) as ph_output then
@@ -232,11 +232,20 @@ feature -- output
 						Result.append (ph_output.out)
 					end
 				end
-				Result.append ("  containers: cid->pid->material,radioactivity"+"%N")
+				Result.append ("  containers: cid->pid->material,radioactivity")
+				if containerlist.count >= 1 then
+					Result.append("%N")
+				end
 				across containerlist as cn_string loop
 					if attached containers.at (cn_string.item) as cn_output then
-						Result.append("    ")
-						Result.append(cn_output.out)
+						if cn_string.is_last then
+							Result.append("    ")
+							Result.append(cn_output.out)
+						else
+							Result.append("    ")
+							Result.append(cn_output.out + "%N")
+						end
+
 					end
 				end
 			end

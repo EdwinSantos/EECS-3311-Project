@@ -17,7 +17,9 @@ is_tolerant_on_white_spaces = True
 executable :: OperatingSystem -> FilePath
 --executable MacOSX = "./tracker.osx.exe"
 -- executable MacOSX = "./osx"
-executable Linux  = "../tictac"
+-- /home/user/eecs3311/project/Project/tracker/EIFGENs/tracker/W_code/
+-- ..tracker/EIFGENs/tracker/W_code/tracker
+executable Linux  = "../tracker/EIFGENs/tracker/W_code/tracker"
 
 -- Specify where you want to log the outputs 
 -- from both the oracle and your executable.
@@ -30,4 +32,4 @@ log_dir = "./log"
 
 -- Specify the list of (relative or absolute) paths of the acceptance test files.
 acceptance_tests = 
-    [ "../at1.txt" ]
+    [ "../at1.txt", "../at2.txt" ]

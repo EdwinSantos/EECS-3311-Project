@@ -17,7 +17,7 @@ feature {NONE}
 		item := command_name
 		new_message := msg
 		error_string := ""
-		state_id := st_id
+		state_id := st_id-1
 	end
 
 feature

@@ -18,7 +18,7 @@ feature {NONE}
 	do
 		pid := pid_given
 		item := msg
-		state_id := st_id
+		state_id := st_id-1
 		fillernum := -1
 	 	create fillerarr.make_empty
 		create error.make

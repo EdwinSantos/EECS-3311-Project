@@ -20,7 +20,7 @@ feature -- command
 			-- perform some update on the model state
 			model.default_update
 			-- either undo or "there is nothing left to undo"
-			etf_cmd_container.on_change.notify ([Current])
+
 
 			if model.history.is_empty or model.history.is_first then
 				model.state.set_undo_redo(FALSE)
@@ -28,9 +28,11 @@ feature -- command
 			elseif model.history.on_item then
 				model.state.set_undo_redo(TRUE)
 				model.history.item.undo
-				model.state.state_msg_update ("to " + model.get_i.out + ") " + model.history.item.item)
+				model.state.state_msg_update (model.history.item.item)
 				model.history.back
 			end
+		--	model.state.state_msg_update (model.history.on_item.out)
+			etf_cmd_container.on_change.notify ([Current])
     	end
 
 end

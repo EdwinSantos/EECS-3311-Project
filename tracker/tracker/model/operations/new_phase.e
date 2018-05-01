@@ -22,7 +22,7 @@ feature {NONE}
 			capacity := cap
 			create expected_materials.make_from_array(expec)
 			item := msg
-			state_id := st_id
+			state_id := st_id-1
 			error_string := ""
 			create error.make
 		end
