@@ -131,6 +131,7 @@ feature
 		do
 			cn.moveToPhase(pid_new)
 			state.remove_container (cid)
+			state.state_msg_update(error.OK)
 			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
 		end
 
@@ -138,6 +139,7 @@ feature
 		do
 			cn.moveToPhase(pid_old)
 			state.remove_container (cid)
+			state.state_msg_update (item)
 			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
 			state.set_state_i(state_id)
 		end
