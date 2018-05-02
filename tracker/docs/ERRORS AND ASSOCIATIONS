@@ -2,7 +2,7 @@ Error messages and their associations (not definitive, tested from oracle):
 
 Implemented/tested:
 
-Implemented/not tested:
+Implemented/testing:
 New tracker: Functionality, Undo,E1 (new_tracker on tracker with *containers*),E2,E3,E4
 New phase: Functionality, Undo,E1,E5,E6,E7,E8
 New container: Functionality, undo, E5,E9,E10,E11,E12,E13,E14,E18
@@ -16,7 +16,11 @@ In progress:
 1) undo all the way to new_tracker (get the error no more left to undo)
 2) valid commands 
 3) undo again all the way to new_tracker results in the "item" saved for the first valid command in (2) being the last error message obtained in (1)
-- very likely that any error > valid command has this issue and needs to be resolved
+
+This should only involve errors dealing with e19 from UNDO.
+Ideas: - check if the error message is e19 and instead of setting the state message just set a boolean to capture that error message and leave state message alone. Check boolean in the output function and output the error if captured
+
+
 
 - Testing and bug fixing
 - test each valid case (with an undo and redo)

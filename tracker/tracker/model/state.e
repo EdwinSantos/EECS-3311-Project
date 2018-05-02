@@ -24,6 +24,8 @@ feature {NONE}
 			create errors.make
 			state_message := "ok"
 			undo_redo := FALSE
+			invalid_undo := FALSE
+			invalid_redo := FALSE
 			state_i := 0
 		end
 
@@ -37,6 +39,8 @@ feature
 	state_message : STRING
 	model_access : ETF_MODEL_ACCESS
 	undo_redo : BOOLEAN
+	invalid_undo :BOOLEAN
+	invalid_redo: BOOLEAN
 	state_i : INTEGER
 
 feature -- queries
@@ -82,6 +86,16 @@ feature -- commands
 	set_undo_redo (setter : BOOLEAN)
 		do
 			undo_redo := setter
+		end
+
+	set_invalid_undo (setter :BOOLEAN)
+		do
+			invalid_undo := setter
+		end
+
+	set_invalid_redo (setter :BOOLEAN)
+		do
+			invalid_redo := setter
 		end
 
 	set_state_i(setter : INTEGER)
@@ -219,36 +233,46 @@ feature -- output
 			create Result.make_from_string("")
 			-- this next append outputs the error or ok
 			-- if no error output the rest of the state
-			if undo_redo then
-				Result.append("(to "+ state_i.out +") ")
-			end
-			Result.append(state_message)
-			if state_message.is_equal (errors.OK) then
-				Result.append("%N" + tracker.out)
-				Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
-				across phaselist as ph_string loop
-					if attached phases.at (ph_string.item) as ph_output then
-						Result.append ("    ")
-						Result.append (ph_output.out)
-					end
-				end
-				Result.append ("  containers: cid->pid->material,radioactivity")
-				if containerlist.count >= 1 then
-					Result.append("%N")
-				end
-				across containerlist as cn_string loop
-					if attached containers.at (cn_string.item) as cn_output then
-						if cn_string.is_last then
-							Result.append("    ")
-							Result.append(cn_output.out)
-						else
-							Result.append("    ")
-							Result.append(cn_output.out + "%N")
-						end
 
+			if invalid_undo then
+				Result.append(errors.e19)
+				set_invalid_undo(FALSE)
+			elseif invalid_redo then
+				Result.append(errors.e20)
+				set_invalid_redo(FALSE)
+			else
+				if undo_redo then
+					Result.append("(to "+ state_i.out +") ")
+				end
+				Result.append(state_message)
+				if state_message.is_equal (errors.OK) then
+					Result.append("%N" + tracker.out)
+					Result.append ("  phases: pid->name:capacity,count,radiation" + "%N")
+					across phaselist as ph_string loop
+						if attached phases.at (ph_string.item) as ph_output then
+							Result.append ("    ")
+							Result.append (ph_output.out)
+						end
+					end
+					Result.append ("  containers: cid->pid->material,radioactivity")
+					if containerlist.count >= 1 then
+						Result.append("%N")
+					end
+					across containerlist as cn_string loop
+						if attached containers.at (cn_string.item) as cn_output then
+							if cn_string.is_last then
+								Result.append("    ")
+								Result.append(cn_output.out)
+							else
+								Result.append("    ")
+								Result.append(cn_output.out + "%N")
+							end
+
+						end
 					end
 				end
 			end
+
 
 		end
 
