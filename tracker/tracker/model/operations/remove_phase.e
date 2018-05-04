@@ -78,13 +78,14 @@ feature
 		do
 			state.state_msg_update(error.OK)
 			state.remove_phase(pid)
+			state.set_last_valid_i (state_id+1)
 		end
 
 	undo
 		do
 			state.new_phase (ph.pid, ph.phase_name,ph.container_capacity, ph.expected_materials)
 			state.state_msg_update (item)
-			state.set_state_i(state_id)
+			state.set_state_i(last_valid_id)
 		end
 
 	redo

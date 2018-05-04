@@ -113,13 +113,14 @@ feature -- commands
 		do
 			state.state_msg_update(error.OK)
 			state.new_phase(pid,phase_name,capacity,expected_materials)
+			state.set_last_valid_i (state_id+1)
 		end
 
 	undo
 		do
 			state.remove_phase(pid)
 			state.state_msg_update(item)
-			state.set_state_i(state_id)
+			state.set_state_i(last_valid_id)
 		end
 
 	redo

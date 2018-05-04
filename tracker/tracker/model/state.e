@@ -248,6 +248,7 @@ feature -- output
 
 			if invalid_undo then
 				Result.append(errors.e19)
+				set_state_i (last_valid_i)
 				set_invalid_undo(FALSE)
 			elseif invalid_redo then
 				Result.append(errors.e20)

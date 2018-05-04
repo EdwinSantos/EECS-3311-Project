@@ -123,12 +123,14 @@ feature
 		do
 			state.state_msg_update(errors.OK)
 			state.new_container(cid, material, rad, pid)
+			state.set_last_valid_i (state_id+1)
 		end
 
 	undo
 		do
 			state.remove_container (cid)
-			state.set_state_i(state_id)
+			state.set_state_i(last_valid_id)
+
 		end
 
 	redo

@@ -91,6 +91,7 @@ feature -- commands
 		do
 			state.state_msg_update(ERRORS.OK)
 			state.new_tracker(max_phase, max_cont)
+			state.set_last_valid_i (state_id + 1)
 		end
 
 	undo

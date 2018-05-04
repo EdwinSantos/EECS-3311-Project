@@ -63,13 +63,14 @@ feature
 		do
 			state.state_msg_update(error.OK)
 			state.remove_container(cid)
+			state.set_last_valid_i (state_id+1)
 		end
 
 	undo
 		do
 			state.new_container (cn.cid, cn.mat, cn.radioac, cn.pid)
 			state.state_msg_update (item)
-			state.set_state_i(state_id)
+			state.set_state_i(last_valid_id)
 		end
 
 	redo

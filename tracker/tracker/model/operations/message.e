@@ -32,13 +32,14 @@ feature
 	execute
 		do
 			state.state_msg_update(new_message)
+			state.set_last_valid_i (state_id+1)
 
 		end
 
 	undo
 		do
 			state.state_msg_update(item)
-			state.set_state_i(state_id)
+			state.set_state_i(last_valid_id)
 		end
 
 	redo
