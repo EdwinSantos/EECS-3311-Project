@@ -25,7 +25,6 @@ feature -- command
 			if model.history.is_empty or model.history.is_back_invalid then
 				model.state.set_undo_redo(FALSE)
 				model.state.set_invalid_undo(TRUE)
-				--model.state.state_msg_update (errors.e19)
 			elseif model.history.on_item then
 				model.state.set_undo_redo(TRUE)
 				model.history.item.undo

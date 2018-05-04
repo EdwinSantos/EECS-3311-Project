@@ -22,13 +22,13 @@ feature -- command
 			-- perform some update on the model state
 			model.default_update
 			model.state.set_undo_redo(FALSE)
-			create new_container_oper.make(cid, c.material, c.radioactivity, pid, model.state.get_state_msg, model.get_i)
+			create new_container_oper.make(cid, c.material, c.radioactivity, pid, model.state.get_state_msg, model.get_i, model.state.get_last_valid_i)
 			if not new_container_oper.is_invalid then
 				model.history.extend_history (new_container_oper)
 				new_container_oper.execute
 			else
 				new_container_oper.error_check
-				create message_oper.make (model.state.get_state_msg, new_container_oper.get_error, model.get_i)
+				create message_oper.make (model.state.get_state_msg, new_container_oper.get_error, model.get_i, model.state.get_last_valid_i)
 				model.history.extend_history (message_oper)
 				message_oper.execute
 			end

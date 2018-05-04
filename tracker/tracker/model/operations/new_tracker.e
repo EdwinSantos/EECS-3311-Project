@@ -14,13 +14,14 @@ create
 	make
 
 feature {NONE}
-	make (max_ph, max_c : VALUE; st_id: INTEGER)
+	make (max_ph, max_c : VALUE; st_id: INTEGER; val_id : INTEGER)
 		do
 			item := ""
 			max_phase := max_ph
 			max_cont := max_c
 			error_string := ""
 			state_id := st_id-1
+			last_valid_id := val_id
 			create errors.make
 		end
 feature -- attributes
@@ -94,12 +95,14 @@ feature -- commands
 
 	undo
 		do
+			state.set_state_i(state_id)
 			state.state_msg_update(ERRORS.OK)
 		end
 
 	redo
 		do
 			-- message op is in queue for this
+			state.set_state_i(state_id+1)
 		end
 
 feature

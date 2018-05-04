@@ -20,7 +20,7 @@ feature -- command
 			-- perform some update on the model state
 			model.default_update
 			model.state.set_undo_redo(FALSE)
-			create new_tracker_oper.make (max_phase_radiation, max_container_radiation, model.get_i)
+			create new_tracker_oper.make (max_phase_radiation, max_container_radiation, model.get_i, model.state.get_last_valid_i)
 
 			if not new_tracker_oper.is_invalid then
 				model.history.clear
@@ -28,7 +28,7 @@ feature -- command
 				new_tracker_oper.execute
 			else
 				new_tracker_oper.error_check
-				create message_oper.make(model.state.get_state_msg, new_tracker_oper.get_error,model.get_i)
+				create message_oper.make(model.state.get_state_msg, new_tracker_oper.get_error,model.get_i, model.state.get_last_valid_i)
 				model.history.extend_history (message_oper)
 				message_oper.execute
 			end

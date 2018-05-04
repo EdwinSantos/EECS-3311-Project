@@ -15,7 +15,7 @@ create
 	make
 
 feature {NONE}
-	make (ph_id: STRING ; name: STRING ; cap: INTEGER_64 ; expec: ARRAY[INTEGER_64] ; msg: STRING; st_id : INTEGER)
+	make (ph_id: STRING ; name: STRING ; cap: INTEGER_64 ; expec: ARRAY[INTEGER_64] ; msg: STRING; st_id : INTEGER; val_id : INTEGER)
 		do
 			pid := ph_id
 			phase_name := name
@@ -24,6 +24,7 @@ feature {NONE}
 			item := msg
 			state_id := st_id-1
 			error_string := ""
+			last_valid_id := val_id
 			create error.make
 		end
 

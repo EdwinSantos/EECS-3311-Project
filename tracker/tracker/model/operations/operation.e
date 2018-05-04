@@ -24,6 +24,7 @@ feature
 	item: STRING
 	error_string: STRING
 	state_id : INTEGER
+	last_valid_id :INTEGER
 
 	get_error : STRING
 		do

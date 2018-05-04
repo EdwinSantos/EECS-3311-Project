@@ -14,12 +14,13 @@ create
 	make
 
 feature {NONE}
-	make (cid_given: STRING; msg : STRING; st_id : INTEGER)
+	make (cid_given: STRING; msg : STRING; st_id : INTEGER; val_id : INTEGER)
 	do
 		cid := cid_given
 		error_string := ""
 		item := msg
 		state_id := st_id-1
+		last_valid_id := val_id
 		fillernum := -1
 		create filler2.make_from_int (-1)
 		if attached state.containers.at(cid_given) as cnat then

@@ -25,23 +25,15 @@ feature -- command
 			model.default_update
 			model.state.set_undo_redo(FALSE)
 
---			if model.state.get_state_msg.is_equal (errors.e19) and not model.history.is_empty then
---				if attached model.history.get_first as the_first then
---					create new_phase_oper.make(pid,phase_name,capacity, expected_materials, the_first.error_string , the_first.state_id)
---				else
---					create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.state.get_state_msg, model.get_i)
---				end
 
---			else
-				create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.state.get_state_msg, model.get_i)
-			--end
+			create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.state.get_state_msg, model.get_i, model.state.get_last_valid_i)
 
 			if not new_phase_oper.is_invalid then
 				model.history.extend_history(new_phase_oper)
 				new_phase_oper.execute
 			else
 				new_phase_oper.error_check
-				create message_oper.make(model.state.get_state_msg, new_phase_oper.get_error, model.get_i)
+				create message_oper.make(model.state.get_state_msg, new_phase_oper.get_error, model.get_i, model.state.get_last_valid_i)
 				model.history.extend_history(message_oper)
 			    message_oper.execute
 			end

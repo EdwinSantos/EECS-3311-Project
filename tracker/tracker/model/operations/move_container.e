@@ -14,13 +14,14 @@ create
 	make
 
 feature {NONE}
-	make (cid_given : STRING ; pid_old_given : STRING ; pid_new_given : STRING; msg : STRING ; st_id : INTEGER)
+	make (cid_given : STRING ; pid_old_given : STRING ; pid_new_given : STRING; msg : STRING ; st_id : INTEGER; val_id : INTEGER)
 	do
 		cid := cid_given
 		pid_old := pid_old_given
 		pid_new := pid_new_given
 		item := msg
 		state_id := st_id-1
+		last_valid_id := val_id
 		error_string := ""
 		fillernum := -1
 		create filler2.make_from_int (-1)

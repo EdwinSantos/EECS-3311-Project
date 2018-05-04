@@ -14,11 +14,12 @@ create
 	make
 
 feature {NONE}
-	make (pid_given: STRING; msg: STRING; st_id : INTEGER)
+	make (pid_given: STRING; msg: STRING; st_id : INTEGER; val_id : INTEGER)
 	do
 		pid := pid_given
 		item := msg
 		state_id := st_id-1
+		last_valid_id := val_id
 		fillernum := -1
 	 	create fillerarr.make_empty
 		create error.make

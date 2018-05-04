@@ -27,6 +27,7 @@ feature {NONE}
 			invalid_undo := FALSE
 			invalid_redo := FALSE
 			state_i := 0
+			last_valid_i := 0
 		end
 
 feature
@@ -42,11 +43,17 @@ feature
 	invalid_undo :BOOLEAN
 	invalid_redo: BOOLEAN
 	state_i : INTEGER
+	last_valid_i : INTEGER
 
 feature -- queries
 	get_state_i : INTEGER
 		do
 			Result := state_i
+		end
+
+	get_last_valid_i : INTEGER
+		do
+			Result := last_valid_i
 		end
 
 	get_state_msg : STRING
@@ -101,6 +108,11 @@ feature -- commands
 	set_state_i(setter : INTEGER)
 		do
 			state_i := setter
+		end
+
+	set_last_valid_i(setter:INTEGER)
+		do
+			last_valid_i := setter
 		end
 
 	new_tracker (max_p, max_c : VALUE)

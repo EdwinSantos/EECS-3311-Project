@@ -12,12 +12,13 @@ create
 	make
 
 feature {NONE}
-	make (command_name, msg: STRING; st_id :INTEGER)
+	make (command_name, msg: STRING; st_id :INTEGER; val_id : INTEGER)
 	do
 		item := command_name
 		new_message := msg
 		error_string := ""
 		state_id := st_id-1
+		last_valid_id := val_id
 	end
 
 feature
