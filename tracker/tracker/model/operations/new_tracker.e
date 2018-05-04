@@ -20,7 +20,7 @@ feature {NONE}
 			max_phase := max_ph
 			max_cont := max_c
 			error_string := ""
-			state_id := st_id-1
+			state_id := st_id
 			last_valid_id := val_id
 			create errors.make
 		end
@@ -91,7 +91,7 @@ feature -- commands
 		do
 			state.state_msg_update(ERRORS.OK)
 			state.new_tracker(max_phase, max_cont)
-			state.set_last_valid_i (state_id + 1)
+			state.set_last_valid_i (state_id)
 		end
 
 	undo

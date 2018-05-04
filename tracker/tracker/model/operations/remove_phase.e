@@ -18,7 +18,7 @@ feature {NONE}
 	do
 		pid := pid_given
 		item := msg
-		state_id := st_id-1
+		state_id := st_id
 		last_valid_id := val_id
 		fillernum := -1
 	 	create fillerarr.make_empty
@@ -78,7 +78,7 @@ feature
 		do
 			state.state_msg_update(error.OK)
 			state.remove_phase(pid)
-			state.set_last_valid_i (state_id+1)
+			state.set_last_valid_i (state_id)
 		end
 
 	undo

@@ -19,7 +19,7 @@ feature {NONE}
 		cid := cid_given
 		error_string := ""
 		item := msg
-		state_id := st_id-1
+		state_id := st_id
 		last_valid_id := val_id
 		fillernum := -1
 		create filler2.make_from_int (-1)
@@ -63,7 +63,7 @@ feature
 		do
 			state.state_msg_update(error.OK)
 			state.remove_container(cid)
-			state.set_last_valid_i (state_id+1)
+			state.set_last_valid_i (state_id)
 		end
 
 	undo

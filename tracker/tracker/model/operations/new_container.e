@@ -20,7 +20,7 @@ feature {NONE}
 		material := material_given
 		rad := rad_given
 		pid := pid_given
-		state_id := st_id-1
+		state_id := st_id
 		last_valid_id := val_id
 		error_string := ""
 		item := msg
@@ -123,7 +123,7 @@ feature
 		do
 			state.state_msg_update(errors.OK)
 			state.new_container(cid, material, rad, pid)
-			state.set_last_valid_i (state_id+1)
+			state.set_last_valid_i (state_id)
 		end
 
 	undo

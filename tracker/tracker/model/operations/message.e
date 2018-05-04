@@ -17,7 +17,7 @@ feature {NONE}
 		item := command_name
 		new_message := msg
 		error_string := ""
-		state_id := st_id-1
+		state_id := st_id
 		last_valid_id := val_id
 	end
 
@@ -32,7 +32,7 @@ feature
 	execute
 		do
 			state.state_msg_update(new_message)
-			state.set_last_valid_i (state_id+1)
+			state.set_last_valid_i (state_id)
 
 		end
 

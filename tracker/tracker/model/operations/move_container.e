@@ -20,7 +20,7 @@ feature {NONE}
 		pid_old := pid_old_given
 		pid_new := pid_new_given
 		item := msg
-		state_id := st_id-1
+		state_id := st_id
 		last_valid_id := val_id
 		error_string := ""
 		fillernum := -1
@@ -135,7 +135,7 @@ feature
 			state.remove_container (cid)
 			state.state_msg_update(error.OK)
 			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
-			state.set_last_valid_i (state_id+1)
+			state.set_last_valid_i (state_id)
 		end
 
 	undo

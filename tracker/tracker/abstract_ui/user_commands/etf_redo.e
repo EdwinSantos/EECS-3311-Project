@@ -28,6 +28,7 @@ feature -- command
 				model.state.set_undo_redo(TRUE)
 				model.history.forth
 				model.history.item.redo
+				model.state.set_state_i(model.history.item.state_id)
 			end
 			etf_cmd_container.on_change.notify ([Current])
     	end

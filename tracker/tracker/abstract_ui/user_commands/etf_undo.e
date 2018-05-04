@@ -31,7 +31,11 @@ feature -- command
 				model.state.set_invalid_undo(FALSE)
 				model.history.item.undo
 				model.state.state_msg_update (model.history.item.item)
+				model.state.set_state_i (model.history.item.last_valid_id)
 				model.history.back
+				if not model.history.is_back_invalid then
+					model.state.set_last_valid_i (model.history.item.last_valid_id)
+				end
 			end
 
 			etf_cmd_container.on_change.notify ([Current])

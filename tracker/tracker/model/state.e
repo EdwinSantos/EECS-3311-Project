@@ -256,6 +256,7 @@ feature -- output
 				set_invalid_redo(FALSE)
 			else
 				if undo_redo then
+					--Result.append (last_valid_i.out + "  |  ")
 					Result.append("(to "+ state_i.out +") ")
 				end
 				Result.append(state_message)
