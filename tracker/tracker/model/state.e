@@ -45,6 +45,7 @@ feature
 	state_i : INTEGER
 	last_valid_i : INTEGER
 
+
 feature -- queries
 	get_state_i : INTEGER
 		do

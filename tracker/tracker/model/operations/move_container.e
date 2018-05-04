@@ -109,20 +109,21 @@ feature
 
 	error_check
 		do
-			if not does_phase_exist then
-				error_string := error.e9
-			elseif does_new_phase_exceeds_capacity then
-				error_string := error.e11
-			elseif  does_radiation_exceed_capacity then
-				error_string := error.e12
-			elseif not new_phase_accepts_mat then
-				error_string := error.e13
-			elseif not is_container_in_tracker then
+
+			if not is_container_in_tracker then
 				error_string := error.e15
+			elseif not does_phase_exist then
+				error_string := error.e9
 			elseif are_pids_same then
 				error_string := error.e16
 			elseif not is_container_in_source then
 				error_string := error.e17
+			elseif not new_phase_accepts_mat then
+				error_string := error.e13
+			elseif does_new_phase_exceeds_capacity then
+				error_string := error.e11
+			elseif  does_radiation_exceed_capacity then
+				error_string := error.e12
 			else
 				error_string := error.OK
 			end

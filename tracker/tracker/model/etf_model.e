@@ -21,8 +21,8 @@ feature {NONE} -- Initialization
 			-- Initialization for `Current'.
 		do
 			create s.make_empty
-			create state.make
 			create history.make
+			create state.make
 			i := 0
 		end
 

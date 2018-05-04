@@ -23,6 +23,7 @@ feature -- command
 			if model.history.is_empty or model.history.is_last then
 				model.state.set_undo_redo(FALSE)
 				model.state.set_invalid_redo(TRUE)
+				--model.state.set_state_i (model.state.get_last_valid_i)
 			elseif model.history.not_last then
 				model.state.set_undo_redo(TRUE)
 				model.history.forth

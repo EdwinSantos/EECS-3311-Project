@@ -12,13 +12,11 @@ Move container: Functionality, undo, E9, E11, E12, E13, E14, E15, E16, E17
 
 In progress:
 - testing the 13 luca tests
-- at1 : undo bug (likely to be the issue affecting most of the other tests)
-- current issue is the etf command gets the last model.i when it should only be getting the last valid state.i
-- causes the next valid etf command after e19 to have the state.i of the last e19
+Passed: 1,2,3,9
 
-- Testing and bug fixing
-- test each valid case (with an undo and redo)
-- test each error case
+movecontainer checks container validity first
+Which means the error codes arent tested in numerical order (move container tests e15 before e9)
+
 - assuming the "if attached" statements in the make functions for removeph and removecont work then the undo should be a simple call to new[object] using that saved object from the if attached
 
 
