@@ -70,7 +70,7 @@ feature
 
 	is_max_phase_rad_exceeded : BOOLEAN
 		do
-			Result := rad + state.get_phase_with_pid(pid).currentrad >= state.tracker.max_phase_radiation
+			Result := rad + state.get_phase_with_pid(pid).currentrad > state.tracker.max_phase_radiation
 		end
 
 	does_phase_expect_material: BOOLEAN
@@ -106,14 +106,14 @@ feature
 				error_string := errors.E10
 			elseif is_phase_capacity_exceeded then
 				error_string := errors.E11
-			elseif is_max_phase_rad_exceeded then
-				error_string := errors.E12
 			elseif not does_phase_expect_material then
 				error_string := errors.E13
 			elseif is_container_rad_over_limit then
 				error_string := errors.E14
 			elseif is_container_rad_neg then
 				error_string := errors.E18
+			elseif is_max_phase_rad_exceeded then
+				error_string := errors.E12
 			else
 				error_string := errors.OK
 			end

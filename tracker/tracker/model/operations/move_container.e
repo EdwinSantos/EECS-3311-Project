@@ -89,12 +89,12 @@ feature
 
 	does_new_phase_exceeds_capacity: BOOLEAN
 		do
-			Result := ph2.containers_in_phase + 1 > ph2.container_capacity
+			Result := state.get_phase_with_pid (pid_new).is_full
 		end
 
 	does_radiation_exceed_capacity : BOOLEAN
 		do
-			Result := ph2.currentRad + cn.radioac > state.tracker.max_phase_radiation
+			Result := (state.get_phase_with_pid (pid_new).currentrad + cn.radioac) > state.tracker.max_phase_radiation
 		end
 
 	new_phase_accepts_mat : BOOLEAN

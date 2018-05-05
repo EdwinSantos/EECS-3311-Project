@@ -33,7 +33,7 @@ feature
 
 	is_full : BOOLEAN
 		do
-			Result := containers_in_phase >= container_capacity
+			Result := containers_in_phase = container_capacity
 		end
 
 	accepts_material(material: INTEGER_64) : BOOLEAN
