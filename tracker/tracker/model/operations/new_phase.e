@@ -81,11 +81,6 @@ feature -- queries
 feature -- commands
 	error_check
 		do
-			-- state. get tracker info
-			-- state. get current phases
-			-- run the error checking queries  (to be added)
-			-- modify error_string if the queries find errors
-
 			if is_already_in_use then
 				-- Tracker already in use
 				-- Check if it has more than one container
@@ -127,7 +122,6 @@ feature -- commands
 	redo
 		do
 			execute
-			state.set_state_i(state_id + 1)
 		end
 
 feature

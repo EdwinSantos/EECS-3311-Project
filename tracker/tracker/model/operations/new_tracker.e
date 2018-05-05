@@ -92,18 +92,17 @@ feature -- commands
 			state.state_msg_update(ERRORS.OK)
 			state.new_tracker(max_phase, max_cont)
 			state.set_last_valid_i (state_id)
+			state.set_first_i(state_id)
 		end
 
 	undo
 		do
-			state.set_state_i(state_id)
 			state.state_msg_update(ERRORS.OK)
 		end
 
 	redo
 		do
 			-- message op is in queue for this
-			state.set_state_i(state_id+1)
 		end
 
 feature

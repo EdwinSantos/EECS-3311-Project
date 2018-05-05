@@ -45,7 +45,6 @@ feature
 	redo
 		do
 			execute
-			state.set_state_i(state_id + 1)
 		end
 
 end

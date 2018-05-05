@@ -12,8 +12,14 @@ create
 
 feature {STATE}
 	make
+		--local
+		--	tr_op : NEW_TRACKER
+		--	arg : VALUE
 		do
+			--create arg.make_from_int (0)
+			--create tr_op.make (arg, arg, 0, 0)
 			create {ARRAYED_LIST[OPERATION]}history.make(10)
+			--extend_history(tr_op)
 		end
 
 

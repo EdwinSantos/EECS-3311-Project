@@ -25,7 +25,7 @@ feature -- command
 			if model.history.is_empty or model.history.is_back_invalid then
 				model.state.set_undo_redo(FALSE)
 				model.state.set_invalid_undo(TRUE)
-				model.state.set_state_i (model.state.get_last_valid_i)
+				--model.state.set_state_i (model.state.get_last_valid_i)
 			elseif model.history.on_item then
 				model.state.set_undo_redo(TRUE)
 				model.state.set_invalid_undo(FALSE)
@@ -34,7 +34,9 @@ feature -- command
 				model.state.set_state_i (model.history.item.last_valid_id)
 				model.history.back
 				if not model.history.is_back_invalid then
-					model.state.set_last_valid_i (model.history.item.last_valid_id)
+					model.state.set_last_valid_i(model.history.item.last_valid_id)
+				else
+					model.state.set_last_valid_i (model.state.get_first_i)
 				end
 			end
 
