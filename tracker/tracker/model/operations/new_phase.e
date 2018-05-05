@@ -85,12 +85,12 @@ feature -- commands
 				-- Tracker already in use
 				-- Check if it has more than one container
 				error_string := error.E1
-			elseif is_not_alphanumeric_start then
-				-- pid or name starts with an odd character
-				error_string := error.E5
 			elseif does_phase_exist then
 				-- phase id already exists
 				error_string := error.E6
+			elseif is_not_alphanumeric_start then
+				-- pid or name starts with an odd character
+				error_string := error.E5
 			elseif is_capacity_neg then
 				-- phase capacity must be positive	
 				error_string := error.E7
@@ -105,9 +105,17 @@ feature -- commands
 		end
 
 	execute
+		local
+			pruned_expec : ARRAY[INTEGER_64]
 		do
 			state.state_msg_update(error.OK)
-			state.new_phase(pid,phase_name,capacity,expected_materials)
+			create pruned_expec.make_empty
+			across expected_materials as expected_mat loop
+				if not pruned_expec.has (expected_mat.item) then
+					pruned_expec.force(expected_mat.item,pruned_expec.count + 1)
+				end
+			end
+			state.new_phase(pid,phase_name,capacity,pruned_expec)
 			state.set_last_valid_i (state_id)
 		end
 
