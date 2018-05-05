@@ -109,7 +109,6 @@ feature
 
 	error_check
 		do
-
 			if not is_container_in_tracker then
 				error_string := error.e15
 			elseif not does_phase_exist then

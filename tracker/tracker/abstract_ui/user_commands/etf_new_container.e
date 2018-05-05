@@ -23,6 +23,7 @@ feature -- command
 			model.default_update
 			model.state.set_undo_redo(FALSE)
 			create new_container_oper.make(cid, c.material, c.radioactivity, pid, model.state.get_state_msg, model.get_i, model.state.get_last_valid_i)
+
 			if not new_container_oper.is_invalid then
 				model.history.extend_history (new_container_oper)
 				new_container_oper.execute

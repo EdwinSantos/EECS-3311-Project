@@ -116,7 +116,6 @@ feature -- commands
 			state.remove_phase(pid)
 			state.state_msg_update(item)
 			state.set_state_i(last_valid_id)
-			--state.set_last_valid_i (last_valid_id)
 		end
 
 	redo

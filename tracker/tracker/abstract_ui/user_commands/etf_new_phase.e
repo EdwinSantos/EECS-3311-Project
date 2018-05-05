@@ -20,12 +20,9 @@ feature -- command
     		message_oper : MESSAGE
     		errors : ERRORS
     	do
-    		create errors.make
 			-- perform some update on the model state
 			model.default_update
 			model.state.set_undo_redo(FALSE)
-
-
 			create new_phase_oper.make(pid,phase_name,capacity, expected_materials, model.state.get_state_msg, model.get_i, model.state.get_last_valid_i)
 
 			if not new_phase_oper.is_invalid then

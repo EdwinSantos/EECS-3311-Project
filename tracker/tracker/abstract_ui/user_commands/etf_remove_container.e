@@ -29,6 +29,7 @@ feature -- command
 			else
 				remove_cn_oper.error_check
 				create message_oper.make (model.state.get_state_msg,remove_cn_oper.get_error, model.get_i, model.state.get_last_valid_i)
+				model.history.extend_history (message_oper)
 				message_oper.execute
 			end
 			etf_cmd_container.on_change.notify ([Current])

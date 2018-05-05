@@ -271,6 +271,7 @@ feature -- output
 					--Result.append (last_valid_i.out + "  |  ")
 					Result.append("(to "+ state_i.out +") ")
 				end
+				--Result.append (last_valid_i.out + "  |  ")
 				Result.append(state_message)
 				if state_message.is_equal (errors.OK) then
 					Result.append("%N" + tracker.out)

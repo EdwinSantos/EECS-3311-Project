@@ -25,6 +25,7 @@ feature -- command
 				model.state.set_invalid_redo(TRUE)
 			elseif model.history.not_last then
 				model.state.set_undo_redo(TRUE)
+
 				model.history.forth
 				model.history.item.redo
 				model.state.set_state_i(model.history.item.state_id)

@@ -129,6 +129,7 @@ feature
 	undo
 		do
 			state.remove_container (cid)
+			state.state_msg_update (item)
 			state.set_state_i(last_valid_id)
 
 		end
