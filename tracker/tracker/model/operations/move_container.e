@@ -25,7 +25,7 @@ feature {NONE}
 		error_string := ""
 		fillernum := -1
 		create filler2.make_from_int (-1)
-		create error.make
+		create errors.make
 		if attached state.containers.at(cid_given) as cnatt then
 			create cn.make(cnatt.cid, [cnatt.mat,cnatt.radioac], cnatt.pid)
 		else
@@ -38,7 +38,7 @@ feature
 	cid: STRING
 	pid_old : STRING
 	pid_new : STRING
-	error : ERRORS
+	errors : ERRORS
 	-- "filler" objects with illegal values if the cid/pids given don't exist
 	fillernum: INTEGER
 	filler2 : VALUE
@@ -93,21 +93,21 @@ feature
 	error_check
 		do
 			if not is_container_in_tracker then
-				error_string := error.e15
+				error_string := errors.e15
 			elseif are_pids_same then
-				error_string := error.e16
+				error_string := errors.e16
 			elseif not does_phase_exist then
-				error_string := error.e9
+				error_string := errors.e9
 			elseif not is_container_in_source then
-				error_string := error.e17
+				error_string := errors.e17
 			elseif not new_phase_accepts_mat then
-				error_string := error.e13
+				error_string := errors.e13
 			elseif does_new_phase_exceeds_capacity then
-				error_string := error.e11
+				error_string := errors.e11
 			elseif  does_radiation_exceed_capacity then
-				error_string := error.e12
+				error_string := errors.e12
 			else
-				error_string := error.OK
+				error_string := errors.OK
 			end
 		end
 
@@ -115,7 +115,7 @@ feature
 		do
 			cn.moveToPhase(pid_new)
 			state.remove_container (cid)
-			state.state_msg_update(error.OK)
+			state.state_msg_update(errors.OK)
 			state.new_container (cid, cn.mat,cn.radioac, cn.pid)
 			state.set_last_valid_i (state_id)
 		end

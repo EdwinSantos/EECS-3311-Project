@@ -28,12 +28,12 @@ feature {NONE}
 		else
 			create cn.make ("-1", [fillernum.to_integer_64, filler2], "-1")
 		end
-		create error.make
+		create errors.make
 	end
 
 feature
 	cid: STRING
-	error : ERRORS
+	errors : ERRORS
 	cn : MATERIAL_CONTAINER
 	-- "filler" objects with illegal values if the cid/pids given don't exist
 	fillernum: INTEGER
@@ -52,16 +52,16 @@ feature
 	error_check
 		do
 			if not does_container_exist then
-				error_string := error.E15
+				error_string := errors.E15
 			else
-				error_string := error.OK
+				error_string := errors.OK
 			end
 
 		end
 
 	execute
 		do
-			state.state_msg_update(error.OK)
+			state.state_msg_update(errors.OK)
 			state.remove_container(cid)
 			state.set_last_valid_i (state_id)
 		end

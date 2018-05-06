@@ -22,7 +22,7 @@ feature {NONE}
 		last_valid_id := val_id
 		fillernum := -1
 	 	create fillerarr.make_empty
-		create error.make
+		create errors.make
 		error_string := ""
 		if attached state.phases.at(pid_given) as phat then
 			create ph.make(phat.pid,phat.phase_name,phat.container_capacity,phat.expected_materials)
@@ -32,7 +32,7 @@ feature {NONE}
 	end
 
 feature
-	error : ERRORS
+	errors : ERRORS
 	pid : STRING
 	fillernum :INTEGER
 	fillerarr : ARRAY[INTEGER_64]
@@ -66,17 +66,17 @@ feature
 	error_check
 		do
 			if does_tracker_exist then
-				error_string :=	error.e1
+				error_string :=	errors.e1
 			elseif not does_phase_exist then
-				error_string := error.e9
+				error_string := errors.e9
 			else
-				error_string := error.OK
+				error_string := errors.OK
 			end
 		end
 
 	execute
 		do
-			state.state_msg_update(error.OK)
+			state.state_msg_update(errors.OK)
 			state.remove_phase(pid)
 			state.set_last_valid_i (state_id)
 		end

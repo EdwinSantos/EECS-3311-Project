@@ -14,13 +14,6 @@ feature
 			Result := ma.m.state
 		end
 
-	tictac: ETF_MODEL
-		local
-			ma: ETF_MODEL_ACCESS
-		once
-			Result := ma.m
-		end
-
 	item: STRING
 	error_string: STRING
 	state_id : INTEGER

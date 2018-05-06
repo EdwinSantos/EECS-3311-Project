@@ -25,7 +25,7 @@ feature {NONE}
 			state_id := st_id
 			error_string := ""
 			last_valid_id := val_id
-			create error.make
+			create errors.make
 		end
 
 feature -- queries
@@ -33,7 +33,7 @@ feature -- queries
 	phase_name:STRING
 	capacity:INTEGER_64
 	expected_materials : ARRAY[INTEGER_64]
-	error : ERRORS
+	errors : ERRORS
 
 	is_invalid : BOOLEAN
 		do
@@ -84,23 +84,23 @@ feature -- commands
 			if is_already_in_use then
 				-- Tracker already in use
 				-- Check if it has more than one container
-				error_string := error.E1
+				error_string := errors.E1
 			elseif does_phase_exist then
 				-- phase id already exists
-				error_string := error.E6
+				error_string := errors.E6
 			elseif is_not_alphanumeric_start then
 				-- pid or name starts with an odd character
-				error_string := error.E5
+				error_string := errors.E5
 			elseif is_capacity_neg then
 				-- phase capacity must be positive	
-				error_string := error.E7
+				error_string := errors.E7
 			elseif is_expected_mat_neg then
 				-- needs atleast one expected material
-				error_string := error.E8
+				error_string := errors.E8
 			else
 				-- CREATE PHASE
 				-- no errors found
-				error_string := error.OK
+				error_string := errors.OK
 			end
 		end
 
@@ -108,7 +108,7 @@ feature -- commands
 		local
 			pruned_expec : ARRAY[INTEGER_64]
 		do
-			state.state_msg_update(error.OK)
+			state.state_msg_update(errors.OK)
 			create pruned_expec.make_empty
 			across expected_materials as expected_mat loop
 				if not pruned_expec.has (expected_mat.item) then
