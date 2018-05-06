@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Reading and writing to files."/>
+<meta name="author" content="JSO"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_file_utility Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_file_utility"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Reading and writing to files.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../generated_code/etf_file_utility.html">ETF_FILE_UTILITY</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_read_text_from">read_text_from</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes</SPAN>
+
+	<A NAME="f_error"></A><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error">error</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_error_string"></A><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_items"></A><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> file as a list of strings, separated by new lines</SPAN>
+
+	<A NAME="f_item"></A><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the entire file as a single string</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ASSUMPTION: input file does not change!</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">across</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A> <SPAN CLASS="ekeyword">as</SPAN> line
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> creates</SPAN>
+
+	<A NAME="f_read_text_from"></A><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_read_text_from">read_text_from</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> read file at </SPAN><SPAN CLASS="equoted">a_path</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> error is false if there are errors reading the file</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> item is the text in the file if there are no errors</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> error_string is the error condition</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">PLAIN_TEXT_FILE</SPAN>
+			<SPAN CLASS="elocal">line</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="esymbol">{</SPAN><SPAN CLASS="neclass">LINKED_LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">}</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_with_name</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">exists</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error">error</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;error: '&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">a_path</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;' does not exist&quot;
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_readable</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error">error</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;error: '&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">a_path</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;' is not readable&quot;
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="ekeyword">from</SPAN>
+						<SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">open_read</SPAN>
+					<SPAN CLASS="ekeyword">until</SPAN>
+						<SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">readable</SPAN>
+					<SPAN CLASS="ekeyword">loop</SPAN>
+						<SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">read_line</SPAN>
+						<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">last_string</SPAN><SPAN CLASS="esymbol">)</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">extend</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">line</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+					<SPAN CLASS="elocal">l_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">close</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error">error</A> <SPAN CLASS="ekeyword">implies</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="enumber">0</SPAN>
+				<SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error">error</A> <SPAN CLASS="ekeyword">implies</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Commands</SPAN>
+
+	<A NAME="f_remove_comment_lines"></A><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_remove_comment_lines">remove_comment_lines</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Remove user comment lines, i.e., those starting with '--'.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This is used to make the handling of the window mode accurate.</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">line</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">from</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">start</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">after</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">twin</SPAN>
+				<SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">left_adjust</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">starts_with</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;--&quot;<SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_whitespace</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">remove</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">forth</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_file_utility.html">ETF_FILE_UTILITY</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_file_utility_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_file_utility"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Output handler for bank triggered via an observer event"/>
+<meta name="author" content="JSO"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_output_handler_interface Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_output_handler_interface"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Output handler for bank triggered via an observer event&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../generated_code/etf_output_handler_interface_short.html">ETF_OUTPUT_HANDLER_INTERFACE</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+
+	<A NAME="f_output"></A><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_short.html#f_output">output</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_error_message"></A><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_short.html#f_error_message">error_message</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Log to 'output'</SPAN>
+
+	<A NAME="f_log_model_state"></A><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_short.html#f_log_model_state">log_model_state</A>
+
+	<A NAME="f_log_empty"></A><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_short.html#f_log_empty">log_empty</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_command_short.html">ETF_COMMAND</A><SPAN CLASS="esymbol">)</SPAN>
+
+	<A NAME="f_log_command"></A><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_short.html#f_log_command">log_command</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_command_short.html">ETF_COMMAND</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Log the normal effect of 'a_cmd' to 'output'</SPAN>
+
+	<A NAME="f_log_error"></A><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_short.html#f_log_error">log_error</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_error</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Log 'a_error' to 'error_message'</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_output_handler_interface_short.html">ETF_OUTPUT_HANDLER_INTERFACE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_output_handler_interface_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_output_handler_interface"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

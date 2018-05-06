@@ -1,0 +1,1340 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="root class"/>
+<meta name="author" content="Jackie Wang"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_cmd_line_root_interface Flat</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface.html">Text</A></TD>
+<TD CLASS="nolink2">Flat</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_cmd_line_root_interface"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;root class&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Jackie Wang&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization</SPAN>
+
+	<A NAME="f_default_create"></A><SPAN CLASS="nefeature">default_create</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Process instances of classes with no creation clause.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (Default: do nothing.)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_make">make_from_gui_root</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization for </SPAN><SPAN CLASS="equoted">Current</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface_flat.html">ETF_GUI_ROOT_INTERFACE</A><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_gui">gui</A>
+			<SPAN CLASS="ekeyword">check</SPAN>
+					<SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_gui">gui</A> <SPAN CLASS="ekeyword">as</SPAN> g
+			<SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_is_history_shown">is_history_shown</A> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">g</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_gui_flat.html#f_main_window">main_window</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window_imp_flat.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">show</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="elocal">g</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_gui_flat.html#f_main_window">main_window</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window_imp_flat.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">hide</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="elocal">g</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">launch</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access</SPAN>
+
+	<A NAME="f_argument"></A><SPAN CLASS="nefeature">argument</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN><SPAN CLASS="equoted">i</SPAN><SPAN CLASS="ecomment">-th argument of command that started system execution</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (the command name if </SPAN><SPAN CLASS="equoted">i</SPAN><SPAN CLASS="ecomment"> = 0)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">index_large_enough</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+			<SPAN CLASS="etag">index_small_enough</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Internal_arguments</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">argument</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">as_string_8</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">argument_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_argument_array"></A><SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Array containing command name (position 0) and arguments</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">internal_argument_array</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">argument_array_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">argument_array_compare_objects</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">object_comparison</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_command_line"></A><SPAN CLASS="nefeature">Command_line</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Total command line</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Command_name</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">twin</SPAN>
+			<SPAN CLASS="ekeyword">from</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot; &quot;<SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">argument</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="nefeature">Command_name</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_command_name"></A><SPAN CLASS="nefeature">Command_name</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Name of command that started system execution</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">argument</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">0</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">definition</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="nefeature">argument</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">0</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_generating_type"></A><SPAN CLASS="nefeature">generating_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TYPE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Type of current object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (type of which it is a direct instance)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">generating_type_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_generator"></A><SPAN CLASS="nefeature">generator</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Name of current object's generating class</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (base class of the type of which it is a direct instance)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">generator_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">generator_not_empty</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Measurement</SPAN>
+
+	<A NAME="f_argument_count"></A><SPAN CLASS="nefeature">argument_count</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Number of arguments given to command that started</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> system execution (command name does not count)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Internal_arguments</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">argument_count</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">argument_count_positive</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Comparison</SPAN>
+
+	<A NAME="f_deep_equal"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">deep_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">like</SPAN> arg #<SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Are </SPAN><SPAN CLASS="equoted">a</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">b</SPAN><SPAN CLASS="ecomment"> either both void</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> or attached to isomorphic object structures?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_deep_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">shallow_implies_deep</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+			<SPAN CLASS="etag">both_or_none_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="etag">same_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">same_type</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="etag">symmetric</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="nefeature">deep_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_equal"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">like</SPAN> arg #<SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Are </SPAN><SPAN CLASS="equoted">a</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">b</SPAN><SPAN CLASS="ecomment"> either both void or attached</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to objects considered equal?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">definition</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_is_deep_equal"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">is_deep_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Are </SPAN><SPAN CLASS="equoted">Current</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> attached to isomorphic object structures?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">shallow_implies_deep</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+			<SPAN CLASS="etag">same_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="nefeature">same_type</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="etag">symmetric</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_deep_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_is_equal"></A><SPAN CLASS="nefeature">is_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> attached to an object considered</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> equal to current object?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">symmetric</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="ekeyword">Current</SPAN>
+			<SPAN CLASS="etag">consistent</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_standard_equal"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">standard_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">like</SPAN> arg #<SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Are </SPAN><SPAN CLASS="equoted">a</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">b</SPAN><SPAN CLASS="ecomment"> either both void or attached to</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> field-by-field identical objects of the same type?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Always uses default object comparison criterion.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">definition</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">b</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">a</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">b</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_standard_is_equal"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">standard_is_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> attached to an object of the same type</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> as current object, and field-by-field identical to it?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">same_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="nefeature">same_type</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="etag">symmetric</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">implies</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Status report</SPAN>
+
+	<A NAME="f_coalesced_character_option_value"></A><SPAN CLASS="nefeature">coalesced_character_option_value</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The value, if any, specified for character option </SPAN><SPAN CLASS="equoted">o</SPAN><SPAN CLASS="ecomment"> on</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the command line.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Defined as follows (where 'X' is the current 'option_sign' and</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 'xx' is an arbitrary, possibly empty sequence of characters):</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;</SPAN><SPAN CLASS="equoted">val</SPAN><SPAN CLASS="ecomment"> if command line includes an argument of the form </SPAN><SPAN CLASS="equoted">Xxxoval</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	 &nbsp;&nbsp;(this may be an empty string if argument is just </SPAN><SPAN CLASS="equoted">Xxxo</SPAN><SPAN CLASS="ecomment">).</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;Void otherwise.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">o_non_null</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">o</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="echar">'%U'</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">p</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="elocal">l</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">index_of_character_option</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">l</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">p</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">twin</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="echar">'%U'</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">remove</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">index_of</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_coalesced_option_character_value"></A><SPAN CLASS="nefeature">coalesced_option_character_value</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use coalesced_character_option_value instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">coalesced_character_option_value</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_coalesced_option_word_value"></A><SPAN CLASS="nefeature">coalesced_option_word_value</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use coalesced_word_option_value instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">coalesced_word_option_value</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_coalesced_word_option_value"></A><SPAN CLASS="nefeature">coalesced_word_option_value</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The value, if any, specified for word option </SPAN><SPAN CLASS="equoted">opt</SPAN><SPAN CLASS="ecomment"> on the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> command line.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Defined as follows (where X is the current </SPAN><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="ecomment">):</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;</SPAN><SPAN CLASS="equoted">val</SPAN><SPAN CLASS="ecomment"> if command line includes an argument of the form </SPAN><SPAN CLASS="equoted">Xoptval</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	 &nbsp;&nbsp;(this may be an empty string if argument is just </SPAN><SPAN CLASS="equoted">Xopt</SPAN><SPAN CLASS="ecomment">).</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;Void otherwise.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">opt_non_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">opt</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">opt_meaningful</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">p</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="elocal">l</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">index_of_beginning_with_word_option</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">l</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">p</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">twin</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="echar">'%U'</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">remove</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">l</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_conforms_to"></A><SPAN CLASS="nefeature">conforms_to</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Does type of current object conform to type</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> (as per Eiffel: The Language, chapter 13)?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_has_character_option"></A><SPAN CLASS="nefeature">has_character_option</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use index_of_character_option instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">index_of_character_option</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_has_word_option"></A><SPAN CLASS="nefeature">has_word_option</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use index_of_word_option instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">index_of_word_option</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_index_of_beginning_with_word_option"></A><SPAN CLASS="nefeature">index_of_beginning_with_word_option</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Does command line specify argument beginning with word</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> option </SPAN><SPAN CLASS="equoted">opt</SPAN><SPAN CLASS="ecomment"> and, if so, at what position?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If one of the arguments in list of space-separated arguments</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> is </SPAN><SPAN CLASS="equoted">Xoptxx</SPAN><SPAN CLASS="ecomment">, where </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment"> is the current </SPAN><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="ecomment">, 'xx'</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> is arbitrary, possibly empty sequence of characters,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> then index of this argument in list;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> else 0.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">opt_non_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">opt</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">opt_meaningful</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">from</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="nefeature">option_word_begins_with</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_index_of_character_option"></A><SPAN CLASS="nefeature">index_of_character_option</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Does command line specify character option </SPAN><SPAN CLASS="equoted">o</SPAN><SPAN CLASS="ecomment"> and, if so,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> at what position?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If one of the space-separated arguments is of the form </SPAN><SPAN CLASS="equoted">Xxxoyy</SPAN><SPAN CLASS="ecomment">,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> where </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment"> is the current </SPAN><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="ecomment">, </SPAN><SPAN CLASS="equoted">xx</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">yy</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> are arbitrary, possibly empty sequences of characters,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> then index of this argument in list of arguments;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> else 0.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">o_non_null</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">o</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="echar">'%U'</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">from</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="nefeature">option_character_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_index_of_word_option"></A><SPAN CLASS="nefeature">index_of_word_option</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Does command line specify word option </SPAN><SPAN CLASS="equoted">opt</SPAN><SPAN CLASS="ecomment"> and, if so,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> at what position?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If one of the arguments in list of space-separated arguments</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> is </SPAN><SPAN CLASS="equoted">Xopt</SPAN><SPAN CLASS="ecomment">, where </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment"> is the current </SPAN><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="ecomment">,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> then index of this argument in list;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> else 0.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">opt_non_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">opt</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">opt_meaningful</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">from</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="nefeature">option_word_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_option_sign"></A><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8_REF</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The character used to signal options on the command line.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This can be '%U' if no sign is necessary for the argument</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to be an option</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Default is '-'</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="echar">'-'</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_same_type"></A><SPAN CLASS="nefeature">same_type</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is type of current object identical to type of </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment">?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">definition</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">conforms_to</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">conforms_to</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_separate_character_option_value"></A><SPAN CLASS="nefeature">separate_character_option_value</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The value, if any, specified after character option </SPAN><SPAN CLASS="equoted">o</SPAN><SPAN CLASS="ecomment"> on</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the command line.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This is one of the following (where </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment"> is the current</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="ecomment">, </SPAN><SPAN CLASS="equoted">xx</SPAN><SPAN CLASS="ecomment"> and 'yy' are arbitrary, possibly empty</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> sequences of characters):</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;</SPAN><SPAN CLASS="equoted">val</SPAN><SPAN CLASS="ecomment"> if command line includes two consecutive arguments</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	 &nbsp;&nbsp;of the form </SPAN><SPAN CLASS="equoted">Xxxoyy</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">val</SPAN><SPAN CLASS="ecomment"> respectively.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;Empty string if command line includes argument </SPAN><SPAN CLASS="equoted">Xxxoyy</SPAN><SPAN CLASS="ecomment">, which is</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	 &nbsp;&nbsp;either last argument or followed by argument starting with </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;Void if there is no argument of the form </SPAN><SPAN CLASS="equoted">Xxxoyy</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">o_non_null</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">o</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="echar">'%U'</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">p</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">index_of_character_option</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_separate_word_option_value"></A><SPAN CLASS="nefeature">separate_word_option_value</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The value, if any, specified after word option </SPAN><SPAN CLASS="equoted">opt</SPAN><SPAN CLASS="ecomment"> on the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> command line.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This is one of the following (where </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment"> is the current </SPAN><SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="ecomment">):</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;</SPAN><SPAN CLASS="equoted">val</SPAN><SPAN CLASS="ecomment"> if command line includes two consecutive arguments</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	 &nbsp;&nbsp;of the form </SPAN><SPAN CLASS="equoted">Xopt</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="equoted">val</SPAN><SPAN CLASS="ecomment"> respectively.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;Empty string if command line includes argument </SPAN><SPAN CLASS="equoted">Xopt</SPAN><SPAN CLASS="ecomment">, which is</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	 &nbsp;&nbsp;either last argument or followed by argument starting with </SPAN><SPAN CLASS="equoted">X</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;Void if no </SPAN><SPAN CLASS="equoted">Xopt</SPAN><SPAN CLASS="ecomment"> argument.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">opt_non_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">opt</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">opt_meaningful</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">p</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">index_of_word_option</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">opt</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">p</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Status setting</SPAN>
+
+	<A NAME="f_set_option_sign"></A><SPAN CLASS="nefeature">set_option_sign</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">c</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Make </SPAN><SPAN CLASS="equoted">c</SPAN><SPAN CLASS="ecomment"> the option sign.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Use'%U' if no sign is necessary for the argument to</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> be an option</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">c</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Duplication</SPAN>
+
+	<A NAME="f_clone"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">clone</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">like</SPAN> <SPAN CLASS="elocal">other</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use `twin' instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Void if </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> is void; otherwise new object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> equal to </SPAN><SPAN CLASS="equoted">other</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> For non-void </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment">, </SPAN><SPAN CLASS="nefeature">clone</SPAN><SPAN CLASS="ecomment"> calls </SPAN><SPAN CLASS="nefeature">copy</SPAN><SPAN CLASS="ecomment">;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to change copying/cloning semantics, redefine </SPAN><SPAN CLASS="nefeature">copy</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">twin</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="elocal">other</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_copy"></A><SPAN CLASS="nefeature">copy</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Update current object using fields of object attached</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment">, so as to yield equal objects.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">type_identity</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">same_type</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">is_equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Current</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="elocal">other</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_deep_clone"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">deep_clone</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">like</SPAN> <SPAN CLASS="elocal">other</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use `deep_twin' instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Void if </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> is void: otherwise, new object structure</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> recursively duplicated from the one attached to </SPAN><SPAN CLASS="equoted">other</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">deep_twin</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">deep_equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">deep_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_deep_copy"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">deep_copy</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Effect equivalent to that of:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">		</SPAN><SPAN CLASS="nefeature">copy</SPAN><SPAN CLASS="ecomment"> (</SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> . </SPAN><SPAN CLASS="nefeature">deep_twin</SPAN><SPAN CLASS="ecomment">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="nefeature">copy</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">deep_twin</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">deep_equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">deep_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_deep_twin"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">deep_twin</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New object structure recursively duplicated from Current.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">deep_twin_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">deep_equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">deep_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_standard_clone"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">standard_clone</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">like</SPAN> <SPAN CLASS="elocal">other</SPAN>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Use `standard_twin' instead. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Void if </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> is void; otherwise new object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> field-by-field identical to </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Always uses default copying semantics.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">standard_twin</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_standard_copy"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">standard_copy</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Copy every field of </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment"> onto corresponding field</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">other_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">other</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">type_identity</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">same_type</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">is_standard_equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">other</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_standard_twin"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">standard_twin</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New object field-by-field identical to </SPAN><SPAN CLASS="equoted">other</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Always uses default copying semantics.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">standard_twin_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_twin"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">twin</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New object equal to </SPAN><SPAN CLASS="equoted">Current</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN><SPAN CLASS="nefeature">twin</SPAN><SPAN CLASS="ecomment"> calls </SPAN><SPAN CLASS="nefeature">copy</SPAN><SPAN CLASS="ecomment">; to change copying/twinning semantics, redefine </SPAN><SPAN CLASS="nefeature">copy</SPAN><SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">twin_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">is_equal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="ekeyword">Current</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic operations</SPAN>
+
+	<A NAME="f_as_attached"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">as_attached</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A>
+		<SPAN CLASS="ekeyword">obsolete</SPAN> &quot;Remove calls to this feature. [2017-05-31]&quot;
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Attached version of Current.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (Can be used during transitional period to convert</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> non-void-safe classes to void-safe ones.)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Current</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_default"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">default</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Default value of object's type</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_default_pointer"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">default_pointer</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">POINTER</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Default value of type </SPAN><SPAN CLASS="equoted">POINTER</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (Avoid the need to write </SPAN><SPAN CLASS="equoted">p</SPAN><SPAN CLASS="ecomment">.</SPAN><SPAN CLASS="nefeature">default</SPAN><SPAN CLASS="ecomment"> for</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> some </SPAN><SPAN CLASS="equoted">p</SPAN><SPAN CLASS="ecomment"> of type </SPAN><SPAN CLASS="equoted">POINTER</SPAN><SPAN CLASS="ecomment">.)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_default_rescue"></A><SPAN CLASS="nefeature">default_rescue</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Process exception for routines with no Rescue clause.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (Default: do nothing.)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_do_nothing"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">do_nothing</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Execute a null action.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Implementation</SPAN>
+
+	<A NAME="f_internal_argument_array"></A><SPAN CLASS="nefeature">internal_argument_array</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Array containing command name (position 0) and arguments</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_filled</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;&quot;<SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="enumber">0</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">compare_objects</SPAN>
+			<SPAN CLASS="ekeyword">from</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">argument</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">internal_argument_array_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">internal_argument_array_compare_objects</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">object_comparison</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_internal_arguments"></A><SPAN CLASS="nefeature">Internal_arguments</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARGUMENTS_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access to the Unicode arguments.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_option_character_equal"></A><SPAN CLASS="nefeature">option_character_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">c</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">CHARACTER_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Does </SPAN><SPAN CLASS="equoted">arg</SPAN><SPAN CLASS="ecomment"> contain the character option </SPAN><SPAN CLASS="equoted">c</SPAN><SPAN CLASS="ecomment">?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">arg_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">arg</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="echar">'%U'</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">has</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">c</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">has</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">c</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_option_word_begins_with"></A><SPAN CLASS="nefeature">option_word_begins_with</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Does </SPAN><SPAN CLASS="equoted">arg</SPAN><SPAN CLASS="ecomment"> begin with the word option </SPAN><SPAN CLASS="equoted">w</SPAN><SPAN CLASS="ecomment">?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">arg_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">arg</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">w_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">w</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="echar">'%U'</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="elocal">w</SPAN>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="elocal">w</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_option_word_equal"></A><SPAN CLASS="nefeature">option_word_equal</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN><SPAN CLASS="equoted">arg</SPAN><SPAN CLASS="ecomment"> equal to the word option </SPAN><SPAN CLASS="equoted">w</SPAN><SPAN CLASS="ecomment">?</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+			<SPAN CLASS="etag">arg_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">arg</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">w_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">w</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="echar">'%U'</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">arg</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="elocal">w</SPAN>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="nefeature">Option_sign</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="elocal">w</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access: Cursor</SPAN>
+
+	<A NAME="f_new_cursor"></A><SPAN CLASS="nefeature">new_cursor</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ITERATION_CURSOR</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Fresh cursor associated with current structure</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">new_cursor</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ITERABLE</SPAN>
+			<SPAN CLASS="etag">result_attached</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Attributes</SPAN>
+
+	<A NAME="f_gui"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_gui">gui</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../tracker/etf_gui_flat.html">ETF_GUI</A>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface_flat.html">ETF_GUI_ROOT_INTERFACE</A><SPAN CLASS="ecomment">)</SPAN>
+
+	<A NAME="f_is_history_shown"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_is_history_shown">is_history_shown</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface_flat.html">ETF_GUI_ROOT_INTERFACE</A><SPAN CLASS="ecomment">)</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Commands</SPAN>
+
+	<A NAME="f_hide_history"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_hide_history">hide_history</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> When the GUI is launch, do not show the history panel.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface_flat.html">ETF_GUI_ROOT_INTERFACE</A><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_is_history_shown">is_history_shown</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_show_history"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_show_history">show_history</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> When the GUI is launched, show the history panel</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> which displays the trace of events.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface_flat.html">ETF_GUI_ROOT_INTERFACE</A><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_is_history_shown">is_history_shown</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ETF Version </SPAN>
+
+	<A NAME="f_etf_version"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_etf_version">Etf_version</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN> <SPAN CLASS="esymbol">=</SPAN> &quot;1.08 (2017-08-23)&quot;
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Output</SPAN>
+
+	<A NAME="f_io"></A><SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STD_FILES</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Handle to standard file setup</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_output_default</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">io_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_out"></A><SPAN CLASS="nefeature">out</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">tagged_out</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">out_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_print"></A><SPAN CLASS="nefeature">print</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Write terse external representation of </SPAN><SPAN CLASS="equoted">o</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> on standard output.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">o</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">o</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">out</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_tagged_out"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">tagged_out</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;built_in&quot;
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">tagged_out_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Platform</SPAN>
+
+	<A NAME="f_operating_environment"></A><SPAN CLASS="nefeature">Operating_environment</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">OPERATING_ENVIRONMENT</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects available from the operating system</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">once</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+			<SPAN CLASS="etag">operating_environment_not_void</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Retrieval</SPAN>
+
+	<A NAME="f_internal_correct_mismatch"></A><SPAN CLASS="ekeyword">frozen</SPAN> <SPAN CLASS="nefeature">internal_correct_mismatch</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Called from runtime to perform a proper dynamic dispatch on </SPAN><SPAN CLASS="equoted">correct_mismatch</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> from MISMATCH_CORRECTOR.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">(from </SPAN><SPAN CLASS="neclass">ANY</SPAN><SPAN CLASS="ecomment">)</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">l_msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="elocal">l_exc</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">EXCEPTIONS</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <SPAN CLASS="esymbol">{</SPAN><SPAN CLASS="neclass">MISMATCH_CORRECTOR</SPAN><SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ekeyword">Current</SPAN> <SPAN CLASS="ekeyword">as</SPAN> l_corrector <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">l_corrector</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">correct_mismatch</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_msg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;Mismatch: &quot;<SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_exc</SPAN>
+				<SPAN CLASS="elocal">l_msg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">generating_type</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">name</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="elocal">l_exc</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">raise_retrieval_exception</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">l_msg</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes</SPAN>
+
+	<A NAME="f_chunk_size_for_file_mode"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_chunk_size_for_file_mode">Chunk_size_for_file_mode</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">100</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes for window mode</SPAN>
+
+	<A NAME="f_context_state_from_exec_log"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_end_of_window"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+
+	<A NAME="f_end_of_window_unbounded"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window_unbounded">end_of_window_unbounded</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_exec_log"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes for batch file mode</SPAN>
+
+	<A NAME="f_is_init"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_last_window_slice_specified"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_last_window_slice_specified">last_window_slice_specified</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_start_of_window"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+
+	<A NAME="f_window_spec_error"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_spec_error">window_spec_error</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> used to make sure 'init' is displayed only once	</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> auxiliary procedures</SPAN>
+
+	<A NAME="f_batch_file_mode_make_a_step"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_batch_file_mode_make_a_step">batch_file_mode_make_a_step</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">PLAIN_TEXT_FILE</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec">exec</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">open_append</SPAN>
+			<SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">close</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_exec"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec">exec</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_cmds</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Log the execution of 'input_cmds' to 'exec_log'.</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_software_operation_flat.html">ETF_SOFTWARE_OPERATION</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_make">make</A>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_execute">execute</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_cmds</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_flat.html#f_error_message">error_message</A> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_flat.html#f_output">output</A>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_exec_without_log"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_without_log">exec_without_log</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_cmds</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Execute 'input_cmds' without a log.</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_software_operation_flat.html">ETF_SOFTWARE_OPERATION</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_make">make</A>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_execute_without_log">execute_without_log</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_cmds</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_man_page"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_man_page">Man_page</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN> <SPAN CLASS="esymbol">=</SPAN> &quot;[
+		new_tracker(
+		    max_phase_radiation: VALUE ; 
+		    max_container_radiation: VALUE
+		)
+		new_phase(
+		    pid: PID = STRING ; 
+		    phase_name: STRING ; 
+		    capacity: INTEGER_64 ; 
+		    expected_materials: ARRAY[MATERIAL = {glass, metal, plastic, liquid}]
+		)
+		remove_phase(
+		    pid: PID = STRING
+		)
+		new_container(
+		    cid: CID = STRING ; 
+		    c: CONTAINER = TUPLE[material: MATERIAL = {glass, metal, plastic, liquid}; radioactivity: VALUE] ; 
+		    pid: PID = STRING
+		)
+		remove_container(
+		    cid: CID = STRING
+		)
+		move_container(
+		    cid: CID = STRING ; 
+		    pid1: PID = STRING ; 
+		    pid2: PID = STRING
+		)
+		undo
+		redo
+	]<SPAN CLASS="estring">&quot;</SPAN>
+
+	<A NAME="f_retrieve_context_state_from_exec_log"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_retrieve_context_state_from_exec_log">retrieve_context_state_from_exec_log</A>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">last_cmd_pos</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">last_cmd_end_of_line</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">last_cmd_pos</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring_index</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;-&gt;&quot;<SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="elocal">last_cmd_end_of_line</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">index_of</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="echar">'%N'</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">last_cmd_pos</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">last_cmd_end_of_line</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_validate_window_spec"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_validate_window_spec">validate_window_spec</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+				<SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-w&quot; <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">4</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">5</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_integer</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_integer</SPAN> <SPAN CLASS="ekeyword">or else</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;_&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_integer</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer</SPAN>
+					<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;_&quot; <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window_unbounded">end_of_window_unbounded</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window_unbounded">end_of_window_unbounded</A> <SPAN CLASS="ekeyword">or else</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="ekeyword">then</SPAN>
+						<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+							<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_neg_start_pos_end_window_msg">neg_start_pos_end_window_msg</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+						<SPAN CLASS="ekeyword">end</SPAN>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_invalid_window_msg">invalid_window_msg</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window_not_valid">end_of_window_not_valid</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window_not_valid">start_of_window_not_valid</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_spec_error">window_spec_error</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">msg</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_window_mode_make_a_step"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_mode_make_a_step">window_mode_make_a_step</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">line</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_software_operation_flat.html">ETF_SOFTWARE_OPERATION</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">-</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec">exec</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_retrieve_context_state_from_exec_log">retrieve_context_state_from_exec_log</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_make">make</A>
+					<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler_flat.html#f_model_state">model_state</A><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="esymbol">&lt;</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec">exec</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">line</SPAN> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="ekeyword">and</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">&gt;</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_without_log">exec_without_log</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> init</SPAN>
+
+	<A NAME="f_initialize_attributes"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_initialize_attributes">initialize_attributes</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_spec_error">window_spec_error</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_make">make</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> initialise and execute commands</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="elocal">input_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="elocal">output_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_file_utility_flat.html">ETF_FILE_UTILITY</A>
+			<SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">PLAIN_TEXT_FILE</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">0</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_initialize_attributes">initialize_attributes</A>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">]</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-help&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_usage_msg">usage_msg</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-version&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_version_msg">version_msg</A>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-g&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface_flat.html#f_make">make_from_gui_root</A>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-i&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_interactive_mode">handle_interactive_mode</A>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-b&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">2</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<SPAN CLASS="elocal">input_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">]</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_batch_mode">handle_batch_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">3</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<SPAN CLASS="elocal">input_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">]</SPAN>
+						<SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+						<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_read_text_from">read_text_from</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+						<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
+							<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_with_name</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">output_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+							<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">exists</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+								<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_remove_comment_lines">remove_comment_lines</A>
+								<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_batch_file_mode">handle_batch_file_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+							<SPAN CLASS="ekeyword">else</SPAN>
+								<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: output file &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; already exists!&quot;
+							<SPAN CLASS="ekeyword">end</SPAN>
+						<SPAN CLASS="ekeyword">else</SPAN>
+							<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_error_string">error_string</A>
+						<SPAN CLASS="ekeyword">end</SPAN>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-w&quot; <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-l&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-w&quot; <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">4</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">5</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-l&quot; <SPAN CLASS="ekeyword">and then</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">2</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;-w&quot; <SPAN CLASS="ekeyword">then</SPAN>
+							<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_validate_window_spec">validate_window_spec</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+							<SPAN CLASS="elocal">input_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">4</SPAN><SPAN CLASS="esymbol">]</SPAN>
+							<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">5</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+								<SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">5</SPAN><SPAN CLASS="esymbol">]</SPAN>
+							<SPAN CLASS="ekeyword">else</SPAN>
+								<SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
+							<SPAN CLASS="ekeyword">end</SPAN>
+						<SPAN CLASS="ekeyword">else</SPAN>
+							<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_last_window_slice_specified">last_window_slice_specified</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+							<SPAN CLASS="elocal">input_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">2</SPAN><SPAN CLASS="esymbol">]</SPAN>
+							<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="nefeature">argument_count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">3</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+								<SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">]</SPAN>
+							<SPAN CLASS="ekeyword">else</SPAN>
+								<SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
+							<SPAN CLASS="ekeyword">end</SPAN>
+						<SPAN CLASS="ekeyword">end</SPAN>
+						<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_spec_error">window_spec_error</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+							<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_read_text_from">read_text_from</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+							<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
+								<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">output_path</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+									<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_with_name</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">output_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+									<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">exists</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+										<SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">open_append</SPAN>
+										<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_file_default</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+										<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+										<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_remove_comment_lines">remove_comment_lines</A>
+										<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_window_mode">handle_window_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+										<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_output_default</SPAN>
+									<SPAN CLASS="ekeyword">else</SPAN>
+										<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: output file &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">output_path</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; already exists!&quot;
+									<SPAN CLASS="ekeyword">end</SPAN>
+								<SPAN CLASS="ekeyword">else</SPAN>
+									<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_is_init">is_init</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+									<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_remove_comment_lines">remove_comment_lines</A>
+									<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_window_mode">handle_window_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+								<SPAN CLASS="ekeyword">end</SPAN>
+							<SPAN CLASS="ekeyword">else</SPAN>
+								<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_error_string">error_string</A>
+							<SPAN CLASS="ekeyword">end</SPAN>
+						<SPAN CLASS="ekeyword">else</SPAN>
+							<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_spec_error">window_spec_error</A>
+						<SPAN CLASS="ekeyword">end</SPAN>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_invalid_flag_msg">invalid_flag_msg</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_flag_missing_msg">flag_missing_msg</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">print</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">msg</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="echar">'%N'</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">print</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> message queries</SPAN>
+
+	<A NAME="f_end_of_window_not_valid"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window_not_valid">end_of_window_not_valid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: the end of window is neither a valid integer nor '_'&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_error"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_error">error</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">err_msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">err_msg</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;
+			<SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_ref_msg">ref_msg</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_flag_missing_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_flag_missing_msg">flag_missing_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: a mode is not specified&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_invalid_flag_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_invalid_flag_msg">invalid_flag_msg</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: '&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;' is not a valid mode&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_invalid_flag_msg_or_num_args"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_invalid_flag_msg_or_num_args">invalid_flag_msg_or_num_args</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">f</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: either &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">f</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; is not a valid option, or &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">f</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; is not specified with the correct number of arguments&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_invalid_window_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_invalid_window_msg">invalid_window_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: a window [start, end) should be such that start &lt;= end&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_neg_start_pos_end_window_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_neg_start_pos_end_window_msg">neg_start_pos_end_window_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: when the start of a window is non-positive, its end must be a non-positive number&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_ref_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_ref_msg">ref_msg</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Run '&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -help' to see more details&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_start_of_window_not_valid"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window_not_valid">start_of_window_not_valid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: the start of window is not a valid integer&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_usage_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_usage_msg">usage_msg</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;The executable &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; may be invoked as: %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%T&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -help %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%T&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -version %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%T&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -i %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%T&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -b     input.txt [output.txt] %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%T&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -w m n input.txt [output.txt] %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%T&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot; -l     input.txt [output.txt] %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;where %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot; ====================================%N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;  Option %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;    -g  gui mode: run the ETF project as a GUI %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;    -i  interactive mode: read the event trace from console %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;    -b  batch mode: read the event trace from file 'input.txt' %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        Note. An output file is specified to log results of a large input file. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;    -w  window mode: same as batch mode, except that only results of the %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        m^th to (n-1)^th input commands, when m &gt; 0 and n &gt; 0, are logged into the output file. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        Use negative numbers -1, -2, etc., to denote the last, 2nd last, etc, input commands. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        Constraints: 1. if m &lt;= 0, then n &lt;= 0 %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                     2. if m &gt;  0, then n &gt;  0 %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                     3. m &lt;= n %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        Note. A window with valid start 'm' and end 'n' has the log: %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;              S_m C_m S_m+1 C_m+1 ... S_n Cn S_n+1 %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;              where S_i and S_i+1, m &lt;= i &lt;= n, denote the starting and resulting states of command C_i %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        Note. When m = n, only the starting state of the input command denoted by 'm' is logged. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;        Examples. Use '1   1' as the window to log the initial state. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use '1   2' as the window to log the 1st command and its starting and resulting states. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use '2   2' as the window to log the starting state of the 2st command. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use '-1 -1' as the window to log the resulting state of the 2nd last command. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use '-1  0' as the window to log the last command and its starting and resulting states. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use '0   0' as the window to log the final state. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use 'm   _' (m &gt; 0) as the window to log the m^th to the last commands. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;                  Use 'm   _' (m &lt; 0) as the window to log the m^th last to the last commands. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot;    -l last mode: a special case of the -w mode with the window specified as '-1 0' or '-1 _'. %N&quot; <SPAN CLASS="esymbol">+</SPAN> &quot; ====================================&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_version_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_version_msg">version_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Eiffel Testing Framework (ETF) Version: &quot; <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_etf_version">Etf_version</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_wrong_arguments_for_mode"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_arguments_for_mode">wrong_arguments_for_mode</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">flag</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: wrong number of arguments for the '&quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">flag</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;' mode&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_wrong_defns_file_chosen_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_defns_file_chosen_msg">Wrong_defns_file_chosen_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN> <SPAN CLASS="esymbol">=</SPAN> &quot;Application quit: please choose the right file with event declaratons&quot;
+
+	<A NAME="f_wrong_num_args_msg"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_wrong_num_args_msg">wrong_num_args_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;Error: wrong number of arguments&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> mode handling procedures</SPAN>
+
+	<A NAME="f_handle_batch_file_mode"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_batch_file_mode">handle_batch_file_mode</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_file_utility_flat.html">ETF_FILE_UTILITY</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">PLAIN_TEXT_FILE</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> assumptions: 1. input_path denotes an existing file</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. output_path denotes an non-existing file</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">j</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+			<SPAN CLASS="elocal">j</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+			<SPAN CLASS="ekeyword">across</SPAN>
+				<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_items">items</A> <SPAN CLASS="ekeyword">as</SPAN> line
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_chunk_size_for_file_mode">Chunk_size_for_file_mode</A> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_batch_file_mode_make_a_step">batch_file_mode_make_a_step</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+					<SPAN CLASS="elocal">j</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">j</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+					<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_chunk_size_for_file_mode">Chunk_size_for_file_mode</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_batch_file_mode_make_a_step">batch_file_mode_make_a_step</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">output_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_handle_batch_mode"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_batch_mode">handle_batch_mode</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_file_utility_flat.html">ETF_FILE_UTILITY</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_read_text_from">read_text_from</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_remove_comment_lines">remove_comment_lines</A>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec">exec</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_item">item</A><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_error_string">error_string</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_handle_interactive_mode"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_interactive_mode">handle_interactive_mode</A>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">user_input</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="elocal">to_quit</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+			<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_software_operation_flat.html">ETF_SOFTWARE_OPERATION</A>
+			<SPAN CLASS="elocal">input</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_input_handler_flat.html">ETF_INPUT_HANDLER</A>
+			<SPAN CLASS="elocal">output</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_cmd_line_output_handler_flat.html">ETF_CMD_LINE_OUTPUT_HANDLER</A>
+			<SPAN CLASS="elocal">ui</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_abstract_ui_flat.html">ETF_ABSTRACT_UI</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_make">make</A>
+			<SPAN CLASS="ekeyword">from</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler_flat.html#f_model_state">model_state</A>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">print</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="elocal">to_quit</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+			<SPAN CLASS="ekeyword">until</SPAN>
+				<SPAN CLASS="elocal">to_quit</SPAN>
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">print</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;-&gt;&quot;<SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">read_line</SPAN>
+				<SPAN CLASS="elocal">user_input</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">last_string</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">user_input</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;quit&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">to_quit</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+				<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="elocal">user_input</SPAN> <SPAN CLASS="esymbol">~</SPAN> &quot;man&quot; <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">print</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_man_page">Man_page</A> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">ui</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface_flat.html#f_make">make</A>
+					<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">input</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface_flat.html#f_make_without_running">make_without_running</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">user_input</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">ui</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">output</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler_flat.html#f_make">make</A>
+					<SPAN CLASS="elocal">input</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface_flat.html#f_on_error">on_error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event_flat.html#f_attach">attach</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">agent</SPAN> <SPAN CLASS="elocal">output</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_flat.html#f_log_error">log_error</A><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="elocal">input</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface_flat.html#f_parse_and_validate_input_string">parse_and_validate_input_string</A>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">input</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface_flat.html#f_etf_error">etf_error</A> <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">output</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface_flat.html#f_error_message">error_message</A> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_execute_without_log">execute_without_log</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">user_input</SPAN><SPAN CLASS="esymbol">)</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">sys</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface_flat.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler_flat.html#f_model_state">model_state</A>
+					<SPAN CLASS="ekeyword">end</SPAN>
+					<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">print</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_exec_log">exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_handle_window_mode"></A><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_handle_window_mode">handle_window_mode</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_file_utility_flat.html">ETF_FILE_UTILITY</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> assumption: input file exists</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">k</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="elocal">num_cmds</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_items">items</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_last_window_slice_specified">last_window_slice_specified</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window_unbounded">end_of_window_unbounded</A> <SPAN CLASS="ekeyword">then</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="elocal">k</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">across</SPAN>
+				<SPAN CLASS="elocal">input_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility_flat.html#f_items">items</A> <SPAN CLASS="ekeyword">as</SPAN> line
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="elocal">k</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">k</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">k</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">line</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_window_mode_make_a_step">window_mode_make_a_step</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">k</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="elocal">input_file_chunk</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_start_of_window">start_of_window</A> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">and then</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_end_of_window">end_of_window</A> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="elocal">num_cmds</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_cmd_line_root_interface_flat.html#f_context_state_from_exec_log">context_state_from_exec_log</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">invariant</SPAN>
+		<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ARGUMENTS</SPAN>
+	<SPAN CLASS="etag">argument_array_consistent</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">Argument_array</SPAN> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="nefeature">internal_argument_array</SPAN>
+
+		<SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">from </SPAN><SPAN CLASS="neclass">ANY</SPAN>
+	<SPAN CLASS="etag">reflexive_equality</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">standard_is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">)</SPAN>
+	<SPAN CLASS="etag">reflexive_conformance</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="nefeature">conforms_to</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">)</SPAN>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_cmd_line_root_interface_flat.html">ETF_CMD_LINE_ROOT_INTERFACE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface.html">Text</A></TD>
+<TD CLASS="nolink2">Flat</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_cmd_line_root_interface_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_cmd_line_root_interface"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

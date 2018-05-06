@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Summary description for {ROOT}."/>
+<meta name="author" content="JSO and Jackie Wang"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_gui_root_interface Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_gui_root_interface"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../root/root.html">ROOT</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO and Jackie Wang&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface.html">ETF_GUI_ROOT_INTERFACE</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Commands</SPAN>
+
+	<A NAME="f_show_history"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_show_history">show_history</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> When the GUI is launched, show the history panel</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> which displays the trace of events.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_is_history_shown">is_history_shown</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_hide_history"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_hide_history">hide_history</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> When the GUI is launch, do not show the history panel.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_is_history_shown">is_history_shown</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Attributes</SPAN>
+
+	<A NAME="f_gui"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_gui">gui</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../tracker/etf_gui.html">ETF_GUI</A>
+
+	<A NAME="f_is_history_shown"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_is_history_shown">is_history_shown</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_make">make</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization for </SPAN><SPAN CLASS="equoted">Current</SPAN><SPAN CLASS="ecomment">.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_gui">gui</A>
+			<SPAN CLASS="ekeyword">check</SPAN>
+					<SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_gui">gui</A> <SPAN CLASS="ekeyword">as</SPAN> g
+			<SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_gui_root_interface.html#f_is_history_shown">is_history_shown</A> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">g</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_gui.html#f_main_window">main_window</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">show</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="elocal">g</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_gui.html#f_main_window">main_window</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">hide</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="elocal">g</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">launch</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_gui_root_interface.html">ETF_GUI_ROOT_INTERFACE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_gui_root_interface_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_gui_root_interface"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

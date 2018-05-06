@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Summary description for {NEW_TRACKER}."/>
+<meta name="author" content=""/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>new_tracker Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="new_tracker"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/new_tracker_short.html">NEW_TRACKER</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../tracker/new_tracker_short.html">NEW_TRACKER</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes</SPAN>
+
+	<A NAME="f_errors"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_errors">errors</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors_short.html">ERRORS</A>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+
+	<A NAME="f_max_phase"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_max_phase">max_phase</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN>
+
+	<A NAME="f_max_cont"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_max_cont">max_cont</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN>
+
+	<A NAME="f_is_invalid"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_is_invalid">is_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_is_already_in_use"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_is_already_in_use">is_already_in_use</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_is_max_phase_neg"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_is_max_phase_neg">is_max_phase_neg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_is_container_neg"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_is_container_neg">is_container_neg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+
+	<A NAME="f_is_container_greater_phase"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_is_container_greater_phase">is_container_greater_phase</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> commands</SPAN>
+
+	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_error_check">error_check</A>
+
+	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_execute">execute</A>
+
+	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_undo">undo</A>
+
+	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_redo">redo</A>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_out"></A><A CLASS="efeature" HREF="../tracker/new_tracker_short.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/new_tracker_short.html">NEW_TRACKER</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="new_tracker"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

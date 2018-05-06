@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Parser token codes"/>
+<meta name="generator" content="geyacc version 3.9"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_evt_tokens Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_evt_tokens"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Parser token codes&quot;</SPAN>
+	<SPAN CLASS="eitag">generator</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;geyacc version 3.9&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../generated_code/etf_evt_tokens_short.html">ETF_EVT_TOKENS</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Last values</SPAN>
+
+	<A NAME="f_last_detachable_any_value"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_last_detachable_any_value">last_detachable_any_value</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <SPAN CLASS="neclass">ANY</SPAN>
+
+	<A NAME="f_last_integer_value"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_last_integer_value">last_integer_value</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+
+	<A NAME="f_last_real_value"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_last_real_value">last_real_value</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">REAL_32</SPAN>
+
+	<A NAME="f_last_string_value"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_last_string_value">last_string_value</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access</SPAN>
+
+	<A NAME="f_token_name"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_token_name">token_name</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_token</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Name of token </SPAN><SPAN CLASS="equoted">a_token</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Token codes</SPAN>
+
+	<A NAME="f_number"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_number">Number</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">258</SPAN>
+
+	<A NAME="f_real"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_real">Real</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">259</SPAN>
+
+	<A NAME="f_ident"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_ident">Ident</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">260</SPAN>
+
+	<A NAME="f_char_lit"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_char_lit">Char_lit</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">261</SPAN>
+
+	<A NAME="f_str_lit"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_str_lit">Str_lit</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">262</SPAN>
+
+	<A NAME="f_tk_system"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_system">Tk_system</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">263</SPAN>
+
+	<A NAME="f_tk_bool"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_bool">Tk_bool</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">264</SPAN>
+
+	<A NAME="f_tk_boolean"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_boolean">Tk_boolean</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">265</SPAN>
+
+	<A NAME="f_tk_char"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_char">Tk_char</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">266</SPAN>
+
+	<A NAME="f_tk_character"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_character">Tk_character</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">267</SPAN>
+
+	<A NAME="f_tk_int"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_int">Tk_int</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">268</SPAN>
+
+	<A NAME="f_tk_integer"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_integer">Tk_integer</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">269</SPAN>
+
+	<A NAME="f_tk_real"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_real">Tk_real</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">270</SPAN>
+
+	<A NAME="f_tk_str"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_str">Tk_str</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">271</SPAN>
+
+	<A NAME="f_tk_value"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_value">Tk_value</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">272</SPAN>
+
+	<A NAME="f_tk_tuple"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_tuple">Tk_tuple</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">273</SPAN>
+
+	<A NAME="f_tk_array"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_array">Tk_array</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">274</SPAN>
+
+	<A NAME="f_tk_true"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_true">Tk_true</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">275</SPAN>
+
+	<A NAME="f_tk_false"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_false">Tk_false</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">276</SPAN>
+
+	<A NAME="f_tk_comma"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_comma">Tk_comma</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">277</SPAN>
+
+	<A NAME="f_tk_colon"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_colon">Tk_colon</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">278</SPAN>
+
+	<A NAME="f_tk_semi_colon"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_semi_colon">Tk_semi_colon</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">279</SPAN>
+
+	<A NAME="f_tk_lparen"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_lparen">Tk_lparen</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">280</SPAN>
+
+	<A NAME="f_tk_rparen"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_rparen">Tk_rparen</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">281</SPAN>
+
+	<A NAME="f_tk_lsbrac"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_lsbrac">Tk_lsbrac</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">282</SPAN>
+
+	<A NAME="f_tk_rsbrac"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_rsbrac">Tk_rsbrac</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">283</SPAN>
+
+	<A NAME="f_tk_labrac"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_labrac">Tk_labrac</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">284</SPAN>
+
+	<A NAME="f_tk_rabrac"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_rabrac">Tk_rabrac</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">285</SPAN>
+
+	<A NAME="f_tk_lcbrac"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_lcbrac">Tk_lcbrac</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">286</SPAN>
+
+	<A NAME="f_tk_rcbrac"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_rcbrac">Tk_rcbrac</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">287</SPAN>
+
+	<A NAME="f_tk_dquote"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_dquote">Tk_dquote</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">288</SPAN>
+
+	<A NAME="f_tk_minus"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_minus">Tk_minus</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">289</SPAN>
+
+	<A NAME="f_tk_upto"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_upto">Tk_upto</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">290</SPAN>
+
+	<A NAME="f_tk_type"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_type">Tk_type</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">291</SPAN>
+
+	<A NAME="f_tk_eq"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_tk_eq">Tk_eq</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">292</SPAN>
+
+	<A NAME="f_eol"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_tokens_short.html#f_eol">Eol</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">293</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_evt_tokens_short.html">ETF_EVT_TOKENS</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_tokens_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_evt_tokens"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

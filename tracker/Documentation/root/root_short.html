@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Central control for running an ETF project."/>
+<meta name="author" content="JSO and Jackie Wang"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>root Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="root"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Central control for running an ETF project.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO and Jackie Wang&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../root/root_short.html">ROOT</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../root/root_short.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constants</SPAN>
+<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unit Testing mode</SPAN>
+
+	<A NAME="f_unit_test"></A><A CLASS="efeature" HREF="../root/root_short.html#f_unit_test">Unit_test</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> GUI mode</SPAN>
+
+	<A NAME="f_etf_gui_show_history"></A><A CLASS="efeature" HREF="../root/root_short.html#f_etf_gui_show_history">Etf_gui_show_history</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">2</SPAN>
+
+	<A NAME="f_etf_gui_hide_history"></A><A CLASS="efeature" HREF="../root/root_short.html#f_etf_gui_hide_history">Etf_gui_hide_history</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">3</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> command-line mode</SPAN>
+
+	<A NAME="f_etf_cl_show_history"></A><A CLASS="efeature" HREF="../root/root_short.html#f_etf_cl_show_history">Etf_cl_show_history</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">4</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> show history if '-g' option is specified</SPAN>
+
+	<A NAME="f_etf_cl_hide_history"></A><A CLASS="efeature" HREF="../root/root_short.html#f_etf_cl_hide_history">Etf_cl_hide_history</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">5</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> hide history if '-g' option is specified</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Attributes</SPAN>
+
+	<A NAME="f_switch"></A><A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Running mode of ETF application.</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Tests</SPAN>
+
+	<A NAME="f_add_tests"></A><A CLASS="efeature" HREF="../root/root_short.html#f_add_tests">add_tests</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> test classes to be run in unit_test mode</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+				<A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_unit_test">Unit_test</A>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constructor</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../root/root_short.html#f_make">make</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialize ETF application.</SPAN>
+	
+<SPAN CLASS="ekeyword">invariant</SPAN>
+	<SPAN CLASS="etag">valid_switch</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_unit_test">Unit_test</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_etf_gui_show_history">Etf_gui_show_history</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_etf_gui_hide_history">Etf_gui_hide_history</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_etf_cl_show_history">Etf_cl_show_history</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_switch">switch</A> <SPAN CLASS="esymbol">=</SPAN> <A CLASS="efeature" HREF="../root/root_short.html#f_etf_cl_hide_history">Etf_cl_hide_history</A>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../root/root_short.html">ROOT</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="root_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="root"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

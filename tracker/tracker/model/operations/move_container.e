@@ -94,10 +94,10 @@ feature
 		do
 			if not is_container_in_tracker then
 				error_string := error.e15
-			elseif not does_phase_exist then
-				error_string := error.e9
 			elseif are_pids_same then
 				error_string := error.e16
+			elseif not does_phase_exist then
+				error_string := error.e9
 			elseif not is_container_in_source then
 				error_string := error.e17
 			elseif not new_phase_accepts_mat then

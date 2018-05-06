@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Operate abstract user interface"/>
+<meta name="author" content="JSO and Jackie Wang"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_software_operation_interface Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_software_operation_interface"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Operate abstract user interface&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO and Jackie Wang&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../generated_code/etf_software_operation_interface.html">ETF_SOFTWARE_OPERATION_INTERFACE</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_make">make</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> initialize input, output, ui</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_initialize_attributes">initialize_attributes</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_initialize_attributes"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_initialize_attributes">initialize_attributes</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> initialize attributes</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and attach output handlers</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler.html#f_make">make</A>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_make">make</A>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_make_without_running">make_without_running</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_dummy_command">Dummy_command</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes</SPAN>
+
+	<A NAME="f_ui"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_abstract_ui.html">ETF_ABSTRACT_UI</A>
+
+	<A NAME="f_input"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_input_handler.html">ETF_INPUT_HANDLER</A>
+
+	<A NAME="f_output"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_cmd_line_output_handler.html">ETF_CMD_LINE_OUTPUT_HANDLER</A>
+
+	<A NAME="f_dummy_command"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_dummy_command">Dummy_command</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN> <SPAN CLASS="esymbol">=</SPAN> &quot;&quot;
+
+	<A NAME="f_error"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_error">error</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Commands</SPAN>
+
+	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_execute">execute</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmds</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">is_init</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Parse input string </SPAN><SPAN CLASS="equoted">cmds</SPAN><SPAN CLASS="ecomment"> as a list of commands</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If no input errors,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 		then execute commands and log to 'output'</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 		note. when 'is_init', log the initial state</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If errors,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 		then report errors to 'output'</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_initialize_attributes">initialize_attributes</A>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_on_change">on_change</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event.html#f_attach">attach</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">agent</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler.html#f_log_command">log_command</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_make_without_running">make_without_running</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmds</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_on_error">on_error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event.html#f_attach">attach</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">agent</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface.html#f_log_error">log_error</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_parse_and_validate_input_string">parse_and_validate_input_string</A>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_etf_error">etf_error</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">is_init</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_cmd_line_output_handler.html#f_log_model_state">log_model_state</A>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_run_input_commands">run_input_commands</A>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_error">error</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_etf_error">etf_error</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_execute_without_log"></A><A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_execute_without_log">execute_without_log</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmds</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Parse input string </SPAN><SPAN CLASS="equoted">cmds</SPAN><SPAN CLASS="ecomment"> as a list of commands</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If no input errors,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 		then execute commands without writing to a log</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If errors,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 		then report errors to 'output'</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_initialize_attributes">initialize_attributes</A>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_on_change">on_change</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event.html#f_attach">attach</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">agent</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface.html#f_log_empty">log_empty</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_make_without_running">make_without_running</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmds</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_on_error">on_error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event.html#f_attach">attach</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">agent</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_output_handler_interface.html#f_log_error">log_error</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_parse_and_validate_input_string">parse_and_validate_input_string</A>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_etf_error">etf_error</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_ui">ui</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_run_input_commands">run_input_commands</A>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_error">error</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../generated_code/etf_software_operation_interface.html#f_input">input</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_input_handler_interface.html#f_etf_error">etf_error</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_software_operation_interface.html">ETF_SOFTWARE_OPERATION_INTERFACE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_software_operation_interface_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_software_operation_interface"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

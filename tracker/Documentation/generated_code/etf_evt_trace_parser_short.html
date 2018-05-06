@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_evt_trace_parser Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_evt_trace_parser"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../generated_code/etf_evt_trace_parser_short.html">ETF_EVT_TRACE_PARSER</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> create</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">param_types</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">HASH_TABLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">LINKED_LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../generated_code/etf_param_type_short.html">ETF_PARAM_TYPE</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">items</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">HASH_TABLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Create a event trace parser.</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> access &nbsp;</SPAN>
+
+	<A NAME="f_event_trace"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_event_trace">event_trace</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">name</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">args</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">]</SPAN>
+
+	<A NAME="f_last_error"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_last_error">last_error</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_evt_param_types"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_evt_param_types">evt_param_types</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">HASH_TABLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">LINKED_LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../generated_code/etf_param_type_short.html">ETF_PARAM_TYPE</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN>
+
+	<A NAME="f_enum_items"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_enum_items">enum_items</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">HASH_TABLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> context</SPAN>
+
+	<A NAME="f_current_evt"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_current_evt">current_evt</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_current_param"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_current_param">current_param</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_param_type_short.html">ETF_PARAM_TYPE</A>
+
+	<A NAME="f_value_to_int_or_real"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_value_to_int_or_real">value_to_int_or_real</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">param_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_param_type_short.html">ETF_PARAM_TYPE</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A>
+
+	<A NAME="f_value_to_int_or_real_primitive"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_value_to_int_or_real_primitive">value_to_int_or_real_primitive</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">param_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_primitive_param_type_short.html">ETF_PRIMITIVE_PARAM_TYPE</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A>
+
+	<A NAME="f_value_to_int_or_real_tuple"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_value_to_int_or_real_tuple">value_to_int_or_real_tuple</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">param_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_tuple_param_short.html">ETF_TUPLE_PARAM</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A>
+
+	<A NAME="f_value_to_int_or_real_composite"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_value_to_int_or_real_composite">value_to_int_or_real_composite</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">param_type</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_array_param_short.html">ETF_ARRAY_PARAM</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A>
+
+	<A NAME="f_value_to_int"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_value_to_int">value_to_int</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A>
+
+	<A NAME="f_value_to_real"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_value_to_real">value_to_real</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">arg</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_evt_arg_short.html">ETF_EVT_ARG</A>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> parsing</SPAN>
+
+	<A NAME="f_report_error"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_report_error">report_error</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_message</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Print error message.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (This routine is called by default by </SPAN><SPAN CLASS="nefeature">parse</SPAN><SPAN CLASS="ecomment"> when it</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> detects a syntax error and there is no error action</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> %error available. It can be redefined in descendants.)</SPAN>
+
+	<A NAME="f_parse_string"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_parse_string">parse_string</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">str</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> parse the text of this given string</SPAN>
+
+	<A NAME="f_parse_file"></A><A CLASS="efeature" HREF="../generated_code/etf_evt_trace_parser_short.html#f_parse_file">parse_file</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">filename</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> parse the text of the given input file</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../generated_code/etf_evt_trace_parser_short.html">ETF_EVT_TRACE_PARSER</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="etf_evt_trace_parser_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_evt_trace_parser"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

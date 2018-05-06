@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Summary description for {REMOVE_CONTAINER}."/>
+<meta name="author" content=""/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>remove_container Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="remove_container"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/remove_container.html">REMOVE_CONTAINER</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../tracker/remove_container.html">REMOVE_CONTAINER</A>
+
+<SPAN CLASS="ekeyword">inherit</SPAN>
+	<A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A>
+		<SPAN CLASS="ekeyword">redefine</SPAN>
+			<A CLASS="efeature" HREF="../tracker/remove_container.html#f_out">out</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../tracker/remove_container.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cid_given</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">st_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">val_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/remove_container.html#f_cid">cid</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">cid_given</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">msg</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">st_id</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">val_id</SPAN>
+			<A CLASS="efeature" HREF="../tracker/remove_container.html#f_fillernum">fillernum</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">-1</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_filler2">filler2</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_int</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">-1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">at</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cid_given</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">as</SPAN> cnat <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cnat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_cid">cid</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">cnat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_mat">mat</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cnat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_radioac">radioac</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cnat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;-1&quot;<SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="efeature" HREF="../tracker/remove_container.html#f_fillernum">fillernum</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_filler2">filler2</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">,</SPAN> &quot;-1&quot;<SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_cid"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_cid">cid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_error"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_error">error</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A>
+
+	<A NAME="f_cn"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/material_container.html">MATERIAL_CONTAINER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &quot;filler&quot; objects with illegal values if the cid/pids given don't exist</SPAN>
+
+	<A NAME="f_fillernum"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_fillernum">fillernum</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+
+	<A NAME="f_filler2"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_filler2">filler2</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN>
+
+	<A NAME="f_is_invalid"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_is_invalid">is_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_does_container_exist">does_container_exist</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_does_container_exist"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_does_container_exist">does_container_exist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">across</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A> <SPAN CLASS="ekeyword">as</SPAN> target_container
+			<SPAN CLASS="ekeyword">some</SPAN>
+				<SPAN CLASS="elocal">target_container</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_cid">cid</A> <SPAN CLASS="esymbol">~</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_cid">cid</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_error_check">error_check</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_does_container_exist">does_container_exist</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e15">e15</A>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_execute">execute</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_remove_container">remove_container</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_container.html#f_cid">cid</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_undo">undo</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_new_container">new_container</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_cid">cid</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_mat">mat</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_radioac">radioac</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_state_i">set_state_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_redo">redo</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/remove_container.html#f_execute">execute</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_out"></A><A CLASS="efeature" HREF="../tracker/remove_container.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/remove_container.html">REMOVE_CONTAINER</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="remove_container_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="remove_container"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

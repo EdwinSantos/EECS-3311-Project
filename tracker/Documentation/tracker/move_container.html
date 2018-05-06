@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<meta name="description" content="Summary description for {MOVE_CONTAINER}."/>
+<meta name="author" content=""/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>move_container Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="move_container"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/move_container.html">MOVE_CONTAINER</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../tracker/move_container.html">MOVE_CONTAINER</A>
+
+<SPAN CLASS="ekeyword">inherit</SPAN>
+	<A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A>
+		<SPAN CLASS="ekeyword">redefine</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_out">out</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../tracker/move_container.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cid_given</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">pid_old_given</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">pid_new_given</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">st_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">val_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">cid_given</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_old">pid_old</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">pid_old_given</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">pid_new_given</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">msg</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">st_id</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">val_id</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_fillernum">fillernum</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">-1</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_filler2">filler2</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_int</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">-1</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">at</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cid_given</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">as</SPAN> cnatt <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cnatt</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_cid">cid</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">cnatt</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_mat">mat</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cnatt</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_radioac">radioac</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">cnatt</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;-1&quot;<SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_fillernum">fillernum</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_filler2">filler2</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">,</SPAN> &quot;-1&quot;<SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_cid"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_pid_old"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_old">pid_old</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_pid_new"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_error"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &quot;filler&quot; objects with illegal values if the cid/pids given don't exist</SPAN>
+
+	<A NAME="f_fillernum"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_fillernum">fillernum</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+
+	<A NAME="f_filler2"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_filler2">filler2</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN>
+
+	<A NAME="f_cn"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/material_container.html">MATERIAL_CONTAINER</A>
+
+	<A NAME="f_is_invalid"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_is_invalid">is_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_is_container_in_tracker">is_container_in_tracker</A>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_are_pids_same">are_pids_same</A>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_does_phase_exist">does_phase_exist</A>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_does_new_phase_exceeds_capacity">does_new_phase_exceeds_capacity</A>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_does_radiation_exceed_capacity">does_radiation_exceed_capacity</A>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_new_phase_accepts_mat">new_phase_accepts_mat</A>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_is_container_in_source">is_container_in_source</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_does_phase_exist"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_does_phase_exist">does_phase_exist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_does_phase_exist">does_phase_exist</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_old">pid_old</A><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_does_phase_exist">does_phase_exist</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_is_container_in_tracker"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_is_container_in_tracker">is_container_in_tracker</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">has</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_are_pids_same"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_are_pids_same">are_pids_same</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_old">pid_old</A> <SPAN CLASS="esymbol">~</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_does_new_phase_exceeds_capacity"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_does_new_phase_exceeds_capacity">does_new_phase_exceeds_capacity</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_phase_with_pid">get_phase_with_pid</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_is_full">is_full</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_does_radiation_exceed_capacity"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_does_radiation_exceed_capacity">does_radiation_exceed_capacity</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_phase_with_pid">get_phase_with_pid</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_currentrad">currentrad</A> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_radioac">radioac</A><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="esymbol">&gt;</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_tracker">tracker</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/tracker.html#f_max_phase_radiation">max_phase_radiation</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_new_phase_accepts_mat"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_new_phase_accepts_mat">new_phase_accepts_mat</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_phase_with_pid">get_phase_with_pid</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_accepts_material">accepts_material</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_mat">mat</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_is_container_in_source"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_is_container_in_source">is_container_in_source</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_pid">pid</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_equal</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_old">pid_old</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_error_check">error_check</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_is_container_in_tracker">is_container_in_tracker</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e15">e15</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_are_pids_same">are_pids_same</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e16">e16</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_does_phase_exist">does_phase_exist</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e9">e9</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_is_container_in_source">is_container_in_source</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e17">e17</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_new_phase_accepts_mat">new_phase_accepts_mat</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e13">e13</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_does_new_phase_exceeds_capacity">does_new_phase_exceeds_capacity</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e11">e11</A>
+			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_does_radiation_exceed_capacity">does_radiation_exceed_capacity</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e12">e12</A>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_execute">execute</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_movetophase">movetophase</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_new">pid_new</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_remove_container">remove_container</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_new_container">new_container</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_mat">mat</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_radioac">radioac</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_undo">undo</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_movetophase">movetophase</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_pid_old">pid_old</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_remove_container">remove_container</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_new_container">new_container</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/move_container.html#f_cid">cid</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_mat">mat</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_radioac">radioac</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/move_container.html#f_cn">cn</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/material_container.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_state_i">set_state_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_redo">redo</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../tracker/move_container.html#f_execute">execute</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_out"></A><A CLASS="efeature" HREF="../tracker/move_container.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/move_container.html">MOVE_CONTAINER</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_container_short.html">Contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="move_container"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+
