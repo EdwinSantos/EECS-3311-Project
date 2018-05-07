@@ -1,0 +1,5 @@
+-- Error test 1
+new_tracker(20,10)
+new_phase("pid1", "someothername", 3, <<glass, metal, plastic, liquid>>)
+new_container("cid2", [liquid,  1], "pid1")
+new_tracker(20,10) -- error e1
