@@ -1,0 +1,22 @@
+undo
+redo
+new_tracker(20,10)
+new_phase("pid1", "someothername", 3, <<glass, metal, plastic, liquid>>)
+new_container("cid2", [liquid,  1], "pid1")
+undo
+undo
+new_tracker(200,10)
+undo
+redo
+new_tracker(500,100)
+new_phase("pid2", "some new name", 3, <<glass, metal, plastic, liquid>>)
+new_container("something",[glass, 6],"")
+new_container("something",[glass, 6],"")
+undo
+redo
+redo
+undo
+redo
+new_container("something",[glass, 6],"pid2")
+new_phase("pid3", "some new name", 3, <<metal, plastic, liquid>>)
+move_container("something","pid2","pid3)

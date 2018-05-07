@@ -1,0 +1,18 @@
+-- student at1
+new_tracker(20,10)
+new_phase("pid1", "someothername", 3, <<glass, metal, plastic, liquid>>)
+new_phase("pid2", "hello", 2, <<glass, plastic>>)
+new_container("cid2", [liquid,  1], "pid1")
+new_container("cid2", [liquid,  1], "pid1") -- error
+new_container("cid3", [liquid,  1], "pid1") 
+new_container("cid4", [liquid,  1], "pid1")
+new_container("cid5", [liquid,  1], "pid1") -- error
+undo
+undo
+undo
+redo
+redo
+redo
+move_container("cid4","pid1","pid2") -- error
+undo
+new_container("cid7", [glass,  1], "pid2")
