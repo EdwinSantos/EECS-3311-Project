@@ -1,0 +1,2 @@
+-- Error test 2
+new_tracker(-10,5) -- error e2

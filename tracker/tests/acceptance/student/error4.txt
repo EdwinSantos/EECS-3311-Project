@@ -1,0 +1,2 @@
+-- Error test 4
+new_tracker(40,60) -- error e4

@@ -1,0 +1,5 @@
+-- Error test 15
+new_tracker(20,10)
+new_phase("pid0", "somename", 3, <<glass, metal, plastic, liquid>>)
+new_phase("pid1", "someothername", 3, <<glass, metal, plastic, liquid>>)
+move_container("cid0","pid0", "pid1") -- error 15

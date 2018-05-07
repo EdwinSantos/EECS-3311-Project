@@ -1,0 +1,4 @@
+-- Error test 6
+new_tracker(20,20)
+new_phase("pid0", "somename", 2, <<glass, metal, plastic, liquid>>)
+new_phase("pid0", "someothername", 2, <<glass, metal, plastic, liquid>>) -error e6

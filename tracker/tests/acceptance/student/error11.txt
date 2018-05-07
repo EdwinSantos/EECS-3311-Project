@@ -1,0 +1,6 @@
+-- Error test 11
+new_tracker(20,20)
+new_phase("pid0", "somename", 2, <<glass, metal, plastic, liquid>>)
+new_container("cid2", [liquid,  1], "pid0")
+new_container("cid3", [liquid,  1], "pid0")
+new_container("cid4", [liquid,  1], "pid0") -error e11

@@ -1,0 +1,6 @@
+-- Error test 17
+new_tracker(20,10)
+new_phase("pid0", "someothername", 3, <<glass, metal, plastic, liquid>>)
+new_phase("pid1", "someothername", 3, <<glass, metal, plastic, liquid>>)
+new_container("cid2", [liquid,  1], "pid0")
+move_container("cid2","pid1", "pid0") -- error 17

@@ -1,0 +1,4 @@
+-- Error test 9
+new_tracker(20,20)
+new_phase("pid0", "somename", 2, <<glass, metal, plastic, liquid>>)
+new_container("cid2", [liquid,  0.5], "pid1") -- error e9
