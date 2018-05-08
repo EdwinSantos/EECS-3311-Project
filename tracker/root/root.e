@@ -34,8 +34,8 @@ feature -- Attributes
 	switch: INTEGER
 			-- Running mode of ETF application.
 		do
-			-- Result := unit_test
-			Result := etf_gui_show_history
+			Result := unit_test
+			-- Result := etf_gui_show_history
 			-- Result := etf_cl_show_history
 		end
 
@@ -45,6 +45,7 @@ feature -- Tests
 		require
 			switch = unit_test
 		do
+			add_test (create {TEST_NEW_TRACKER}.make)
 			-- add your tests here
 			-- add cluster for tests
 			-- add_test (create {MY_TEST}.make)
