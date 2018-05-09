@@ -65,7 +65,7 @@ feature
 			errors : ERRORS
 			operation : OPERATION
 		do
-			comment("sucessfully created a new tracker")
+			comment("ok: sucessfully created a new tracker")
 			create errors.make
 			operation := create {NEW_TRACKER}.make (create {VALUE}.make_from_string ("60"), create {VALUE}.make_from_string ("40"), 0, 0)
 			operation.error_check

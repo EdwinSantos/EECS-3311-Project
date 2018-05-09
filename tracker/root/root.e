@@ -46,6 +46,8 @@ feature -- Tests
 			switch = unit_test
 		do
 			add_test (create {TEST_NEW_TRACKER}.make)
+			add_test (create {TEST_NEW_PHASE}.make)
+			add_test (create {TEST_NEW_CONTAINER}.make)
 			-- add your tests here
 			-- add cluster for tests
 			-- add_test (create {MY_TEST}.make)
