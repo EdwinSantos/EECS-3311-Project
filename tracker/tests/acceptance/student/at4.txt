@@ -9,6 +9,9 @@ new_container("cid3", [liquid,  10], "pid1")
 remove_phase("pid1")
 undo
 redo
+remove_container("cid2")
+undo
+undo
 undo
 undo
 undo
