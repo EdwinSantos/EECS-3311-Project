@@ -3,22 +3,31 @@
 <base target="main">
 </head>
 <body>
-<p align="center"><b>Test Run:05/08/2018   10:10:57.276 PM</b></p><font color="blue"><H2  align="center">ROOT</H2></font><p align="center">Note: * indicates a violation test case</p>
+<p align="center"><b>Test Run:05/09/2018   11:59:13.303 PM</b></p><font color="blue"><H2  align="center">ROOT</H2></font><p align="center">Note: * indicates a violation test case</p>
 <table border=1 align="center">
-<tr><td bgcolor="#00FF00" colspan="3">&nbsp;</td></tr><tr><td align="center" colspan="3">PASSED (18 out of 18)</td></tr>
+<tr><td bgcolor="#00FF00" colspan="3">&nbsp;</td></tr><tr><td align="center" colspan="3">PASSED (27 out of 27)</td></tr>
 <tr><td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Case Type</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Passed</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Total</b></font></td></tr>
 <tr><td align="center"><font color="blue"><b>Violation</b></font></td>
 <td align="center">0</td><td align="center">0</td></tr>
 <tr><td align="center"><font color="blue"><b>Boolean</b></font></td>
-<td align="center">18</td><td align="center">18</td></tr>
+<td align="center">27</td><td align="center">27</td></tr>
 <tr><td align="center"><font color="blue"><b>All Cases</b></font></td>
-<td align="center">18</td><td align="center">18</td></tr>
+<td align="center">27</td><td align="center">27</td></tr>
 <tr><td align="center" bgcolor="#000080"><font color="#FFCC00"><b>State</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Contract Violation</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Test Name</b></font></td></tr>
 <tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test1</b></font></td>
+<td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_REMOVE_PHASE</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>ok: sucessfully removed a phase</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>ok: sucessfully removed a phase</td>
+</tr>
+<tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test2</b></font></td>
 <td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_NEW_TRACKER</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
 <td>e2: attempted to create a tracker with negative max phase radiation</td>
@@ -35,7 +44,7 @@
 <td align="center">NONE</td>
 <td>ok: sucessfully created a new tracker</td>
 </tr>
-<tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test2</b></font></td>
+<tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test3</b></font></td>
 <td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_NEW_PHASE</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
 <td>e5: identifiers/names must start with A-Z, a-z or 0..9</td>
@@ -56,7 +65,7 @@
 <td align="center">NONE</td>
 <td>ok: sucessfully created a new container</td>
 </tr>
-<tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test3</b></font></td>
+<tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test4</b></font></td>
 <td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_NEW_CONTAINER</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
 <td>e5: identifiers/names must start with A-Z, a-z or 0..9</td>
@@ -92,6 +101,35 @@
 <tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
 <td>ok: container created successfully</td>
+</tr>
+<tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test5</b></font></td>
+<td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_MOVE_CONTAINER</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e11: this container will exceed phase capacity</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e12: this container will exceed phase safe radiation</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e13: phase does not expect this container material</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e15: this container identifier not in tracker</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e16: source and target phase identifier must be different</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e17: this container identifier is not in the source phase</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>ok: sucessfully moved container to another phase</td>
 </tr>
 </table></body>
 </html>

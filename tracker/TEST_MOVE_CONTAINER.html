@@ -3,37 +3,49 @@
 <base target="main">
 </head>
 <body>
-<p align="center"><b>Test Run:05/09/2018   11:59:13.225 PM</b></p><font color="blue"><H2  align="center">TEST_NEW_TRACKER</H2></font><p align="center">Note: * indicates a violation test case</p>
+<p align="center"><b>Test Run:05/09/2018   11:59:13.301 PM</b></p><font color="blue"><H2  align="center">TEST_MOVE_CONTAINER</H2></font><p align="center">Note: * indicates a violation test case</p>
 <table border=1 align="center">
-<tr><td bgcolor="#00FF00" colspan="3">&nbsp;</td></tr><tr><td align="center" colspan="3">PASSED (4 out of 4)</td></tr>
+<tr><td bgcolor="#00FF00" colspan="3">&nbsp;</td></tr><tr><td align="center" colspan="3">PASSED (7 out of 7)</td></tr>
 <tr><td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Case Type</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Passed</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Total</b></font></td></tr>
 <tr><td align="center"><font color="blue"><b>Violation</b></font></td>
 <td align="center">0</td><td align="center">0</td></tr>
 <tr><td align="center"><font color="blue"><b>Boolean</b></font></td>
-<td align="center">4</td><td align="center">4</td></tr>
+<td align="center">7</td><td align="center">7</td></tr>
 <tr><td align="center"><font color="blue"><b>All Cases</b></font></td>
-<td align="center">4</td><td align="center">4</td></tr>
+<td align="center">7</td><td align="center">7</td></tr>
 <tr><td align="center" bgcolor="#000080"><font color="#FFCC00"><b>State</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Contract Violation</b></font></td>
 <td align="center" bgcolor="#000080"><font color="#FFCC00"><b>Test Name</b></font></td></tr>
 <tr><td bgcolor="#008080" align="center"><font color="#FFCC00"><b>Test1</b></font></td>
-<td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_NEW_TRACKER</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
+<td bgcolor="#008080" align="center" colspan="2"><font color="#FFCC00">TEST_MOVE_CONTAINER</font></td></tr><tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
-<td>e2: attempted to create a tracker with negative max phase radiation</td>
+<td>e11: this container will exceed phase capacity</td>
 </tr>
 <tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
-<td>e3: attempted to create a tracker with negative max container radiation</td>
+<td>e12: this container will exceed phase safe radiation</td>
 </tr>
 <tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
-<td>e4: attempted to create a tracker that had max container > max radiation</td>
+<td>e13: phase does not expect this container material</td>
 </tr>
 <tr><td><font color="green"><b>PASSED</b></font></td>
 <td align="center">NONE</td>
-<td>ok: sucessfully created a new tracker</td>
+<td>e15: this container identifier not in tracker</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e16: source and target phase identifier must be different</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>e17: this container identifier is not in the source phase</td>
+</tr>
+<tr><td><font color="green"><b>PASSED</b></font></td>
+<td align="center">NONE</td>
+<td>ok: sucessfully moved container to another phase</td>
 </tr>
 </table></body>
 </html>
