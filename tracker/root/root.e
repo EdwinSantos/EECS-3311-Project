@@ -50,6 +50,7 @@ feature -- Tests
 			add_test (create {TEST_NEW_PHASE}.make)
 			add_test (create {TEST_NEW_CONTAINER}.make)
 			add_test (create {TEST_MOVE_CONTAINER}.make)
+			add_test (create {TEST_REMOVE_CONTAINER}.make)
 
 			-- add your tests here
 			-- add cluster for tests
