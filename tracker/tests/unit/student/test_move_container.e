@@ -158,9 +158,9 @@ feature
 			operation.execute
 			operation := create {NEW_PHASE}.make ("MC_NoError_P2", "someOtherName", 1, << 1 >>, "", 1, 0)
 			operation.execute
-			operation := create {NEW_CONTAINER}.make ("MC_Container1", 1, create {VALUE}.make_from_int (1), "MC_NoError_P1", "", 2, 1)
+			operation := create {NEW_CONTAINER}.make ("MC_C1", 1, create {VALUE}.make_from_int (1), "MC_NoError_P1", "", 2, 1)
 			operation.execute
-			operation := create {MOVE_CONTAINER}.make ("MC_Container1", "MC_NoError_P1", "MC_NoError_P2", "", 3, 2)
+			operation := create {MOVE_CONTAINER}.make ("MC_C1", "MC_NoError_P1", "MC_NoError_P2", "", 3, 2)
 			operation.error_check
 			Result := operation.error_string.is_equal (errors.ok)
 		end

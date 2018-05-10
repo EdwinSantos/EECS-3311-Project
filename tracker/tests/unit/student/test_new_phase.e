@@ -33,10 +33,10 @@ feature
 			comment("e5: identifiers/names must start with A-Z, a-z or 0..9")
 			operation := create {NEW_TRACKER}.make (create {VALUE}.make_from_string ("2"), create {VALUE}.make_from_string ("1"), 0, 0)
 			operation.execute
-			operation := create {NEW_PHASE}.make ("~e5_phase1", "someName", 1, << 1 >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("~NP_e5_P1", "someName", 1, << 1 >>, "", 1, 0)
 			operation.error_check
 			first_error := operation.error_string
-			operation := create {NEW_PHASE}.make ("123e5_phase2", "$$$", 1, << 1 >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("NP_e5_P2", "$$$", 1, << 1 >>, "", 1, 0)
 			operation.error_check
 			Result := operation.error_string.is_equal (errors.e5) and first_error.is_equal (errors.e5)
 		end
@@ -49,9 +49,9 @@ feature
 			comment("e6: phase identifier already exists")
 			operation := create {NEW_TRACKER}.make (create {VALUE}.make_from_string ("4"), create {VALUE}.make_from_string ("2"), 0, 0)
 			operation.execute
-			operation := create {NEW_PHASE}.make ("e6_phase1", "someName", 1, << 1 >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("NP_e6_P1", "someName", 1, << 1 >>, "", 1, 0)
 			operation.execute
-			operation := create {NEW_PHASE}.make ("e6_phase1", "otherName", 1, << 1 >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("NP_e6_P1", "otherName", 1, << 1 >>, "", 1, 0)
 			operation.error_check
 			Result := operation.error_string.is_equal (errors.e6)
 		end
@@ -64,7 +64,7 @@ feature
 			comment("e7: phase capacity must be a positive integer")
 			operation := create {NEW_TRACKER}.make (create {VALUE}.make_from_string ("4"), create {VALUE}.make_from_string ("2"), 0, 0)
 			operation.execute
-			operation := create {NEW_PHASE}.make ("e7_phase", "SomeString", -1, << 1 >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("NP_e7_P1", "SomeString", -1, << 1 >>, "", 1, 0)
 			operation.error_check
 			Result := operation.error_string.is_equal (errors.e7)
 		end
@@ -77,7 +77,7 @@ feature
 			comment("e8: there must be at least one expected material for this phase")
 			operation := create {NEW_TRACKER}.make (create {VALUE}.make_from_string ("4"), create {VALUE}.make_from_string ("2"), 0, 0)
 			operation.execute
-			operation := create {NEW_PHASE}.make ("e8_phase", "SomeString", 1, << >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("NP_e8_P1", "SomeString", 1, << >>, "", 1, 0)
 			operation.error_check
 			Result := operation.error_string.is_equal (errors.e8)
 		end
@@ -90,7 +90,7 @@ feature
 			comment("ok: sucessfully created a new container")
 			operation := create {NEW_TRACKER}.make (create {VALUE}.make_from_string ("2"), create {VALUE}.make_from_string ("1"), 0, 0)
 			operation.execute
-			operation := create {NEW_PHASE}.make ("NP_noError_phase", "someName", 1, << 1 >>, "", 1, 0)
+			operation := create {NEW_PHASE}.make ("NP_noError_P1", "someName", 1, << 1 >>, "", 1, 0)
 			operation.error_check
 			Result := operation.error_string.is_equal (errors.ok)
 		end
