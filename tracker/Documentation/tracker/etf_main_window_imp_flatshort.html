@@ -1,0 +1,2059 @@
+<HTML><HEAD>
+<meta name="description" content="Objects that represent an EV_TITLED_WINDOW."/>
+<meta name="generator" content="EiffelBuild"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>etf_main_window_imp Flat contracts</TITLE></HEAD>
+<BODY BGCOLOR="white">
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_main_window_imp_chart.html">Chart</A></TD><TD><A HREF="etf_main_window_imp_links.html">Relations</A></TD><TD><A HREF="etf_main_window_imp.html">Text</A></TD><TD><A HREF="etf_main_window_imp_flat.html">Flat</A></TD><TD><A HREF="etf_main_window_imp_short.html">Contracts</A></TD><TD>Flat contracts</TD></TR></TABLE><B>note</B>
+    description: "Objects that represent an EV_TITLED_WINDOW."
+    generator: "EiffelBuild"
+    date: "$Date: 2014-01-22 11:12:21 -0800 (Wed, 22 Jan 2014) $"
+    revision: "$Revision: 94077 $"
+
+<B>deferred</B> <B>class</B> <B>interface</B>
+    <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>
+
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Access</FONT>
+
+    <A NAME="f_accelerators">accelerators: EV_ACCELERATOR_LIST
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Key combination shortcuts associated with this window.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            bridge_ok: <B>Result</B> = implementation.accelerator_list
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_accept_cursor">accept_cursor: EV_POINTER_STYLE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Result</I><FONT COLOR="red"> is cursor displayed when the screen pointer is over a</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> target that accepts </FONT>pebble<FONT COLOR="red"> during pick and drop.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            result_not_void: <B>Result</B> /= <B>Void</B>
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            cursor_valid: (<B>attached</B> implementation.accept_cursor <B>implies</B> <B>Result</B> = implementation.accept_cursor) <B>or else</B> <B>Result</B> = Default_pixmaps.Standard_cursor
+</A>
+    <A NAME="f_actual_drop_target_agent">actual_drop_target_agent: <B>detachable</B> FUNCTION [INTEGER_32, INTEGER_32, <B>detachable</B> EV_ABSTRACT_PICK_AND_DROPABLE]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Overrides default drop target on a certain position.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT><I>Void</I><FONT COLOR="red">, </FONT><I>Current</I><FONT COLOR="red"> will use the default drop target.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.actual_drop_target_agent
+</A>
+    <A NAME="f_background_color">background_color: EV_COLOR
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Color displayed behind foreground features.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            bridge_ok: <B>Result</B>.is_equal (implementation.background_color)
+</A>
+    <A NAME="f_background_pixmap">background_pixmap: <B>detachable</B> EV_PIXMAP
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Result</I><FONT COLOR="red"> is pixmap displayed on background of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> It is tessellated and fills whole of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PIXMAPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PIXMAPABLE
+            bridge_ok: (<B>Result</B> = <B>Void</B> <B>and</B> implementation.background_pixmap = <B>Void</B>) <B>or</B> (<B>attached</B> <B>Result</B> <B>and then</B> <B>attached</B> implementation.background_pixmap <B>as</B> l_pixmap <B>and then</B> <B>Result</B>.is_equal (l_pixmap))
+</A>
+    <A NAME="f_cell"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_cell">cell</A>: EV_CELL</A>
+
+    <A NAME="f_command"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_command">command</A>: EV_TEXT_FIELD</A>
+
+    <A NAME="f_command_label"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_command_label">command_label</A>: EV_LABEL</A>
+
+    <A NAME="f_configurable_target_menu_handler">configurable_target_menu_handler: <B>detachable</B> PROCEDURE [EV_MENU, ARRAYED_LIST [EV_PND_TARGET_DATA], EV_PICK_AND_DROPABLE, <B>detachable</B> ANY]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Agent used for customizing the Pick and Drop Target Menu of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_data">data: <B>detachable</B> ANY</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Arbitrary user data may be stored here.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ANY<FONT COLOR="red">)</FONT>
+
+    <A NAME="f_default_identifier_name">default_identifier_name: STRING_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Default name if no other name is set.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_IDENTIFIABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            result_not_void: <B>Result</B> /= <B>Void</B>
+            result_not_empty: <B>not</B> <B>Result</B>.is_empty
+            no_period_in_result: <B>not</B> <B>Result</B>.has ('.'.to_character_32)
+</A>
+    <A NAME="f_default_key_processing_handler">default_key_processing_handler: <B>detachable</B> PREDICATE [EV_KEY] <B>assign</B> set_default_key_processing_handler
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Agent used to determine whether the default key processing should occur for Current.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If agent returns True then default key processing continues as normal, False prevents</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> default key processing from occurring.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.default_key_processing_handler
+</A>
+    <A NAME="f_deny_cursor">deny_cursor: EV_POINTER_STYLE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Result</I><FONT COLOR="red"> is cursor displayed when the screen pointer is over a</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> target that does not accept </FONT>pebble<FONT COLOR="red"> during pick and drop.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            result_not_void: <B>Result</B> /= <B>Void</B>
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            cursor_valid: (<B>attached</B> implementation.deny_cursor <B>implies</B> <B>Result</B> = implementation.deny_cursor) <B>or else</B> <B>Result</B> = Default_pixmaps.No_cursor
+</A>
+    <A NAME="f_ev_application">ev_application: EV_APPLICATION
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Current application if created yet.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_SHARED_APPLICATION<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SHARED_APPLICATION
+            application_exists: <B>attached</B> Shared_environment.application
+            same_processor_as_application: Shared_environment.is_application_processor
+</A>
+    <A NAME="f_ev_separate_application">ev_separate_application: <B>separate</B> EV_APPLICATION
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Current application if created yet.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_SHARED_APPLICATION<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SHARED_APPLICATION
+            application_exists: <B>attached</B> Shared_environment.application
+</A>
+    <A NAME="f_execute"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_execute">execute</A>: EV_BUTTON</A>
+
+    <A NAME="f_foreground_color">foreground_color: EV_COLOR
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Color of foreground features like text.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            bridge_ok: <B>Result</B>.is_equal (implementation.foreground_color)
+</A>
+    <A NAME="f_full_identifier_path">full_identifier_path: STRING_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Full name of object by prepending path of parent</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Uses '.' as a separator.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_IDENTIFIABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            result_not_void: <B>Result</B> /= <B>Void</B>
+            result_correct: parent = <B>Void</B> <B>implies</B> <B>Result</B>.is_equal (identifier_name)
+            result_correct: <B>attached</B> parent <B>as</B> l_parent <B>implies</B> <B>Result</B>.is_equal (l_parent.full_identifier_path + "." + identifier_name)
+</A>
+    <A NAME="f_generating_type">generating_type: TYPE [<B>detachable</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Type of current object</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (type of which it is a direct instance)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            generating_type_not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_generator">generator: STRING_8
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Name of current object's generating class</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (base class of the type of which it is a direct instance)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            generator_not_void: <B>Result</B> /= <B>Void</B>
+            generator_not_empty: <B>not</B> <B>Result</B>.is_empty
+</A>
+    <A NAME="f_has_recursive">has_recursive (an_item: <B>like</B> item): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does structure include </FONT><I>an_item</I><FONT COLOR="red"> or</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> does any structure recursively included by structure,</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> include </FONT><I>an_item</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_hbox_buttons"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_hbox_buttons">hbox_buttons</A>: EV_HORIZONTAL_BOX</A>
+
+    <A NAME="f_hbox_main"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_hbox_main">hbox_main</A>: EV_HORIZONTAL_BOX</A>
+
+    <A NAME="f_help_context">help_context: <B>detachable</B> FUNCTION [EV_HELP_CONTEXT]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Agent that evaluates to help context sent to help engine when help is requested</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_HELP_CONTEXTABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_HELP_CONTEXTABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_HELP_CONTEXTABLE
+            bridge_ok: <B>Result</B> = implementation.help_context
+</A>
+    <A NAME="f_history"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_history">history</A>: EV_RICH_TEXT</A>
+
+    <A NAME="f_icon_name">icon_name: STRING_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Name displayed when `Current is minimized.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT>is_empty<FONT COLOR="red"> then </FONT>title<FONT COLOR="red"> is displayed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            bridge_ok: equal (<B>Result</B>, implementation.icon_name)
+            result_not_void: <B>Result</B> /= <B>Void</B>
+            cloned: <B>Result</B> /= implementation.icon_name
+</A>
+    <A NAME="f_icon_pixmap">icon_pixmap: EV_PIXMAP
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Window icon.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            bridge_ok: <B>Result</B>.is_equal (implementation.icon_pixmap)
+</A>
+    <A NAME="f_id_object"><B>frozen</B> id_object (an_id: INTEGER_32): <B>detachable</B> IDENTIFIED
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Object associated with </FONT><I>an_id</I><FONT COLOR="red"> (void if no such object)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>IDENTIFIED<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>IDENTIFIED
+            consistent: <B>Result</B> = <B>Void</B> <B>or else</B> <B>Result</B>.object_id = an_id
+</A>
+    <A NAME="f_identifier_name">identifier_name: STRING_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Name of object</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If no specific name is set, </FONT>default_identifier_name<FONT COLOR="red"> is used.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_IDENTIFIABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            result_not_void: <B>Result</B> /= <B>Void</B>
+            result_not_empty: <B>not</B> <B>Result</B>.is_empty
+            no_period_in_result: <B>not</B> <B>Result</B>.has ('.'.to_character_32)
+            default_name_available: <B>not</B> has_identifier_name_set <B>implies</B> <B>Result</B>.is_equal (default_identifier_name)
+</A>
+    <A NAME="f_is_docking_enabled">is_docking_enabled: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> May </FONT><I>Current</I><FONT COLOR="red"> be docked to?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If True, </FONT><I>Current</I><FONT COLOR="red"> will accept docking</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> from a compatible EV_DOCKABLE_SOURCE.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_TARGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            bridge_ok: <B>Result</B> = implementation.is_docking_enabled
+</A>
+    <A NAME="f_item">item: EV_WIDGET
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Current item.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            readable: readable
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            bridge_ok: <B>Result</B> = implementation.interface_item
+</A>
+    <A NAME="f_load"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_load">load</A>: EV_BUTTON</A>
+
+    <A NAME="f_maximum_dimension">Maximum_dimension: INTEGER_32 = 32000</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Maximum width/height that a window can be set to.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+
+    <A NAME="f_maximum_height">maximum_height: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Upper bound on </FONT>height<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            bridge_ok: (<B>Result</B> = implementation.internal_maximum_height) <B>or</B> (<B>Result</B> = implementation.minimum_height)
+</A>
+    <A NAME="f_maximum_width">maximum_width: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Upper bound on </FONT>width<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            bridge_ok: (<B>Result</B> = implementation.internal_maximum_width) <B>or</B> (<B>Result</B> = implementation.minimum_width)
+</A>
+    <A NAME="f_menu_bar">menu_bar: <B>detachable</B> EV_MENU_BAR
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Horizontal bar at top of client area that contains menu's.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            bridge_ok: <B>Result</B> = implementation.menu_bar
+</A>
+    <A NAME="f_object_id"><B>frozen</B> object_id: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Unique for current object in any given session</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>IDENTIFIED<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>IDENTIFIED
+            valid_id: <B>Result</B> &gt; 0 <B>implies</B> id_object (<B>Result</B>) = <B>Current</B>
+</A>
+    <A NAME="f_output"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_output">output</A>: EV_RICH_TEXT</A>
+
+    <A NAME="f_parent">parent: <B>detachable</B> EV_CONTAINER
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Contains </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            correct: has_parent <B>implies</B> <B>Result</B> /= <B>Void</B>
+            correct: <B>not</B> has_parent <B>implies</B> <B>Result</B> = <B>Void</B>
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.parent
+</A>
+    <A NAME="f_pebble">pebble: <B>detachable</B> ANY
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Data to be transported by pick and drop mechanism.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.pebble
+</A>
+    <A NAME="f_pebble_function">pebble_function: <B>detachable</B> FUNCTION [<B>detachable</B> ANY]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Returns data to be transported by pick and drop mechanism.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.pebble_function
+</A>
+    <A NAME="f_pebble_positioning_enabled">pebble_positioning_enabled: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT><I>True</I><FONT COLOR="red"> then pick and drop start coordinates are</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT>pebble_x_position<FONT COLOR="red">, </FONT>pebble_y_position<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT><I>False</I><FONT COLOR="red"> then pick and drop start coordinates are</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> the pointer coordinates.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.pebble_positioning_enabled
+</A>
+    <A NAME="f_pebble_x_position">pebble_x_position: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Initial x position for pick and drop relative to </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.pebble_x_position
+</A>
+    <A NAME="f_pebble_y_position">pebble_y_position: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Initial y position for pick and drop relative to </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.pebble_y_position
+</A>
+    <A NAME="f_pointer_position">pointer_position: EV_COORDINATE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Position of the screen pointer relative to </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            is_show_requested: is_show_requested
+</A>
+    <A NAME="f_pointer_style">pointer_style: EV_POINTER_STYLE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Cursor displayed when pointer is over this widget.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_real_target">real_target: <B>detachable</B> EV_DOCKABLE_TARGET
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Result</I><FONT COLOR="red"> is target used during a dockable transport if</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> mouse pointer is above </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.real_target
+</A>
+    <A NAME="f_reset"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_reset">reset</A>: EV_BUTTON</A>
+
+    <A NAME="f_shared_environment">Shared_environment: EV_ENVIRONMENT
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Shared EV_ENVIRONMENT object.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_SHARED_APPLICATION<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_status"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_status">status</A>: EV_RICH_TEXT</A>
+
+    <A NAME="f_status_label"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_status_label">status_label</A>: EV_LABEL</A>
+
+    <A NAME="f_target_data_function">target_data_function: <B>detachable</B> FUNCTION [<B>like</B> pebble, EV_PND_TARGET_DATA]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Function for computing target meta data based on source pebble.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Primarily used for Pick and Drop target menu.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>note</B>
+            option: stable
+</A>
+    <A NAME="f_target_name">target_name: <B>detachable</B> READABLE_STRING_GENERAL
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Optional textual name describing </FONT><I>Current</I><FONT COLOR="red"> pick and drop hole.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>note</B>
+            option: stable
+</A>
+    <A NAME="f_title">title: STRING_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> A textual name used by the window manager.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            bridge_ok: equal (<B>Result</B>, implementation.title)
+            not_void: <B>Result</B> /= <B>Void</B>
+            cloned: <B>Result</B> /= implementation.title
+</A>
+    <A NAME="f_vbox"><A HREF="../tracker/etf_main_window_imp_flatshort.html#f_vbox">vbox</A>: EV_VERTICAL_BOX</A>
+
+    <A NAME="f_veto_dock_function">veto_dock_function: <B>detachable</B> FUNCTION [EV_DOCKABLE_SOURCE, BOOLEAN]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Function to determine whether current dock is allowed.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT><I>Result</I><FONT COLOR="red"> is </FONT><I>True</I><FONT COLOR="red">, dock will be disallowed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_TARGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            bridge_ok: <B>Result</B> = implementation.veto_dock_function
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Measurement</FONT>
+
+    <A NAME="f_client_height">client_height: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Height of the area available to children in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            bridge_ok: <B>Result</B> = implementation.client_height
+</A>
+    <A NAME="f_client_width">client_width: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Width of the area available to children in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            bridge_ok: <B>Result</B> = implementation.client_width
+</A>
+    <A NAME="f_height">height: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Vertical size in pixels.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Same as </FONT>minimum_height<FONT COLOR="red"> when not displayed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.height
+</A>
+    <A NAME="f_minimum_height">minimum_height: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Lower bound on </FONT>height<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.minimum_height
+            positive_or_zero: <B>Result</B> &gt;= 0
+</A>
+    <A NAME="f_minimum_width">minimum_width: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Lower bound on </FONT>width<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.minimum_width
+            positive_or_zero: <B>Result</B> &gt;= 0
+</A>
+    <A NAME="f_screen_x">screen_x: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Horizontal offset relative to screen.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.screen_x
+</A>
+    <A NAME="f_screen_y">screen_y: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Vertical offset relative to screen.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.screen_y
+</A>
+    <A NAME="f_width">width: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Horizontal size in pixels.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Same as </FONT>minimum_width<FONT COLOR="red"> when not displayed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.width
+</A>
+    <A NAME="f_x_position">x_position: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Horizontal offset relative to parent </FONT>x_position<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.x_position
+</A>
+    <A NAME="f_y_position">y_position: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Vertical offset relative to parent </FONT>y_position<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONED<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+            bridge_ok: <B>Result</B> = implementation.y_position
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Comparison</FONT>
+
+    <A NAME="f_deep_equal"><B>frozen</B> deep_equal (a: <B>detachable</B> ANY; b: <B>like</B> arg #1): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Are </FONT><I>a</I><FONT COLOR="red"> and </FONT><I>b</I><FONT COLOR="red"> either both void</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> or attached to isomorphic object structures?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            shallow_implies_deep: standard_equal (a, b) <B>implies</B> <B>Result</B>
+            both_or_none_void: (a = <B>Void</B>) <B>implies</B> (<B>Result</B> = (b = <B>Void</B>))
+            same_type: (<B>Result</B> <B>and</B> (a /= <B>Void</B>)) <B>implies</B> (b /= <B>Void</B> <B>and then</B> a.same_type (b))
+            symmetric: <B>Result</B> <B>implies</B> deep_equal (b, a)
+</A>
+    <A NAME="f_equal"><B>frozen</B> equal (a: <B>detachable</B> ANY; b: <B>like</B> arg #1): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Are </FONT><I>a</I><FONT COLOR="red"> and </FONT><I>b</I><FONT COLOR="red"> either both void or attached</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> to objects considered equal?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            definition: <B>Result</B> = (a = <B>Void</B> <B>and</B> b = <B>Void</B>) <B>or else</B> ((a /= <B>Void</B> <B>and</B> b /= <B>Void</B>) <B>and then</B> a.is_equal (b))
+</A>
+    <A NAME="f_is_deep_equal"><B>frozen</B> is_deep_equal (other: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Are </FONT><I>Current</I><FONT COLOR="red"> and </FONT><I>other</I><FONT COLOR="red"> attached to isomorphic object structures?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            shallow_implies_deep: standard_is_equal (other) <B>implies</B> <B>Result</B>
+            same_type: <B>Result</B> <B>implies</B> same_type (other)
+            symmetric: <B>Result</B> <B>implies</B> other.is_deep_equal (<B>Current</B>)
+</A>
+    <A NAME="f_is_equal">is_equal (other: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>other</I><FONT COLOR="red"> attached to an object considered</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> equal to current object?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            symmetric: <B>Result</B> <B>implies</B> other ~ <B>Current</B>
+            consistent: standard_is_equal (other) <B>implies</B> <B>Result</B>
+</A>
+    <A NAME="f_standard_equal"><B>frozen</B> standard_equal (a: <B>detachable</B> ANY; b: <B>like</B> arg #1): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Are </FONT><I>a</I><FONT COLOR="red"> and </FONT><I>b</I><FONT COLOR="red"> either both void or attached to</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> field-by-field identical objects of the same type?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Always uses default object comparison criterion.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            definition: <B>Result</B> = (a = <B>Void</B> <B>and</B> b = <B>Void</B>) <B>or else</B> ((a /= <B>Void</B> <B>and</B> b /= <B>Void</B>) <B>and then</B> a.standard_is_equal (b))
+</A>
+    <A NAME="f_standard_is_equal"><B>frozen</B> standard_is_equal (other: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>other</I><FONT COLOR="red"> attached to an object of the same type</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> as current object, and field-by-field identical to it?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            same_type: <B>Result</B> <B>implies</B> same_type (other)
+            symmetric: <B>Result</B> <B>implies</B> other.standard_is_equal (<B>Current</B>)
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Status report</FONT>
+
+    <A NAME="f_conforms_to">conforms_to (other: ANY): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does type of current object conform to type</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of </FONT><I>other</I><FONT COLOR="red"> (as per Eiffel: The Language, chapter 13)?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+</A>
+    <A NAME="f_count">count: INTEGER_32
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Number of items in </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CELL
+            valid_result: <B>Result</B> = 0 <B>or</B> <B>Result</B> = 1
+</A>
+    <A NAME="f_extendible">extendible: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is there no element?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Was declared in </FONT>EV_CELL<FONT COLOR="red"> as synonym of </FONT>is_empty<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_full">full: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is structure filled to capacity?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_has">has (v: EV_WIDGET): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does structure include </FONT><I>v</I><FONT COLOR="red">?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> CONTAINER
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>CONTAINER
+            not_found_in_empty: <B>Result</B> <B>implies</B> <B>not</B> is_empty
+</A>
+    <A NAME="f_has_capture">has_capture: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does widget have capture?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.has_capture
+</A>
+    <A NAME="f_has_focus">has_focus: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does widget have the keyboard focus?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.has_focus
+</A>
+    <A NAME="f_has_identifier_name_set">has_identifier_name_set: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is a specific identifier name set?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_IDENTIFIABLE<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_has_parent">has_parent: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does identifiable has a parent?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_IDENTIFIABLE<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_id_freed"><B>frozen</B> id_freed: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Has </FONT><I>Current</I><FONT COLOR="red"> been removed from the table?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>IDENTIFIED<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_is_border_enabled">is_border_enabled: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is a border displayed around </FONT><I>Current</I><FONT COLOR="red">?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_is_displayed">is_displayed: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>Current</I><FONT COLOR="red"> visible on the screen?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>True</I><FONT COLOR="red"> when show requested and parent displayed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.is_displayed
+</A>
+    <A NAME="f_is_dockable">is_dockable: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>Current</I><FONT COLOR="red"> dockable?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT><I>True</I><FONT COLOR="red">, then </FONT><I>Current</I><FONT COLOR="red"> may be dragged</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> from its current parent.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            bridge_ok: <B>Result</B> = implementation.is_dockable
+</A>
+    <A NAME="f_is_empty">is_empty: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is there no element?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Was declared in </FONT>EV_CELL<FONT COLOR="red"> as synonym of </FONT>extendible<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_is_external_docking_enabled">is_external_docking_enabled: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>Current</I><FONT COLOR="red"> able to be docked into an EV_DOCKABLE_DIALOG</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> When there is no valid EV_DRAGABLE_TARGET upon completion</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of transport?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            bridge_ok: <B>Result</B> = implementation.is_external_docking_enabled
+</A>
+    <A NAME="f_is_external_docking_relative">is_external_docking_relative: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Will dockable dialog displayed when </FONT><I>Current</I><FONT COLOR="red"> is docked externally</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> be displayed relative to parent window of </FONT><I>Current</I><FONT COLOR="red">?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Otherwise displayed as a standard window.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            bridge_ok: <B>Result</B> = implementation.is_external_docking_relative
+</A>
+    <A NAME="f_is_inserted">is_inserted (v: EV_WIDGET): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Has </FONT><I>v</I><FONT COLOR="red"> been inserted by the most recent insertion?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (By default, the value returned is equivalent to calling </FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>has (v)</I><FONT COLOR="red">. However, descendants might be able to provide more</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> efficient implementations.)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>COLLECTION<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_is_maximized">is_maximized: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is displayed at maximum size?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            bridge_ok: <B>Result</B> = implementation.is_maximized
+</A>
+    <A NAME="f_is_minimized">is_minimized: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is displayed iconified/minimised?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            bridge_ok: <B>Result</B> = implementation.is_minimized
+</A>
+    <A NAME="f_is_sensitive">is_sensitive: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is object sensitive to user input.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_SENSITIVE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SENSITIVE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SENSITIVE
+            bridge_ok: <B>Result</B> = implementation.user_is_sensitive
+</A>
+    <A NAME="f_is_show_requested">is_show_requested: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Will </FONT><I>Current</I><FONT COLOR="red"> be displayed when its parent is?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> See also </FONT>is_displayed<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            bridge_ok: <B>Result</B> = implementation.is_show_requested
+</A>
+    <A NAME="f_merged_radio_button_groups">merged_radio_button_groups: <B>detachable</B> ARRAYED_LIST [EV_CONTAINER]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Result</I><FONT COLOR="red"> is all other radio button groups</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> merged with </FONT><I>Current</I><FONT COLOR="red">. Void if no other containers</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> are merged.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_is_empty: <B>Result</B> /= <B>Void</B> <B>implies</B> <B>not</B> <B>Result</B>.is_empty
+</A>
+    <A NAME="f_mode_is_configurable_target_menu">mode_is_configurable_target_menu: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is the user interface mode a configurable pop-up menu of targets?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.mode_is_configurable_target_menu
+</A>
+    <A NAME="f_mode_is_drag_and_drop">mode_is_drag_and_drop: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is the user interface mode drag and drop?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.mode_is_drag_and_drop
+</A>
+    <A NAME="f_mode_is_pick_and_drop">mode_is_pick_and_drop: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is the user interface mode pick and drop?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.mode_is_pick_and_drop
+</A>
+    <A NAME="f_mode_is_target_menu">mode_is_target_menu: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is the user interface mode a pop-up menu of targets?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            bridge_ok: <B>Result</B> = implementation.mode_is_target_menu
+</A>
+    <A NAME="f_prunable">prunable: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> May items be removed?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_readable">readable: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is there a current item that may be accessed?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_real_source">real_source: <B>detachable</B> EV_DOCKABLE_SOURCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Result</I><FONT COLOR="red"> is source to be dragged</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red">  when a docking drag occurs on </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT><I>Void</I><FONT COLOR="red">, </FONT><I>Current</I><FONT COLOR="red"> is dragged.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            bridge_ok: <B>Result</B> = implementation.real_source
+</A>
+    <A NAME="f_same_type">same_type (other: ANY): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is type of current object identical to type of </FONT><I>other</I><FONT COLOR="red">?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            definition: <B>Result</B> = (conforms_to (other) <B>and</B> other.conforms_to (<B>Current</B>))
+</A>
+    <A NAME="f_user_can_resize">user_can_resize: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Can the user resize?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            bridge_ok: <B>Result</B> = implementation.user_can_resize
+</A>
+    <A NAME="f_writable">writable: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is there a current item that may be modified?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Status setting</FONT>
+
+    <A NAME="f_center_pointer">center_pointer
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Position screen pointer over center of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_disable_border">disable_border
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure no border is displayed around </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Has no immediate effect if </FONT>user_can_resize<FONT COLOR="red">, although</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> is reflected at next call to </FONT>disable_user_resize<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            border_disabled: <B>not</B> user_can_resize <B>implies</B> <B>not</B> is_border_enabled
+</A>
+    <A NAME="f_disable_capture">disable_capture
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Disable grab of all user input events.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_has_capture: <B>not</B> has_capture
+</A>
+    <A NAME="f_disable_dockable">disable_dockable
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT><I>Current</I><FONT COLOR="red"> is not dockable.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_is_dockable: <B>not</B> is_dockable
+</A>
+    <A NAME="f_disable_docking">disable_docking
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT>is_docking_enabled<FONT COLOR="red"> is False.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>Current</I><FONT COLOR="red"> will not accept docking.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_TARGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            not_dockable: <B>not</B> is_docking_enabled
+</A>
+    <A NAME="f_disable_external_docking">disable_external_docking
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>False</I><FONT COLOR="red"> to </FONT>is_external_docking_enabled<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Forbid </FONT><I>Current</I><FONT COLOR="red"> to be docked into an EV_DOCKABLE_DIALOG</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> When there is no valid EV_DRAGABLE_TARGET upon completion</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of transport.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+            is_dockable: is_dockable
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_externally_dockable: <B>not</B> is_external_docking_enabled
+</A>
+    <A NAME="f_disable_external_docking_relative">disable_external_docking_relative
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>False</I><FONT COLOR="red"> to </FONT>is_external_docking_relative<FONT COLOR="red">, ensuring that</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> a dockable dialog displayed when </FONT><I>Current</I><FONT COLOR="red"> is docked externally</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> is displayed as a standard window.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+            external_docking_enabled: is_external_docking_enabled
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            external_docking_not_relative: <B>not</B> is_external_docking_relative
+</A>
+    <A NAME="f_disable_pebble_positioning">disable_pebble_positioning
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>False</I><FONT COLOR="red"> to </FONT>pebble_positioning_enabled<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> The pick and drop will start at the pointer position.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            pebble_positioning_updated: <B>not</B> pebble_positioning_enabled
+</A>
+    <A NAME="f_disable_sensitive">disable_sensitive
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Make object non-sensitive to user input.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_SENSITIVE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SENSITIVE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SENSITIVE
+            is_unsensitive: <B>not</B> is_sensitive
+</A>
+    <A NAME="f_disable_user_resize">disable_user_resize
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Prevent user from resizing.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_user_can_resize: <B>not</B> user_can_resize
+</A>
+    <A NAME="f_enable_border">enable_border
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure a border is displayed around </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            is_border_enabled: is_border_enabled
+</A>
+    <A NAME="f_enable_capture">enable_capture
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Grab all user input events (mouse and keyboard).</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT>disable_capture<FONT COLOR="red"> must be called to resume normal input handling.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            is_displayed: is_displayed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            has_capture: has_capture
+</A>
+    <A NAME="f_enable_dockable">enable_dockable
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT><I>Current</I><FONT COLOR="red"> is dockable.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            is_dockable: is_dockable
+</A>
+    <A NAME="f_enable_docking">enable_docking
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT>is_docking_enabled<FONT COLOR="red"> is True.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_TARGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            is_dockable: is_docking_enabled
+</A>
+    <A NAME="f_enable_external_docking">enable_external_docking
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>True</I><FONT COLOR="red"> to </FONT>is_external_docking_enabled<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Allows </FONT><I>Current</I><FONT COLOR="red"> to be docked into an EV_DOCKABLE_DIALOG</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> When there is no valid EV_DRAGABLE_TARGET upon completion</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of transport.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+            is_dockable: is_dockable
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            is_externally_dockable: is_external_docking_enabled
+</A>
+    <A NAME="f_enable_external_docking_relative">enable_external_docking_relative
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>True</I><FONT COLOR="red"> to </FONT>is_external_docking_relative<FONT COLOR="red">, ensuring that</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> a dockable dialog displayed when </FONT><I>Current</I><FONT COLOR="red"> is docked externally</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> is displayed relative to the top level window.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+            external_docking_enabled: is_external_docking_enabled
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            external_docking_not_relative: is_external_docking_relative
+</A>
+    <A NAME="f_enable_pebble_positioning">enable_pebble_positioning
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>True</I><FONT COLOR="red"> to </FONT>pebble_positioning_enabled<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Use </FONT>pebble_x_position<FONT COLOR="red"> and </FONT>pebble_y_position<FONT COLOR="red"> as the initial coordinates</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> for the pick and drop in pixels relative to </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            pebble_positioning_updated: pebble_positioning_enabled
+</A>
+    <A NAME="f_enable_sensitive">enable_sensitive
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Make object sensitive to user input.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_SENSITIVE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SENSITIVE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_SENSITIVE
+            is_sensitive: (parent = <B>Void</B> <B>or</B> parent_is_sensitive) <B>implies</B> is_sensitive
+</A>
+    <A NAME="f_enable_user_resize">enable_user_resize
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Allow user to resize.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            user_can_resize: user_can_resize
+</A>
+    <A NAME="f_hide">hide
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Request that </FONT><I>Current</I><FONT COLOR="red"> not be displayed even when its parent is.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If successful, make </FONT>is_show_requested<FONT COLOR="red"> </FONT><I>False</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_lock_update">lock_update
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Lock drawing updates for this window on certain platforms until</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT>unlock_update<FONT COLOR="red"> is called.</FONT>
+            <FONT COLOR="red">--</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Note: - Only one window can be locked at a time.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red">       - The window cannot be moved while update is locked.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            no_locked_window: ev_application.locked_window = <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            locked_window_is_current: ev_application.locked_window = <B>Current</B>
+</A>
+    <A NAME="f_lower">lower
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Request that window be displayed below all other windows.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_maximize">maximize
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Request that </FONT><I>Current</I><FONT COLOR="red"> be displayed maximized.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If successful, make </FONT>is_show_requested<FONT COLOR="red"> </FONT><I>True</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            is_maximized: is_maximized
+</A>
+    <A NAME="f_merge_radio_button_groups">merge_radio_button_groups (other: EV_CONTAINER)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Merge </FONT><I>Current</I><FONT COLOR="red"> radio button group with that of </FONT><I>other</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            other_not_void: other /= <B>Void</B>
+</A>
+    <A NAME="f_minimize">minimize
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Display iconified/minimised.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> It is not possible to guarantee this on some</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> platform configurations.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_displayed: <B>not</B> is_displayed
+</A>
+    <A NAME="f_raise">raise
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Request that window be displayed above all other windows</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (if </FONT>is_minimized<FONT COLOR="red">, window is restored).</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_remove_default_key_processing_handler">remove_default_key_processing_handler
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT>default_key_processing_handler<FONT COLOR="red"> is Void.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_remove_menu_bar">remove_menu_bar
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Make </FONT>menu_bar<FONT COLOR="red"> </FONT><I>Void</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            menu_bar_void: menu_bar = <B>Void</B>
+</A>
+    <A NAME="f_remove_pebble">remove_pebble
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Make </FONT>pebble<FONT COLOR="red"> </FONT><I>Void</I><FONT COLOR="red"> and </FONT>pebble_function<FONT COLOR="red"> `Void,</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Removing transport.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            pebble_removed: pebble = <B>Void</B> <B>and</B> pebble_function = <B>Void</B>
+</A>
+    <A NAME="f_remove_real_source">remove_real_source
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT>real_source<FONT COLOR="red"> is </FONT><I>Void</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            real_source_void: real_source = <B>Void</B>
+</A>
+    <A NAME="f_remove_real_target">remove_real_target
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure </FONT>real_target<FONT COLOR="red"> is </FONT><I>Void</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            real_target_void: real_target = <B>Void</B>
+</A>
+    <A NAME="f_remove_title">remove_title
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Make </FONT>title<FONT COLOR="red"> empty.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            title_empty: title.is_empty
+</A>
+    <A NAME="f_restore">restore
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Restore to original position when minimized or maximized.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            minimize_restored: <B>old</B> is_minimized <B>implies</B> <B>not</B> is_minimized
+            maximize_restored: <B>old</B> is_maximized <B>implies</B> <B>not</B> is_maximized
+</A>
+    <A NAME="f_set_accept_cursor">set_accept_cursor (a_cursor: <B>detachable</B> <B>like</B> accept_cursor)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set </FONT><I>a_cursor</I><FONT COLOR="red"> to be displayed when the screen pointer is over a</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> target that accepts </FONT>pebble<FONT COLOR="red"> during pick and drop.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            accept_cursor_assigned: <B>attached</B> a_cursor <B>as</B> l_accept_cursor <B>implies</B> l_accept_cursor ~ accept_cursor
+</A>
+    <A NAME="f_set_actual_drop_target_agent">set_actual_drop_target_agent (an_agent: <B>like</B> actual_drop_target_agent)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>an_agent</I><FONT COLOR="red"> to </FONT>actual_drop_target_agent<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            an_agent_not_void: an_agent /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            assigned: actual_drop_target_agent = an_agent
+</A>
+    <A NAME="f_set_configurable_target_menu_handler">set_configurable_target_menu_handler (a_handler: <B>detachable</B> PROCEDURE [EV_MENU, ARRAYED_LIST [EV_PND_TARGET_DATA], EV_PICK_AND_DROPABLE, <B>detachable</B> ANY])
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set Configurable Target Menu Handler to </FONT><I>a_handler</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            configurable_target_menu_hander_assigned: configurable_target_menu_handler = a_handler
+</A>
+    <A NAME="f_set_configurable_target_menu_mode">set_configurable_target_menu_mode
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set user interface mode to pop-up menu of targets.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Target menu is configurable as the first option can be used to</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> initiate a regular 'pick and drop' of the source pebble.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            target_menu_mode_set: mode_is_configurable_target_menu
+</A>
+    <A NAME="f_set_default_colors">set_default_colors
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set foreground and background color to their default values.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_set_default_key_processing_handler">set_default_key_processing_handler (a_handler: <B>like</B> default_key_processing_handler)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT>default_key_processing_handler<FONT COLOR="red"> to </FONT><I>a_handler</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_set_deny_cursor">set_deny_cursor (a_cursor: <B>detachable</B> <B>like</B> deny_cursor)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set </FONT><I>a_cursor</I><FONT COLOR="red"> to be displayed when the screen pointer is not</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> over a valid target.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            deny_cursor_assigned: <B>attached</B> a_cursor <B>as</B> l_deny_cursor <B>implies</B> l_deny_cursor ~ deny_cursor
+</A>
+    <A NAME="f_set_drag_and_drop_mode">set_drag_and_drop_mode
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set user interface mode to drag and drop.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            drag_and_drop_set: mode_is_drag_and_drop
+</A>
+    <A NAME="f_set_focus">set_focus
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Grab keyboard focus if </FONT>is_displayed<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            is_sensitive: is_sensitive
+</A>
+    <A NAME="f_set_height">set_height (a_height: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_height</I><FONT COLOR="red"> to </FONT>height<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            not_destroyed: <B>not</B> is_destroyed
+            a_height_positive_or_zero: a_height &gt;= 0
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            height_assigned: height = minimum_height <B>or else</B> height = a_height
+</A>
+    <A NAME="f_set_maximum_height">set_maximum_height (a_maximum_height: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_maximum_height</I><FONT COLOR="red"> to </FONT>maximum_height<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            a_maximum_height_non_negative: a_maximum_height &gt;= 0
+            a_maximum_height_not_less_than_minimum_height: a_maximum_height &gt;= minimum_height
+            a_maximum_height_not_greater_than_maximum_dimension: a_maximum_height &lt;= Maximum_dimension
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            maximum_height_assigned: maximum_height = a_maximum_height
+</A>
+    <A NAME="f_set_maximum_size">set_maximum_size (a_maximum_width, a_maximum_height: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_maximum_width</I><FONT COLOR="red"> to </FONT>maximum_width
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> and </FONT><I>a_maximum_height</I><FONT COLOR="red"> to </FONT>maximum_height<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            a_maximum_width_not_less_than_minimum_width: a_maximum_width &gt;= minimum_width
+            a_maximum_height_not_less_than_minimum_height: a_maximum_height &gt;= minimum_height
+            a_maximum_width_not_greater_than_maximum_dimension: a_maximum_width &lt;= Maximum_dimension
+            a_maximum_height_not_greater_than_maximum_dimension: a_maximum_height &lt;= Maximum_dimension
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            maximum_width_assigned: maximum_width = a_maximum_width
+            maximum_height_assigned: maximum_height = a_maximum_height
+</A>
+    <A NAME="f_set_maximum_width">set_maximum_width (a_maximum_width: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_maximum_width</I><FONT COLOR="red"> to </FONT>maximum_width<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            a_maximum_width_non_negative: a_maximum_width &gt;= 0
+            a_maximum_width_not_less_than_minimum_width: a_maximum_width &gt;= minimum_width
+            a_maximum_width_not_greater_than_maximum_dimension: a_maximum_width &lt;= Maximum_dimension
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            maximum_width_assigned: maximum_width = a_maximum_width
+</A>
+    <A NAME="f_set_menu_bar">set_menu_bar (a_menu_bar: EV_MENU_BAR)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_menu_bar</I><FONT COLOR="red"> to </FONT>menu_bar<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            no_menu_bar_assigned: menu_bar = <B>Void</B>
+            a_menu_bar_not_void: a_menu_bar /= <B>Void</B>
+            a_menu_bar_not_parented: a_menu_bar.parent = <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            assigned: menu_bar = a_menu_bar
+</A>
+    <A NAME="f_set_pebble">set_pebble (a_pebble: ANY)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_pebble</I><FONT COLOR="red"> to </FONT>pebble<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Overrides </FONT>set_pebble_function<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            a_pebble_not_void: a_pebble /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            pebble_assigned: pebble = a_pebble
+</A>
+    <A NAME="f_set_pebble_function">set_pebble_function (a_function: FUNCTION [<B>detachable</B> ANY])
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set </FONT><I>a_function</I><FONT COLOR="red"> to compute </FONT>pebble<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> It will be called once each time a pick occurs, the result</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> will be assigned to </FONT>pebble<FONT COLOR="red"> for the duration of transport.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> When a pick occurs, the pick position in widget coordinates,</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> &lt;&lt;x, y&gt;&gt; in pixels, is passed.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> To handle this data use </FONT><I>a_function</I><FONT COLOR="red"> of type</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> FUNCTION [ANY, TUPLE [INTEGER, INTEGER], ANY] and return the</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> pebble as a function of x and y.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Overrides </FONT>set_pebble<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            a_function_not_void: a_function /= <B>Void</B>
+            a_function_takes_two_integer_open_operands: a_function.valid_operands ([1, 1])
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            pebble_function_assigned: pebble_function = a_function
+</A>
+    <A NAME="f_set_pebble_position">set_pebble_position (a_x, a_y: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set the initial position for pick and drop</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Coordinates are in pixels and are relative to position of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Pebble_positioning_enabled must be </FONT><I>True</I><FONT COLOR="red"> for the position to be used,</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> use enable_pebble_positioning.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            pebble_position_assigned: pebble_x_position = a_x <B>and</B> pebble_y_position = a_y
+</A>
+    <A NAME="f_set_pick_and_drop_mode">set_pick_and_drop_mode
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set user interface mode to pick and drop.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            pick_and_drop_set: mode_is_pick_and_drop
+</A>
+    <A NAME="f_set_position">set_position (a_x, a_y: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_x</I><FONT COLOR="red"> to </FONT>x_position<FONT COLOR="red"> and </FONT><I>a_y</I><FONT COLOR="red"> to </FONT>y_position<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_set_real_source">set_real_source (dockable_source: EV_DOCKABLE_SOURCE)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>dockable_source</I><FONT COLOR="red"> to </FONT>real_source<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+            is_dockable: is_dockable
+            dockable_source_not_void: dockable_source /= <B>Void</B>
+            dockable_source_is_parent_recursive: source_has_current_recursive (dockable_source)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            real_source_assigned: real_source = dockable_source
+</A>
+    <A NAME="f_set_real_target">set_real_target (a_target: EV_DOCKABLE_TARGET)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_target</I><FONT COLOR="red"> to </FONT>real_target<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            target_not_void: a_target /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            assigned: real_target = a_target
+</A>
+    <A NAME="f_set_size">set_size (a_width, a_height: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_width</I><FONT COLOR="red"> to </FONT>width<FONT COLOR="red"> and </FONT><I>a_height</I><FONT COLOR="red"> to </FONT>height<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            not_destroyed: <B>not</B> is_destroyed
+            a_width_positive_or_zero: a_width &gt;= 0
+            a_height_positive_or_zero: a_height &gt;= 0
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            width_assigned: width = minimum_width <B>or else</B> width = a_width
+            height_assigned: height = minimum_height <B>or else</B> height = a_height
+</A>
+    <A NAME="f_set_target_data_function">set_target_data_function (a_function: FUNCTION [<B>like</B> pebble, EV_PND_TARGET_DATA])
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set </FONT><I>a_function</I><FONT COLOR="red"> to compute target meta data based on transport source.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Overrides any </FONT>target_name<FONT COLOR="red"> set with </FONT>set_target_name<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            a_function_not_void: a_function /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            target_data_function_assigned: target_data_function /= <B>Void</B> <B>and then</B> target_data_function.is_equal (a_function)
+</A>
+    <A NAME="f_set_target_menu_mode">set_target_menu_mode
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set user interface mode to pop-up menu of targets.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            target_menu_mode_set: mode_is_target_menu
+</A>
+    <A NAME="f_set_target_name">set_target_name (a_name: READABLE_STRING_GENERAL)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_name</I><FONT COLOR="red"> to </FONT>target_name<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            a_name_not_void: a_name /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ABSTRACT_PICK_AND_DROPABLE
+            target_name_assigned: <B>attached</B> target_name <B>as</B> l_target_name <B>and then</B> a_name /= l_target_name <B>and then</B> a_name.same_string (l_target_name)
+</A>
+    <A NAME="f_set_title">set_title (a_title: <B>separate</B> READABLE_STRING_GENERAL)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_title</I><FONT COLOR="red"> to </FONT>title<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            a_title_not_void: a_title /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            a_title_assigned: title.same_string_general (<B>create</B> {STRING_32}.make_from_separate (a_title))
+            cloned: title /= a_title
+</A>
+    <A NAME="f_set_veto_dock_function">set_veto_dock_function (a_function: FUNCTION [EV_DOCKABLE_SOURCE, BOOLEAN])
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_function</I><FONT COLOR="red"> to </FONT>veto_dock_function<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_TARGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            not_destroyed: <B>not</B> is_destroyed
+            a_function_not_void: a_function /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET
+            veto_function_set: veto_dock_function = a_function
+</A>
+    <A NAME="f_set_width">set_width (a_width: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_width</I><FONT COLOR="red"> to </FONT>width<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            not_destroyed: <B>not</B> is_destroyed
+            a_width_positive_or_zero: a_width &gt;= 0
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            width_assigned: width = minimum_width <B>or else</B> width = a_width
+</A>
+    <A NAME="f_set_x_position">set_x_position (a_x: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_x</I><FONT COLOR="red"> to </FONT>x_position<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            x_position_assigned: x_position = a_x
+</A>
+    <A NAME="f_set_y_position">set_y_position (a_y: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_y</I><FONT COLOR="red"> to </FONT>y_position<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_POSITIONABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONABLE
+            y_position_assigned: y_position = a_y
+</A>
+    <A NAME="f_show">show
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Request that </FONT><I>Current</I><FONT COLOR="red"> be displayed when its parent is.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>True</I><FONT COLOR="red"> by default.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If successful, make </FONT>is_show_requested<FONT COLOR="red"> </FONT><I>True</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_show_configurable_target_menu">show_configurable_target_menu (a_x, a_y: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Show the configurable target menu at position </FONT><I>a_x</I><FONT COLOR="red">, </FONT><I>a_y</I><FONT COLOR="red"> relative to </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+            not_destroyed: <B>not</B> is_destroyed
+            mode_is_configurable_target_menu: mode_is_configurable_target_menu
+            configurable_menu_handler_set: configurable_target_menu_handler /= <B>Void</B>
+</A>
+    <A NAME="f_show_relative_to_window">show_relative_to_window (a_parent: EV_WINDOW)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Show </FONT><I>Current</I><FONT COLOR="red"> with respect to </FONT><I>a_parent</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_void: a_parent /= <B>Void</B>
+            not_destroyed: <B>not</B> is_destroyed
+            parent_not_destroyed: <B>not</B> a_parent.is_destroyed
+            a_window_not_current: a_parent /= <B>Current</B>
+</A>
+    <A NAME="f_unlock_update">unlock_update
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Unlock updates for this widget on certain platforms.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            locked_window_is_current: ev_application.locked_window = <B>Current</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+            no_locked_window: ev_application.locked_window = <B>Void</B>
+</A>
+    <A NAME="f_unmerge_radio_button_groups">unmerge_radio_button_groups (other: EV_CONTAINER)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Remove </FONT><I>other</I><FONT COLOR="red"> from radio button group of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If no radio button of </FONT><I>other</I><FONT COLOR="red"> was checked before removal</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> then first radio button contained will be checked.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            other_is_merged: <B>attached</B> merged_radio_button_groups <B>as</B> l_merged_r_b_groups <B>and then</B> l_merged_r_b_groups.has (other)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            other_not_merged: other.merged_radio_button_groups = <B>Void</B>
+            not_contained_in_this_group: <B>attached</B> merged_radio_button_groups <B>as</B> l_merged_r_b_groups <B>implies</B> <B>not</B> l_merged_r_b_groups.has (other)
+            other_first_radio_button_now_selected: <B>not</B> <B>old</B> other.has_selected_radio_button <B>and</B> <B>old</B> other.has_radio_button <B>implies</B> other.first_radio_button_selected
+            original_radio_button_still_selected: <B>old</B> has_selected_radio_button <B>implies</B> has_selected_radio_button
+            other_first_radio_button_now_selected: <B>not</B> <B>old</B> has_selected_radio_button <B>and</B> <B>old</B> other.has_radio_button <B>and</B> (<B>attached</B> <B>old</B> merged_radio_button_groups <B>as</B> l_merged_r_b_groups <B>and then</B> l_merged_r_b_groups.count = 1) <B>and</B> has_radio_button <B>implies</B> first_radio_button_selected
+            other_original_radio_button_still_selected: <B>old</B> other.has_selected_radio_button <B>implies</B> other.has_selected_radio_button
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Element change</FONT>
+
+    <A NAME="f_extend">extend (v: <B>like</B> item)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Ensure that structure includes </FONT><I>v</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Do not move cursor.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            extendible: extendible
+            v_not_void: v /= <B>Void</B>
+            v_parent_void: v.parent = <B>Void</B>
+            v_not_current: v /= <B>Current</B>
+            v_not_parent_of_current: <B>not</B> is_parent_recursive (v)
+            v_containable: may_contain (v)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            has_v: has (v)
+</A>
+    <A NAME="f_fill">fill (other: CONTAINER [EV_WIDGET])
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Fill with as many items of </FONT><I>other</I><FONT COLOR="red"> as possible.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> The representations of </FONT><I>other</I><FONT COLOR="red"> and current structure</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> need not be the same.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>COLLECTION<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>COLLECTION
+            other_not_void: other /= <B>Void</B>
+            extendible: extendible
+</A>
+    <A NAME="f_put">put (v: <B>like</B> item)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Replace </FONT>item<FONT COLOR="red"> with </FONT><I>v</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Was declared in </FONT>EV_CONTAINER<FONT COLOR="red"> as synonym of </FONT>replace<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            writable: writable
+            v_not_void: v /= <B>Void</B>
+            v_parent_void: v.parent = <B>Void</B>
+            v_not_current: v /= <B>Current</B>
+            v_not_parent_of_current: <B>not</B> is_parent_recursive (v)
+            v_containable: may_contain (v)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            has_v: has (v)
+            not_has_old_item: <B>old</B> readable <B>implies</B> (<B>attached</B> <B>old</B> implementation.item <B>as</B> l_item <B>and then</B> <B>not</B> has (l_item))
+</A>
+    <A NAME="f_remove_help_context">remove_help_context
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Remove key press action associated with </FONT><I>EV_APPLICATION.help_key</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_HELP_CONTEXTABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_HELP_CONTEXTABLE
+            not_destroyed: <B>not</B> is_destroyed
+            help_context_not_void: help_context /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_HELP_CONTEXTABLE
+            no_help_context: help_context = <B>Void</B>
+</A>
+    <A NAME="f_remove_icon_name">remove_icon_name
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Make </FONT>icon_name<FONT COLOR="red"> empty.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            icon_name_removed: icon_name.is_empty
+</A>
+    <A NAME="f_remove_pixmap">remove_background_pixmap
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Remove image displayed on </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PIXMAPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PIXMAPABLE
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PIXMAPABLE
+            pixmap_removed: background_pixmap = <B>Void</B>
+</A>
+    <A NAME="f_replace">replace (v: <B>like</B> item)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Replace </FONT>item<FONT COLOR="red"> with </FONT><I>v</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Was declared in </FONT>EV_CONTAINER<FONT COLOR="red"> as synonym of </FONT>put<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            writable: writable
+            v_not_void: v /= <B>Void</B>
+            v_parent_void: v.parent = <B>Void</B>
+            v_not_current: v /= <B>Current</B>
+            v_not_parent_of_current: <B>not</B> is_parent_recursive (v)
+            v_containable: may_contain (v)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            has_v: has (v)
+            not_has_old_item: <B>old</B> readable <B>implies</B> (<B>attached</B> <B>old</B> implementation.item <B>as</B> l_item <B>and then</B> <B>not</B> has (l_item))
+</A>
+    <A NAME="f_set_background_color">set_background_color (a_color: <B>like</B> background_color)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_color</I><FONT COLOR="red"> to </FONT>background_color<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            not_destroyed: <B>not</B> is_destroyed
+            a_color_not_void: a_color /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            background_color_assigned: background_color.is_equal (a_color)
+</A>
+    <A NAME="f_set_data">set_data (some_data: <B>like</B> data)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>some_data</I><FONT COLOR="red"> to </FONT>data<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ANY
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ANY
+            data_assigned: data = some_data
+</A>
+    <A NAME="f_set_foreground_color">set_foreground_color (a_color: <B>like</B> foreground_color)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_color</I><FONT COLOR="red"> to </FONT>foreground_color<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            not_destroyed: <B>not</B> is_destroyed
+            a_color_not_void: a_color /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+            foreground_color_assigned: foreground_color.is_equal (a_color)
+</A>
+    <A NAME="f_set_help_context">set_help_context (an_help_context: FUNCTION [EV_HELP_CONTEXT])
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>an_help_context</I><FONT COLOR="red"> to </FONT>help_context<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_HELP_CONTEXTABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_HELP_CONTEXTABLE
+            not_destroyed: <B>not</B> is_destroyed
+            an_help_context_not_void: an_help_context /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_HELP_CONTEXTABLE
+            help_context_assigned: <B>attached</B> help_context <B>as</B> l_help_context <B>and then</B> l_help_context.is_equal (an_help_context)
+</A>
+    <A NAME="f_set_icon_name">set_icon_name (an_icon_name: READABLE_STRING_GENERAL)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>an_icon_name</I><FONT COLOR="red"> to </FONT>icon_name<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            an_icon_name_not_void: an_icon_name /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            icon_name_assigned: icon_name.same_string_general (an_icon_name)
+            cloned: icon_name /= an_icon_name
+</A>
+    <A NAME="f_set_icon_pixmap">set_icon_pixmap (an_icon: EV_PIXMAP)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>an_icon</I><FONT COLOR="red"> to </FONT><I>icon</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            not_destroyed: <B>not</B> is_destroyed
+            pixmap_not_void: an_icon /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+            icon_pixmap_assigned: icon_pixmap.is_equal (an_icon)
+</A>
+    <A NAME="f_set_identifier_name">set_identifier_name (a_name: READABLE_STRING_GENERAL)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set </FONT>identifier_name<FONT COLOR="red"> to </FONT><I>a_name</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_IDENTIFIABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            a_name_not_void: a_name /= <B>Void</B>
+            a_name_not_empty: <B>not</B> a_name.is_empty
+            no_period_in_name: <B>not</B> a_name.has ('.'.to_character_32)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_IDENTIFIABLE
+            identifier_name_set: identifier_name.same_string_general (a_name)
+</A>
+    <A NAME="f_set_minimum_height">set_minimum_height (a_minimum_height: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Set </FONT><I>a_minimum_height</I><FONT COLOR="red"> in pixels to </FONT>minimum_height<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT>height<FONT COLOR="red"> is less than </FONT><I>a_minimum_height</I><FONT COLOR="red">, resize.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> From now, </FONT>minimum_height<FONT COLOR="red"> is fixed and will not be changed</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> dynamically by the application anymore.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            a_minimum_height_positive: a_minimum_height &gt;= 0
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            minimum_height_assigned: (a_minimum_height &gt; 0 <B>implies</B> minimum_height = a_minimum_height) <B>or</B> (a_minimum_height = 0 <B>implies</B> (minimum_height &lt;= 1))
+            minimum_height_set_by_user_set: minimum_height_set_by_user
+</A>
+    <A NAME="f_set_minimum_size">set_minimum_size (a_minimum_width, a_minimum_height: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_minimum_height</I><FONT COLOR="red"> to </FONT>minimum_height
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> and </FONT><I>a_minimum_width</I><FONT COLOR="red"> to </FONT>minimum_width<FONT COLOR="red"> in pixels.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT>width<FONT COLOR="red"> or </FONT>height<FONT COLOR="red"> is less than minimum size, resize.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> From now, minimum size is fixed and will not be changed</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> dynamically by the application anymore.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            a_minimum_width_positive: a_minimum_width &gt;= 0
+            a_minimum_height_positive: a_minimum_height &gt;= 0
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            minimum_width_assigned: (a_minimum_width &gt; 0 <B>implies</B> minimum_width = a_minimum_width) <B>or</B> (a_minimum_width = 0 <B>implies</B> (minimum_width &lt;= 1))
+            minimum_height_assigned: (a_minimum_height &gt; 0 <B>implies</B> minimum_height = a_minimum_height) <B>or</B> (a_minimum_height = 0 <B>implies</B> (minimum_height &lt;= 1))
+            minimum_height_set_by_user_set: minimum_height_set_by_user
+            minimum_width_set_by_user_set: minimum_width_set_by_user
+</A>
+    <A NAME="f_set_minimum_width">set_minimum_width (a_minimum_width: INTEGER_32)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_minimum_width</I><FONT COLOR="red"> in pixels to </FONT>minimum_width<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT>width<FONT COLOR="red"> is less than </FONT><I>a_minimum_width</I><FONT COLOR="red">, resize.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> From now, </FONT>minimum_width<FONT COLOR="red"> is fixed and will not be changed</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> dynamically by the application anymore.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            a_minimum_width_positive: a_minimum_width &gt;= 0
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            minimum_width_assigned: (a_minimum_width &gt; 0 <B>implies</B> minimum_width = a_minimum_width) <B>or</B> (a_minimum_width = 0 <B>implies</B> (minimum_width &lt;= 1))
+            minimum_width_set_by_user_set: minimum_width_set_by_user
+</A>
+    <A NAME="f_set_pixmap">set_background_pixmap (a_pixmap: EV_PIXMAP)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Display image of </FONT><I>a_pixmap</I><FONT COLOR="red"> on </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Image of </FONT><I>pixmap</I><FONT COLOR="red"> will be a copy of </FONT><I>a_pixmap</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Image may be scaled in some descendents, i.e EV_TREE_ITEM</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> See EV_TREE.set_pixmaps_size.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PIXMAPABLE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PIXMAPABLE
+            not_destroyed: <B>not</B> is_destroyed
+            pixmap_not_void: a_pixmap /= <B>Void</B>
+</A>
+    <A NAME="f_set_pointer_style">set_pointer_style (a_cursor: EV_POINTER_STYLE)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Assign </FONT><I>a_cursor</I><FONT COLOR="red"> to </FONT>pointer_style<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+            a_cursor_not_void: a_cursor /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            pointer_style_assigned: <B>attached</B> pointer_style <B>as</B> l_pointer_style <B>and then</B> l_pointer_style.is_equal (a_cursor)
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Removal</FONT>
+
+    <A NAME="f_free_id"><B>frozen</B> free_id
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Free the entry associated with </FONT>object_id<FONT COLOR="red"> if any.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>IDENTIFIED<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>IDENTIFIED
+            object_freed: id_freed
+</A>
+    <A NAME="f_prune">prune (v: EV_WIDGET)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Remove </FONT><I>v</I><FONT COLOR="red"> if contained.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+            writable: prunable
+            v_not_void: v /= <B>Void</B>
+            v_parent_void: v.parent = <B>Current</B>
+            v_not_current: v /= <B>Current</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            has_v: <B>not</B> has (v)
+        <B>ensure then</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CELL
+                <B>not</B> has (v)
+</A>
+    <A NAME="f_prune_all">prune_all (v: EV_WIDGET)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Remove all occurrences of </FONT><I>v</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (Reference or object equality,</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> based on </FONT>object_comparison<FONT COLOR="red">.)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>COLLECTION<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>COLLECTION
+            prunable: prunable
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>COLLECTION
+            no_more_occurrences: <B>not</B> has (v)
+</A>
+    <A NAME="f_wipe_out">wipe_out
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Remove </FONT>item<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>COLLECTION
+            prunable: prunable
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>COLLECTION
+            wiped_out: is_empty
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Conversion</FONT>
+
+    <A NAME="f_linear_representation">linear_representation: LINEAR [<B>like</B> item]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Representation as a linear structure</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CELL<FONT COLOR="red">)</FONT>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Duplication</FONT>
+
+    <A NAME="f_copy">copy (other: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Update current object using fields of object attached</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> to </FONT><I>other</I><FONT COLOR="red">, so as to yield equal objects.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+            type_identity: same_type (other)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            is_equal: <B>Current</B> ~ other
+</A>
+    <A NAME="f_deep_copy"><B>frozen</B> deep_copy (other: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Effect equivalent to that of:</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red">		</FONT>copy<FONT COLOR="red"> (</FONT><I>other</I><FONT COLOR="red"> . </FONT>deep_twin<FONT COLOR="red">)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            deep_equal: deep_equal (<B>Current</B>, other)
+</A>
+    <A NAME="f_deep_twin"><B>frozen</B> deep_twin: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New object structure recursively duplicated from Current.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            deep_twin_not_void: <B>Result</B> /= <B>Void</B>
+            deep_equal: deep_equal (<B>Current</B>, <B>Result</B>)
+</A>
+    <A NAME="f_standard_copy"><B>frozen</B> standard_copy (other: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Copy every field of </FONT><I>other</I><FONT COLOR="red"> onto corresponding field</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of current object.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            other_not_void: other /= <B>Void</B>
+            type_identity: same_type (other)
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            is_standard_equal: standard_is_equal (other)
+</A>
+    <A NAME="f_standard_twin"><B>frozen</B> standard_twin: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New object field-by-field identical to </FONT><I>other</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Always uses default copying semantics.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            standard_twin_not_void: <B>Result</B> /= <B>Void</B>
+            equal: standard_equal (<B>Result</B>, <B>Current</B>)
+</A>
+    <A NAME="f_twin"><B>frozen</B> twin: <B>attached</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New object equal to </FONT><I>Current</I>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT>twin<FONT COLOR="red"> calls </FONT>copy<FONT COLOR="red">; to change copying/twinning semantics, redefine </FONT>copy<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            twin_not_void: <B>Result</B> /= <B>Void</B>
+            is_equal: <B>Result</B> ~ <B>Current</B>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Basic operations</FONT>
+
+    <A NAME="f_default"><B>frozen</B> default: <B>detachable</B> <A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Default value of object's type</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_default_pointer"><B>frozen</B> default_pointer: POINTER
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Default value of type </FONT><I>POINTER</I>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (Avoid the need to write </FONT><I>p</I><FONT COLOR="red">.</FONT>default<FONT COLOR="red"> for</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> some </FONT><I>p</I><FONT COLOR="red"> of type </FONT><I>POINTER</I><FONT COLOR="red">.)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_default_rescue">default_rescue
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Process exception for routines with no Rescue clause.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> (Default: do nothing.)</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_do_nothing"><B>frozen</B> do_nothing
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Execute a null action.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_propagate_background_color">propagate_background_color
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Propagate </FONT>background_color<FONT COLOR="red"> recursively, to all children.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            background_color_propagated: background_color_propagated
+</A>
+    <A NAME="f_propagate_foreground_color">propagate_foreground_color
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Propagate </FONT>foreground_color<FONT COLOR="red"> recursively, to all children.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            foreground_color_propagated: foreground_color_propagated
+</A>
+    <A NAME="f_refresh_now">refresh_now
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Force an immediate redraw of </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+            not_destroyed: <B>not</B> is_destroyed
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Command</FONT>
+
+    <A NAME="f_destroy">destroy
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Destroy underlying native toolkit object.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Render </FONT><I>Current</I><FONT COLOR="red"> unusable.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ANY
+            is_destroyed: is_destroyed
+</A>
+    <A NAME="f_destroy_and_exit_if_last">destroy_and_exit_if_last
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Destroy current window and destroy instance of EV_APPLICATION if</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> no more top level windows remain in the system.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW<FONT COLOR="red">)</FONT>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Contract support</FONT>
+
+    <A NAME="f_is_background_color_void">is_background_color_void: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT>background_color<FONT COLOR="red"> void?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_is_foreground_color_void">is_foreground_color_void: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If </FONT>foreground_color<FONT COLOR="red"> void?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_COLORIZABLE<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_is_parent_recursive">is_parent_recursive (a_widget: EV_WIDGET): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>a_widget</I><FONT COLOR="red"> </FONT>parent<FONT COLOR="red">, or recursivly, </FONT>parent<FONT COLOR="red"> of </FONT>parent<FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+            not_destroyed: <B>not</B> is_destroyed
+</A>
+    <A NAME="f_may_contain">may_contain (v: EV_WIDGET): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> May </FONT><I>v</I><FONT COLOR="red"> be inserted in </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Instances of EV_WINDOW may not be inserted</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> in a container even though they are widgets.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_CONTAINER<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_parent_of_source_allows_docking">parent_of_source_allows_docking: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does parent of source to be transported</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> allow current to be dragged out? (See </FONT>real_source<FONT COLOR="red">)</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Not all Vision2 containers are currently supported by this</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> mechanism, only descendents of EV_DOCKABLE_TARGET</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> are supported.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_source_has_current_recursive">source_has_current_recursive (source: EV_DOCKABLE_SOURCE): BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Does </FONT><I>source</I><FONT COLOR="red"> recursively contain </FONT><I>Current</I><FONT COLOR="red">?</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> As seen by parenting structure.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+            not_destroyed: <B>not</B> is_destroyed
+            source_not_void: source /= <B>Void</B>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Event handling</FONT>
+
+    <A NAME="f_close_request_actions">close_request_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed whan a request to close window</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> has been received.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_conforming_pick_actions">conforming_pick_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a pebble that fits here is picked.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_dock_ended_actions">dock_ended_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed after a dock completes from </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Either to a dockable target or a dockable dialog.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_dock_started_actions">dock_started_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a dockable source is dragged.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_SOURCE_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_docked_actions">docked_actions: EV_DOCKABLE_SOURCE_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a dockable source completes a transport</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Fired only if source has been moved, after parenting.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_DOCKABLE_TARGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_TARGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_drop_actions">drop_actions: EV_PND_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a pebble is dropped here.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_file_drop_actions">file_drop_actions: EV_LITE_ACTION_SEQUENCE [LIST [STRING_32]]
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when an OS file drop is performed on </FONT><I>Current</I><FONT COLOR="red">.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_focus_in_actions">focus_in_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when keyboard focus is gained.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_focus_out_actions">focus_out_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when keyboard focus is lost.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_hide_actions">hide_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when window is hidden.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_key_press_actions">key_press_actions: EV_KEY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a keyboard key is pressed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_key_press_string_actions">key_press_string_actions: EV_KEY_STRING_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a keyboard press generates a displayable character.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_key_release_actions">key_release_actions: EV_KEY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a keyboard key is released.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_maximize_actions">maximize_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when window is maximized.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_minimize_actions">minimize_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when window is minimized.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_mouse_wheel_actions">mouse_wheel_actions: EV_INTEGER_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when mouse wheel is rotated.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_move_actions">move_actions: EV_GEOMETRY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when window moves.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pick_actions">pick_actions: EV_PND_START_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when </FONT>pebble<FONT COLOR="red"> is picked up.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pick_ended_actions">pick_ended_actions: EV_PND_FINISHED_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when a transport from </FONT><I>Current</I><FONT COLOR="red"> ends.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> If transport completed successfully, then event data</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> is target. If cancelled, then event data is Void.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pointer_button_press_actions">pointer_button_press_actions: EV_POINTER_BUTTON_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when screen pointer button is pressed.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pointer_button_release_actions">pointer_button_release_actions: EV_POINTER_BUTTON_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when screen pointer button is released.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pointer_double_press_actions">pointer_double_press_actions: EV_POINTER_BUTTON_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when screen pointer is double clicked.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pointer_enter_actions">pointer_enter_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when screen pointer enters widget.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pointer_leave_actions">pointer_leave_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when screen pointer leaves widget.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_pointer_motion_actions">pointer_motion_actions: EV_POINTER_MOTION_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when screen pointer moves.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>require</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT> EV_ABSTRACT_PICK_AND_DROPABLE
+            <B>True</B>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_resize_actions">resize_actions: EV_GEOMETRY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when size changes.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WIDGET_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_restore_actions">restore_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when window leaves </FONT><I>maximized</I><FONT COLOR="red"> or</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> </FONT><I>minimized</I><FONT COLOR="red"> state.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_TITLED_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_show_actions">show_actions: EV_NOTIFY_ACTION_SEQUENCE
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Actions to be performed when window is shown.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_WINDOW_ACTION_SEQUENCES<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW_ACTION_SEQUENCES
+            not_void: <B>Result</B> /= <B>Void</B>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Output</FONT>
+
+    <A NAME="f_io">Io: STD_FILES
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Handle to standard file setup</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            io_not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_out">out: STRING_8
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New string containing terse printable representation</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of current object</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            out_not_void: <B>Result</B> /= <B>Void</B>
+</A>
+    <A NAME="f_print">print (o: <B>detachable</B> ANY)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Write terse external representation of </FONT><I>o</I>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> on standard output.</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+</A>
+    <A NAME="f_tagged_out"><B>frozen</B> tagged_out: STRING_8
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New string containing terse printable representation</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of current object</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            tagged_out_not_void: <B>Result</B> /= <B>Void</B>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Platform</FONT>
+
+    <A NAME="f_operating_environment">Operating_environment: OPERATING_ENVIRONMENT
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Objects available from the operating system</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+            operating_environment_not_void: <B>Result</B> /= <B>Void</B>
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Status Report</FONT>
+
+    <A NAME="f_is_destroyed">is_destroyed: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Is </FONT><I>Current</I><FONT COLOR="red"> no longer usable?</FONT>
+            <FONT COLOR="red">--</FONT> <FONT COLOR="red">(from </FONT>EV_ANY<FONT COLOR="red">)</FONT>
+        <B>ensure</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ANY
+            bridge_ok: <B>Result</B> = implementation.is_destroyed
+</A>    
+<B>invariant</B>
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_TITLED_WINDOW
+    accelerators_not_void: is_usable <B>implies</B> accelerators /= <B>Void</B>
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WINDOW
+    consistent_horizontal_bounds: is_usable <B>implies</B> maximum_width &gt;= minimum_width
+    consistent_vertical_bounds: is_usable <B>implies</B> maximum_height &gt;= minimum_height
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_CONTAINER
+    client_width_non_negative: is_usable <B>implies</B> client_width &gt;= 0
+    client_width_within_limit: is_usable <B>implies</B> client_width &lt;= width
+    client_height_non_negative: is_usable <B>implies</B> client_height &gt;= 0
+    client_height_within_limit: is_usable <B>implies</B> client_height &lt;= height
+    all_radio_buttons_connected: is_usable <B>implies</B> all_radio_buttons_connected
+    parent_of_items_is_current: is_usable <B>implies</B> parent_of_items_is_current
+    items_unique: is_usable <B>implies</B> items_unique
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_WIDGET
+    is_displayed_implies_show_requested: is_usable <B>and then</B> is_displayed <B>implies</B> is_show_requested
+    parent_contains_current: is_usable <B>and then</B> <B>attached</B> parent <B>as</B> l_parent <B>implies</B> l_parent.has (<B>Current</B>)
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_PICK_AND_DROPABLE
+    user_interface_modes_mutually_exclusive: mode_is_pick_and_drop.to_integer + mode_is_drag_and_drop.to_integer + mode_is_target_menu.to_integer = 1
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_ANY
+    is_initialized: is_initialized
+    default_create_called: default_create_called
+    is_coupled: default_create_called <B>implies</B> (implementation.interface = <B>Current</B> <B>or</B> (<B>attached</B> {EV_ENVIRONMENT} <B>Current</B> <B>and then</B> <B>attached</B> implementation.interface))
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>ANY
+    reflexive_equality: standard_is_equal (<B>Current</B>)
+    reflexive_conformance: conforms_to (<B>Current</B>)
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_POSITIONED
+    width_not_negative: is_usable <B>implies</B> width &gt;= 0
+    height_not_negative: is_usable <B>implies</B> height &gt;= 0
+    minimum_width_not_negative: is_usable <B>implies</B> minimum_width &gt;= 0
+    minimum_height_not_negative: is_usable <B>implies</B> minimum_height &gt;= 0
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_DOCKABLE_SOURCE
+    parent_permits_docking: is_dockable <B>implies</B> parent_of_source_allows_docking
+
+        <FONT COLOR="red">--</FONT> <FONT COLOR="red">from </FONT>EV_COLORIZABLE
+    background_color_not_void: is_usable <B>implies</B> <B>not</B> is_background_color_void
+    foreground_color_not_void: is_usable <B>implies</B> <B>not</B> is_foreground_color_void
+
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/etf_main_window_imp_flatshort.html">ETF_MAIN_WINDOW_IMP</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_main_window_imp_chart.html">Chart</A></TD><TD><A HREF="etf_main_window_imp_links.html">Relations</A></TD><TD><A HREF="etf_main_window_imp.html">Text</A></TD><TD><A HREF="etf_main_window_imp_flat.html">Flat</A></TD><TD><A HREF="etf_main_window_imp_short.html">Contracts</A></TD><TD>Flat contracts</TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

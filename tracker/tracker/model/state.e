@@ -29,6 +29,7 @@ feature {NONE}
 			state_i := 0
 			last_valid_i := 0
 			first_i := 0
+			create zero_value.make_from_int (0)
 		end
 
 feature
@@ -46,6 +47,7 @@ feature
 	state_i : INTEGER
 	last_valid_i : INTEGER
 	first_i : INTEGER
+	zero_value : VALUE
 
 
 feature -- queries
@@ -304,4 +306,9 @@ feature -- output
 
 		end
 
+invariant
+	valid_phases: across phaselist as ph_string all attached phases.at (ph_string.item) as ph_out end
+	valid_containers : across containerlist as cn_string all attached containers.at(cn_string.item) as cn_out end
+	valid_tracker_ph_max: tracker.max_phase_radiation.is_greater_equal (zero_value)
+	valid_tracker_cn_max: tracker.max_container_radiation.is_greater_equal (zero_value)
 end

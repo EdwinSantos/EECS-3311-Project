@@ -1,90 +1,63 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {HISTORY}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>history Contracts</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>history Contracts</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_flat.html">Flat</A></TD>
-<TD CLASS="nolink2">Contracts</TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="history"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/history_short.html">HISTORY</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="history_chart.html">Chart</A></TD><TD><A HREF="history_links.html">Relations</A></TD><TD><A HREF="history.html">Text</A></TD><TD><A HREF="history_flat.html">Flat</A></TD><TD>Contracts</TD><TD><A HREF="history_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/history_short.html">HISTORY</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
-	<A CLASS="eclass" HREF="../tracker/history_short.html">HISTORY</A>
+<B>class</B> <B>interface</B>
+    <A HREF="../tracker/history_short.html">HISTORY</A>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../tracker/history_short.html#f_make">make</A>
+<B>create</B> 
+    <A HREF="../tracker/history_short.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> history</SPAN>
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> history</FONT>
 
-	<A NAME="f_history"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_history">history</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A><SPAN CLASS="esymbol">]</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> history of used invoked operations</SPAN>
+    <A NAME="f_history"><A HREF="../tracker/history_short.html#f_history">history</A>: LIST [<A HREF="../tracker/operation_short.html">OPERATION</A>]</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> history of used invoked operations</FONT>
 
-	<A NAME="f_extend_history"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_extend_history">extend_history</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cur_op</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> wipe all operations past current point and</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> extend with </SPAN><SPAN CLASS="equoted">cur_op</SPAN>
-		<SPAN CLASS="ekeyword">ensure</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history_short.html#f_history">history</A> <SPAN CLASS="esymbol">[</SPAN><A CLASS="efeature" HREF="../tracker/history_short.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="elocal">cur_op</SPAN>
-
-	<A NAME="f_remove_right"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_remove_right">remove_right</A>
-
-	<A NAME="f_clear"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_clear">clear</A>
-
-	<A NAME="f_item"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A>
-		<SPAN CLASS="ekeyword">require</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history_short.html#f_on_item">on_item</A>
-
-	<A NAME="f_on_item"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_on_item">on_item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_forth"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_forth">forth</A>
-
-	<A NAME="f_back"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_back">back</A>
-
-	<A NAME="f_get_first"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_get_first">get_first</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A>
-
-	<A NAME="f_not_last"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_not_last">not_last</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_is_last"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_is_last">is_last</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_is_back_invalid"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_is_back_invalid">is_back_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_is_first"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_is_first">is_first</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_is_empty"></A><A CLASS="efeature" HREF="../tracker/history_short.html#f_is_empty">is_empty</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/history_short.html">HISTORY</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_flat.html">Flat</A></TD>
-<TD CLASS="nolink2">Contracts</TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="history"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_extend_history"><A HREF="../tracker/history_short.html#f_extend_history">extend_history</A> (cur_op: <A HREF="../tracker/operation_short.html">OPERATION</A>)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> wipe all operations past current point and</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> extend with </FONT><I>cur_op</I>
+        <B>ensure</B>
+                <A HREF="../tracker/history_short.html#f_history">history</A> [<A HREF="../tracker/history_short.html#f_history">history</A>.count] = cur_op
+</A>
+    <A NAME="f_remove_right"><A HREF="../tracker/history_short.html#f_remove_right">remove_right</A>
+</A>
+    <A NAME="f_clear"><A HREF="../tracker/history_short.html#f_clear">clear</A>
+</A>
+    <A NAME="f_item"><A HREF="../tracker/history_short.html#f_item">item</A>: <A HREF="../tracker/operation_short.html">OPERATION</A>
+        <B>require</B>
+                <A HREF="../tracker/history_short.html#f_on_item">on_item</A>
+</A>
+    <A NAME="f_on_item"><A HREF="../tracker/history_short.html#f_on_item">on_item</A>: BOOLEAN
+</A>
+    <A NAME="f_forth"><A HREF="../tracker/history_short.html#f_forth">forth</A>
+</A>
+    <A NAME="f_back"><A HREF="../tracker/history_short.html#f_back">back</A>
+</A>
+    <A NAME="f_get_first"><A HREF="../tracker/history_short.html#f_get_first">get_first</A>: <A HREF="../tracker/operation_short.html">OPERATION</A>
+</A>
+    <A NAME="f_not_last"><A HREF="../tracker/history_short.html#f_not_last">not_last</A>: BOOLEAN
+</A>
+    <A NAME="f_is_last"><A HREF="../tracker/history_short.html#f_is_last">is_last</A>: BOOLEAN
+</A>
+    <A NAME="f_is_back_invalid"><A HREF="../tracker/history_short.html#f_is_back_invalid">is_back_invalid</A>: BOOLEAN
+</A>
+    <A NAME="f_is_first"><A HREF="../tracker/history_short.html#f_is_first">is_first</A>: BOOLEAN
+</A>
+    <A NAME="f_is_empty"><A HREF="../tracker/history_short.html#f_is_empty">is_empty</A>: BOOLEAN
+</A>    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/history_short.html">HISTORY</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="history_chart.html">Chart</A></TD><TD><A HREF="history_links.html">Relations</A></TD><TD><A HREF="history.html">Text</A></TD><TD><A HREF="history_flat.html">Flat</A></TD><TD>Contracts</TD><TD><A HREF="history_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

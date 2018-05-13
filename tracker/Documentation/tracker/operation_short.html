@@ -1,74 +1,45 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {OPERATION}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>operation Contracts</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>operation Contracts</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation_flat.html">Flat</A></TD>
-<TD CLASS="nolink2">Contracts</TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="operation"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="operation_chart.html">Chart</A></TD><TD><A HREF="operation_links.html">Relations</A></TD><TD><A HREF="operation.html">Text</A></TD><TD><A HREF="operation_flat.html">Flat</A></TD><TD>Contracts</TD><TD><A HREF="operation_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/operation_short.html">OPERATION</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
-	<A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A>
+<B>deferred</B> <B>class</B> <B>interface</B>
+    <A HREF="../tracker/operation_short.html">OPERATION</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> 
+<B>feature</B> 
 
-	<A NAME="f_state"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_state">State</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/state_short.html">STATE</A>
+    <A NAME="f_state"><A HREF="../tracker/operation_short.html#f_state">State</A>: <A HREF="../tracker/state_short.html">STATE</A>
+</A>
+    <A NAME="f_item"><A HREF="../tracker/operation_short.html#f_item">item</A>: STRING_8</A>
 
-	<A NAME="f_tictac"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_tictac">Tictac</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_model_short.html">ETF_MODEL</A>
+    <A NAME="f_error_string"><A HREF="../tracker/operation_short.html#f_error_string">error_string</A>: STRING_8</A>
 
-	<A NAME="f_item"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_state_id"><A HREF="../tracker/operation_short.html#f_state_id">state_id</A>: INTEGER_32</A>
 
-	<A NAME="f_error_string"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_error_string">error_string</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_last_valid_id"><A HREF="../tracker/operation_short.html#f_last_valid_id">last_valid_id</A>: INTEGER_32</A>
 
-	<A NAME="f_state_id"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_state_id">state_id</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
-
-	<A NAME="f_last_valid_id"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_last_valid_id">last_valid_id</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
-
-	<A NAME="f_get_error"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_get_error">get_error</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-
-	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_error_check">error_check</A>
-
-	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_execute">execute</A>
-
-	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_undo">undo</A>
-
-	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/operation_short.html#f_redo">redo</A>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/operation_short.html">OPERATION</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="operation_flat.html">Flat</A></TD>
-<TD CLASS="nolink2">Contracts</TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="operation"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_get_error"><A HREF="../tracker/operation_short.html#f_get_error">get_error</A>: STRING_8
+</A>
+    <A NAME="f_error_check"><A HREF="../tracker/operation_short.html#f_error_check">error_check</A>
+</A>
+    <A NAME="f_execute"><A HREF="../tracker/operation_short.html#f_execute">execute</A>
+</A>
+    <A NAME="f_undo"><A HREF="../tracker/operation_short.html#f_undo">undo</A>
+</A>
+    <A NAME="f_redo"><A HREF="../tracker/operation_short.html#f_redo">redo</A>
+</A>    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/operation_short.html">OPERATION</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="operation_chart.html">Chart</A></TD><TD><A HREF="operation_links.html">Relations</A></TD><TD><A HREF="operation.html">Text</A></TD><TD><A HREF="operation_flat.html">Flat</A></TD><TD>Contracts</TD><TD><A HREF="operation_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

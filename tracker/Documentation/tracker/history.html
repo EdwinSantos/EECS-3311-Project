@@ -1,155 +1,128 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {HISTORY}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>history Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>history Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="history"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/history.html">HISTORY</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="history_chart.html">Chart</A></TD><TD><A HREF="history_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="history_flat.html">Flat</A></TD><TD><A HREF="history_short.html">Contracts</A></TD><TD><A HREF="history_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/history.html">HISTORY</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/history.html">HISTORY</A>
+<B>class</B> 
+    <A HREF="../tracker/history.html">HISTORY</A>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../tracker/history.html#f_make">make</A>
+<B>create</B> 
+    <A HREF="../tracker/history.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/state.html">STATE</A><SPAN CLASS="esymbol">}</SPAN> 
+<B>feature</B> {<A HREF="../tracker/state.html">STATE</A>} 
 
-	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/history.html#f_make">make</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">local</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	tr_op : NEW_TRACKER</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment">	arg : VALUE</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="esymbol">{</SPAN><SPAN CLASS="neclass">ARRAYED_LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">}</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">10</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> history</SPAN>
+    <A NAME="f_make"><A HREF="../tracker/history.html#f_make">make</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red">local</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red">	tr_op : NEW_TRACKER</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red">	arg : VALUE</FONT>
+        <B>do</B>
+            <B>create</B> {ARRAYED_LIST [<A HREF="../tracker/operation.html">OPERATION</A>]} <A HREF="../tracker/history.html#f_history">history</A>.make (10)
+        <B>end</B></A>
+    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> history</FONT>
 
-	<A NAME="f_history"></A><A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A><SPAN CLASS="esymbol">]</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> history of used invoked operations</SPAN>
+    <A NAME="f_history"><A HREF="../tracker/history.html#f_history">history</A>: LIST [<A HREF="../tracker/operation.html">OPERATION</A>]</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> history of used invoked operations</FONT>
 
-	<A NAME="f_extend_history"></A><A CLASS="efeature" HREF="../tracker/history.html#f_extend_history">extend_history</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cur_op</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> wipe all operations past current point and</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> extend with </SPAN><SPAN CLASS="equoted">cur_op</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/history.html#f_remove_right">remove_right</A>
-			<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">extend</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cur_op</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">finish</SPAN>
-		<SPAN CLASS="ekeyword">ensure</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A> <SPAN CLASS="esymbol">[</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="elocal">cur_op</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_extend_history"><A HREF="../tracker/history.html#f_extend_history">extend_history</A> (cur_op: <A HREF="../tracker/operation.html">OPERATION</A>)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> wipe all operations past current point and</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> extend with </FONT><I>cur_op</I>
+        <B>do</B>
+            <A HREF="../tracker/history.html#f_remove_right">remove_right</A>
+            <A HREF="../tracker/history.html#f_history">history</A>.extend (cur_op)
+            <A HREF="../tracker/history.html#f_history">history</A>.finish
+        <B>ensure</B>
+                <A HREF="../tracker/history.html#f_history">history</A> [<A HREF="../tracker/history.html#f_history">history</A>.count] = cur_op
+        <B>end</B></A>
 
-	<A NAME="f_remove_right"></A><A CLASS="efeature" HREF="../tracker/history.html#f_remove_right">remove_right</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">islast</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">after</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-				<SPAN CLASS="ekeyword">from</SPAN>
-					<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">forth</SPAN>
-				<SPAN CLASS="ekeyword">until</SPAN>
-					<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">after</SPAN>
-				<SPAN CLASS="ekeyword">loop</SPAN>
-					<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">remove</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_remove_right"><A HREF="../tracker/history.html#f_remove_right">remove_right</A>
+        <B>do</B>
+            <B>if</B> <B>not</B> <A HREF="../tracker/history.html#f_history">history</A>.islast <B>and</B> <B>not</B> <A HREF="../tracker/history.html#f_history">history</A>.after <B>then</B>
+                <B>from</B>
+                    <A HREF="../tracker/history.html#f_history">history</A>.forth
+                <B>until</B>
+                    <A HREF="../tracker/history.html#f_history">history</A>.after
+                <B>loop</B>
+                    <A HREF="../tracker/history.html#f_history">history</A>.remove
+                <B>end</B>
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_clear"></A><A CLASS="efeature" HREF="../tracker/history.html#f_clear">clear</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">from</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">start</SPAN>
-			<SPAN CLASS="ekeyword">until</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">after</SPAN>
-			<SPAN CLASS="ekeyword">loop</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">remove</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_clear"><A HREF="../tracker/history.html#f_clear">clear</A>
+        <B>do</B>
+            <B>from</B>
+                <A HREF="../tracker/history.html#f_history">history</A>.start
+            <B>until</B>
+                <A HREF="../tracker/history.html#f_history">history</A>.after
+            <B>loop</B>
+                <A HREF="../tracker/history.html#f_history">history</A>.remove
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_item"></A><A CLASS="efeature" HREF="../tracker/history.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A>
-		<SPAN CLASS="ekeyword">require</SPAN>
-				<A CLASS="efeature" HREF="../tracker/history.html#f_on_item">on_item</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_item"><A HREF="../tracker/history.html#f_item">item</A>: <A HREF="../tracker/operation.html">OPERATION</A>
+        <B>require</B>
+                <A HREF="../tracker/history.html#f_on_item">on_item</A>
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.item
+        <B>end</B></A>
 
-	<A NAME="f_on_item"></A><A CLASS="efeature" HREF="../tracker/history.html#f_on_item">on_item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">valid_index</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">index</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_on_item"><A HREF="../tracker/history.html#f_on_item">on_item</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.valid_index (<A HREF="../tracker/history.html#f_history">history</A>.index)
+        <B>end</B></A>
 
-	<A NAME="f_forth"></A><A CLASS="efeature" HREF="../tracker/history.html#f_forth">forth</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">forth</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_forth"><A HREF="../tracker/history.html#f_forth">forth</A>
+        <B>do</B>
+            <A HREF="../tracker/history.html#f_history">history</A>.forth
+        <B>end</B></A>
 
-	<A NAME="f_back"></A><A CLASS="efeature" HREF="../tracker/history.html#f_back">back</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">back</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_back"><A HREF="../tracker/history.html#f_back">back</A>
+        <B>do</B>
+            <A HREF="../tracker/history.html#f_history">history</A>.back
+        <B>end</B></A>
 
-	<A NAME="f_get_first"></A><A CLASS="efeature" HREF="../tracker/history.html#f_get_first">get_first</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">first</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_get_first"><A HREF="../tracker/history.html#f_get_first">get_first</A>: <A HREF="../tracker/operation.html">OPERATION</A>
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.first
+        <B>end</B></A>
 
-	<A NAME="f_not_last"></A><A CLASS="efeature" HREF="../tracker/history.html#f_not_last">not_last</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">islast</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_not_last"><A HREF="../tracker/history.html#f_not_last">not_last</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <B>not</B> <A HREF="../tracker/history.html#f_history">history</A>.is_empty <B>and</B> <B>not</B> <A HREF="../tracker/history.html#f_history">history</A>.islast
+        <B>end</B></A>
 
-	<A NAME="f_is_last"></A><A CLASS="efeature" HREF="../tracker/history.html#f_is_last">is_last</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">islast</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_last"><A HREF="../tracker/history.html#f_is_last">is_last</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.islast
+        <B>end</B></A>
 
-	<A NAME="f_is_back_invalid"></A><A CLASS="efeature" HREF="../tracker/history.html#f_is_back_invalid">is_back_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">before</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_back_invalid"><A HREF="../tracker/history.html#f_is_back_invalid">is_back_invalid</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.before
+        <B>end</B></A>
 
-	<A NAME="f_is_first"></A><A CLASS="efeature" HREF="../tracker/history.html#f_is_first">is_first</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">isfirst</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_first"><A HREF="../tracker/history.html#f_is_first">is_first</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.isfirst
+        <B>end</B></A>
 
-	<A NAME="f_is_empty"></A><A CLASS="efeature" HREF="../tracker/history.html#f_is_empty">is_empty</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/history.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/history.html">HISTORY</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="history_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="history"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_is_empty"><A HREF="../tracker/history.html#f_is_empty">is_empty</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/history.html#f_history">history</A>.is_empty
+        <B>end</B></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/history.html">HISTORY</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="history_chart.html">Chart</A></TD><TD><A HREF="history_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="history_flat.html">Flat</A></TD><TD><A HREF="history_short.html">Contracts</A></TD><TD><A HREF="history_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

@@ -1,94 +1,67 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {NEW_PHASE}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>new_phase Contracts</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>new_phase Contracts</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase_flat.html">Flat</A></TD>
-<TD CLASS="nolink2">Contracts</TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="new_phase"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/new_phase_short.html">NEW_PHASE</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="new_phase_chart.html">Chart</A></TD><TD><A HREF="new_phase_links.html">Relations</A></TD><TD><A HREF="new_phase.html">Text</A></TD><TD><A HREF="new_phase_flat.html">Flat</A></TD><TD>Contracts</TD><TD><A HREF="new_phase_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/new_phase_short.html">NEW_PHASE</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
-	<A CLASS="eclass" HREF="../tracker/new_phase_short.html">NEW_PHASE</A>
+<B>class</B> <B>interface</B>
+    <A HREF="../tracker/new_phase_short.html">NEW_PHASE</A>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_make">make</A>
+<B>create</B> 
+    <A HREF="../tracker/new_phase_short.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> queries</FONT>
 
-	<A NAME="f_pid"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_pid">pid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_pid"><A HREF="../tracker/new_phase_short.html#f_pid">pid</A>: STRING_8</A>
 
-	<A NAME="f_phase_name"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_phase_name">phase_name</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_phase_name"><A HREF="../tracker/new_phase_short.html#f_phase_name">phase_name</A>: STRING_8</A>
 
-	<A NAME="f_capacity"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_capacity">capacity</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN>
+    <A NAME="f_capacity"><A HREF="../tracker/new_phase_short.html#f_capacity">capacity</A>: INTEGER_64</A>
 
-	<A NAME="f_expected_materials"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_expected_materials">expected_materials</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">]</SPAN>
+    <A NAME="f_expected_materials"><A HREF="../tracker/new_phase_short.html#f_expected_materials">expected_materials</A>: ARRAY [INTEGER_64]</A>
 
-	<A NAME="f_error"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_error">error</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors_short.html">ERRORS</A>
+    <A NAME="f_errors"><A HREF="../tracker/new_phase_short.html#f_errors">errors</A>: <A HREF="../tracker/errors_short.html">ERRORS</A></A>
 
-	<A NAME="f_is_invalid"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_is_invalid">is_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+    <A NAME="f_is_invalid"><A HREF="../tracker/new_phase_short.html#f_is_invalid">is_invalid</A>: BOOLEAN
+</A>
+    <A NAME="f_is_already_in_use"><A HREF="../tracker/new_phase_short.html#f_is_already_in_use">is_already_in_use</A>: BOOLEAN
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> phases cannot be added when there exist containers</FONT>
+</A>
+    <A NAME="f_is_not_alphanumeric_start"><A HREF="../tracker/new_phase_short.html#f_is_not_alphanumeric_start">is_not_alphanumeric_start</A>: BOOLEAN
+</A>
+    <A NAME="f_does_phase_exist"><A HREF="../tracker/new_phase_short.html#f_does_phase_exist">does_phase_exist</A>: BOOLEAN
+</A>
+    <A NAME="f_is_capacity_neg"><A HREF="../tracker/new_phase_short.html#f_is_capacity_neg">is_capacity_neg</A>: BOOLEAN
+</A>
+    <A NAME="f_is_expected_mat_neg"><A HREF="../tracker/new_phase_short.html#f_is_expected_mat_neg">is_expected_mat_neg</A>: BOOLEAN
+</A>    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> commands</FONT>
 
-	<A NAME="f_is_already_in_use"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_is_already_in_use">is_already_in_use</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> phases cannot be added when there exist containers</SPAN>
+    <A NAME="f_error_check"><A HREF="../tracker/new_phase_short.html#f_error_check">error_check</A>
+</A>
+    <A NAME="f_execute"><A HREF="../tracker/new_phase_short.html#f_execute">execute</A>
+</A>
+    <A NAME="f_undo"><A HREF="../tracker/new_phase_short.html#f_undo">undo</A>
+</A>
+    <A NAME="f_redo"><A HREF="../tracker/new_phase_short.html#f_redo">redo</A>
+</A>    
+<B>feature</B> 
 
-	<A NAME="f_is_not_alphanumeric_start"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_is_not_alphanumeric_start">is_not_alphanumeric_start</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_does_phase_exist"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_does_phase_exist">does_phase_exist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_is_capacity_neg"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_is_capacity_neg">is_capacity_neg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-
-	<A NAME="f_is_expected_mat_neg"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_is_expected_mat_neg">is_expected_mat_neg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> commands</SPAN>
-
-	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_error_check">error_check</A>
-
-	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_execute">execute</A>
-
-	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_undo">undo</A>
-
-	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_redo">redo</A>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> 
-
-	<A NAME="f_out"></A><A CLASS="efeature" HREF="../tracker/new_phase_short.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/new_phase_short.html">NEW_PHASE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_phase_flat.html">Flat</A></TD>
-<TD CLASS="nolink2">Contracts</TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="new_phase"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_out"><A HREF="../tracker/new_phase_short.html#f_out">out</A>: STRING_8
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New string containing terse printable representation</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of current object</FONT>
+</A>    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/new_phase_short.html">NEW_PHASE</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="new_phase_chart.html">Chart</A></TD><TD><A HREF="new_phase_links.html">Relations</A></TD><TD><A HREF="new_phase.html">Text</A></TD><TD><A HREF="new_phase_flat.html">Flat</A></TD><TD>Contracts</TD><TD><A HREF="new_phase_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

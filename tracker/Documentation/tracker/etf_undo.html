@@ -1,87 +1,60 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content=""/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>etf_undo Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>etf_undo Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_undo"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_undo_chart.html">Chart</A></TD><TD><A HREF="etf_undo_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_undo_flat.html">Flat</A></TD><TD><A HREF="etf_undo_short.html">Contracts</A></TD><TD><A HREF="etf_undo_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: ""
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/etf_undo.html">ETF_UNDO</A>
+<B>class</B> 
+    <A HREF="../tracker/etf_undo.html">ETF_UNDO</A>
 
-<SPAN CLASS="ekeyword">inherit</SPAN>
-	<A CLASS="eclass" HREF="../generated_code/etf_undo_interface.html">ETF_UNDO_INTERFACE</A>
-		<SPAN CLASS="ekeyword">redefine</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_undo.html#f_undo">undo</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+<B>inherit</B>
+    ETF_UNDO_INTERFACE
+        <B>redefine</B>
+            <A HREF="../tracker/etf_undo.html#f_undo">undo</A>
+        <B>end</B>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../generated_code/etf_undo_interface.html#f_make">make</A>
+<B>create</B> 
+    make
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> command</SPAN>
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> command</FONT>
 
-	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/etf_undo.html#f_undo">undo</A>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">errors</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">errors</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
-			<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_default_update">default_update</A>
-			<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">False</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_is_empty">is_empty</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_is_back_invalid">is_back_invalid</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">False</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_invalid_undo">set_invalid_undo</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">True</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_on_item">on_item</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">True</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_invalid_undo">set_invalid_undo</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">False</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_item">item</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_undo">undo</A>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_item">item</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_state_i">set_state_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_item">item</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_back">back</A>
-				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_is_back_invalid">is_back_invalid</A> <SPAN CLASS="ekeyword">then</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_first_i">get_first_i</A><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">else</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_item">item</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-			<A CLASS="efeature" HREF="../generated_code/etf_command_interface.html#f_etf_cmd_container">etf_cmd_container</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_on_change">on_change</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event.html#f_notify">notify</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/etf_undo.html">ETF_UNDO</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_undo_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_undo"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_undo"><A HREF="../tracker/etf_undo.html#f_undo">undo</A>
+        <B>local</B>
+            errors: <A HREF="../tracker/errors.html">ERRORS</A>
+        <B>do</B>
+            <B>create</B> errors.<A HREF="../tracker/errors.html#f_make">make</A>
+            <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_default_update">default_update</A>
+            <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A> (<B>False</B>)
+            <B>if</B> <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_is_empty">is_empty</A> <B>or</B> <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_is_back_invalid">is_back_invalid</A> <B>then</B>
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A> (<B>False</B>)
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_invalid_undo">set_invalid_undo</A> (<B>True</B>)
+            <B>elseif</B> <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_on_item">on_item</A> <B>then</B>
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A> (<B>True</B>)
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_invalid_undo">set_invalid_undo</A> (<B>False</B>)
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_item">item</A>.<A HREF="../tracker/operation.html#f_undo">undo</A>
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> (<A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_item">item</A>.<A HREF="../tracker/operation.html#f_item">item</A>)
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_state_i">set_state_i</A> (<A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_item">item</A>.<A HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A>)
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_back">back</A>
+                <B>if</B> <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_is_back_invalid">is_back_invalid</A> <B>then</B>
+                    <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A> (<A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_get_first_i">get_first_i</A>)
+                <B>else</B>
+                    <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A> (<A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_item">item</A>.<A HREF="../tracker/operation.html#f_state_id">state_id</A>)
+                <B>end</B>
+            <B>end</B>
+            etf_cmd_container.on_change.notify ([<B>Current</B>])
+        <B>end</B></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/etf_undo.html">ETF_UNDO</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_undo_chart.html">Chart</A></TD><TD><A HREF="etf_undo_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_undo_flat.html">Flat</A></TD><TD><A HREF="etf_undo_short.html">Contracts</A></TD><TD><A HREF="etf_undo_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

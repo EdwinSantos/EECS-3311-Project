@@ -1,124 +1,97 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {ERRORS}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>errors Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>errors Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="errors"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="errors_chart.html">Chart</A></TD><TD><A HREF="errors_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="errors_flat.html">Flat</A></TD><TD><A HREF="errors_short.html">Contracts</A></TD><TD><A HREF="errors_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/errors.html">ERRORS</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A>
+<B>class</B> 
+    <A HREF="../tracker/errors.html">ERRORS</A>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
+<B>create</B> 
+    <A HREF="../tracker/errors.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+<B>feature</B> {NONE} 
 
-	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;ok&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e1">e1</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e1: current tracker is in use&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e2">e2</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e2: max phase radiation must be non-negative value&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e3">e3</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e3: max container radiation must be non-negative value&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e4">e4</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e4: max container must not be more than max phase radiation&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e5">e5</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e5: identifiers/names must start with A-Z, a-z or 0..9&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e6">e6</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e6: phase identifier already exists&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e7">e7</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e7: phase capacity must be a positive integer&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e8">e8</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e8: there must be at least one expected material for this phase&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e9">e9</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e9: phase identifier not in the system&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e10">e10</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e10: this container identifier already in tracker&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e11">e11</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e11: this container will exceed phase capacity&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e12">e12</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e12: this container will exceed phase safe radiation&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e13">e13</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e13: phase does not expect this container material&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e14">e14</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e14: container radiation capacity exceeded&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e15">e15</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e15: this container identifier not in tracker&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e16">e16</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e16: source and target phase identifier must be different&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e17">e17</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e17: this container identifier is not in the source phase&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e18">e18</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e18: this container radiation must not be negative&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e19">e19</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e19: there is no more to undo&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/errors.html#f_e20">e20</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_from_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;e20: there is no more to redo&quot;<SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> 
+    <A NAME="f_make"><A HREF="../tracker/errors.html#f_make">make</A>
+        <B>do</B>
+            <B>create</B> <A HREF="../tracker/errors.html#f_ok">ok</A>.make_from_string ("ok")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e1">e1</A>.make_from_string ("e1: current tracker is in use")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e2">e2</A>.make_from_string ("e2: max phase radiation must be non-negative value")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e3">e3</A>.make_from_string ("e3: max container radiation must be non-negative value")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e4">e4</A>.make_from_string ("e4: max container must not be more than max phase radiation")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e5">e5</A>.make_from_string ("e5: identifiers/names must start with A-Z, a-z or 0..9")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e6">e6</A>.make_from_string ("e6: phase identifier already exists")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e7">e7</A>.make_from_string ("e7: phase capacity must be a positive integer")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e8">e8</A>.make_from_string ("e8: there must be at least one expected material for this phase")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e9">e9</A>.make_from_string ("e9: phase identifier not in the system")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e10">e10</A>.make_from_string ("e10: this container identifier already in tracker")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e11">e11</A>.make_from_string ("e11: this container will exceed phase capacity")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e12">e12</A>.make_from_string ("e12: this container will exceed phase safe radiation")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e13">e13</A>.make_from_string ("e13: phase does not expect this container material")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e14">e14</A>.make_from_string ("e14: container radiation capacity exceeded")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e15">e15</A>.make_from_string ("e15: this container identifier not in tracker")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e16">e16</A>.make_from_string ("e16: source and target phase identifier must be different")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e17">e17</A>.make_from_string ("e17: this container identifier is not in the source phase")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e18">e18</A>.make_from_string ("e18: this container radiation must not be negative")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e19">e19</A>.make_from_string ("e19: there is no more to undo")
+            <B>create</B> <A HREF="../tracker/errors.html#f_e20">e20</A>.make_from_string ("e20: there is no more to redo")
+        <B>end</B></A>
+    
+<B>feature</B> 
 
-	<A NAME="f_ok"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_ok"><A HREF="../tracker/errors.html#f_ok">ok</A>: STRING_8</A>
 
-	<A NAME="f_e1"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e1">e1</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e1"><A HREF="../tracker/errors.html#f_e1">e1</A>: STRING_8</A>
 
-	<A NAME="f_e2"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e2">e2</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e2"><A HREF="../tracker/errors.html#f_e2">e2</A>: STRING_8</A>
 
-	<A NAME="f_e3"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e3">e3</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e3"><A HREF="../tracker/errors.html#f_e3">e3</A>: STRING_8</A>
 
-	<A NAME="f_e4"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e4">e4</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e4"><A HREF="../tracker/errors.html#f_e4">e4</A>: STRING_8</A>
 
-	<A NAME="f_e5"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e5">e5</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e5"><A HREF="../tracker/errors.html#f_e5">e5</A>: STRING_8</A>
 
-	<A NAME="f_e6"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e6">e6</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e6"><A HREF="../tracker/errors.html#f_e6">e6</A>: STRING_8</A>
 
-	<A NAME="f_e7"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e7">e7</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e7"><A HREF="../tracker/errors.html#f_e7">e7</A>: STRING_8</A>
 
-	<A NAME="f_e8"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e8">e8</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e8"><A HREF="../tracker/errors.html#f_e8">e8</A>: STRING_8</A>
 
-	<A NAME="f_e9"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e9">e9</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e9"><A HREF="../tracker/errors.html#f_e9">e9</A>: STRING_8</A>
 
-	<A NAME="f_e10"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e10">e10</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e10"><A HREF="../tracker/errors.html#f_e10">e10</A>: STRING_8</A>
 
-	<A NAME="f_e11"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e11">e11</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e11"><A HREF="../tracker/errors.html#f_e11">e11</A>: STRING_8</A>
 
-	<A NAME="f_e12"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e12">e12</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e12"><A HREF="../tracker/errors.html#f_e12">e12</A>: STRING_8</A>
 
-	<A NAME="f_e13"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e13">e13</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e13"><A HREF="../tracker/errors.html#f_e13">e13</A>: STRING_8</A>
 
-	<A NAME="f_e14"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e14">e14</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e14"><A HREF="../tracker/errors.html#f_e14">e14</A>: STRING_8</A>
 
-	<A NAME="f_e15"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e15">e15</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e15"><A HREF="../tracker/errors.html#f_e15">e15</A>: STRING_8</A>
 
-	<A NAME="f_e16"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e16">e16</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e16"><A HREF="../tracker/errors.html#f_e16">e16</A>: STRING_8</A>
 
-	<A NAME="f_e17"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e17">e17</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e17"><A HREF="../tracker/errors.html#f_e17">e17</A>: STRING_8</A>
 
-	<A NAME="f_e18"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e18">e18</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e18"><A HREF="../tracker/errors.html#f_e18">e18</A>: STRING_8</A>
 
-	<A NAME="f_e19"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e19">e19</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_e19"><A HREF="../tracker/errors.html#f_e19">e19</A>: STRING_8</A>
 
-	<A NAME="f_e20"></A><A CLASS="efeature" HREF="../tracker/errors.html#f_e20">e20</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="errors_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="errors"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_e20"><A HREF="../tracker/errors.html#f_e20">e20</A>: STRING_8</A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/errors.html">ERRORS</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="errors_chart.html">Chart</A></TD><TD><A HREF="errors_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="errors_flat.html">Flat</A></TD><TD><A HREF="errors_short.html">Contracts</A></TD><TD><A HREF="errors_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

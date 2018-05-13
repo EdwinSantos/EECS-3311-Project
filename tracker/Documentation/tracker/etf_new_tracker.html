@@ -1,82 +1,55 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content=""/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>etf_new_tracker Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>etf_new_tracker Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_new_tracker"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_new_tracker_chart.html">Chart</A></TD><TD><A HREF="etf_new_tracker_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_new_tracker_flat.html">Flat</A></TD><TD><A HREF="etf_new_tracker_short.html">Contracts</A></TD><TD><A HREF="etf_new_tracker_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: ""
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/etf_new_tracker.html">ETF_NEW_TRACKER</A>
+<B>class</B> 
+    <A HREF="../tracker/etf_new_tracker.html">ETF_NEW_TRACKER</A>
 
-<SPAN CLASS="ekeyword">inherit</SPAN>
-	<A CLASS="eclass" HREF="../generated_code/etf_new_tracker_interface.html">ETF_NEW_TRACKER_INTERFACE</A>
-		<SPAN CLASS="ekeyword">redefine</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_new_tracker.html#f_new_tracker">new_tracker</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+<B>inherit</B>
+    ETF_NEW_TRACKER_INTERFACE
+        <B>redefine</B>
+            <A HREF="../tracker/etf_new_tracker.html#f_new_tracker">new_tracker</A>
+        <B>end</B>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../generated_code/etf_new_tracker_interface.html#f_make">make</A>
+<B>create</B> 
+    make
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> command</SPAN>
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> command</FONT>
 
-	<A NAME="f_new_tracker"></A><A CLASS="efeature" HREF="../tracker/etf_new_tracker.html#f_new_tracker">new_tracker</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">max_phase_radiation</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">max_container_radiation</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/new_tracker.html">NEW_TRACKER</A>
-			<SPAN CLASS="elocal">message_oper</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/message.html">MESSAGE</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_default_update">default_update</A>
-			<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">False</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">max_phase_radiation</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">max_container_radiation</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_get_i">get_i</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_last_valid_i">get_last_valid_i</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_invalid">is_invalid</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_clear">clear</A>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_extend_history">extend_history</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_execute">execute</A>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_error_check">error_check</A>
-				<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">message_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/message.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_state_msg">get_state_msg</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">new_tracker_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_get_error">get_error</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_get_i">get_i</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_state">state</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_get_last_valid_i">get_last_valid_i</A><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/history.html#f_extend_history">extend_history</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">message_oper</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="elocal">message_oper</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/message.html#f_execute">execute</A>
-			<SPAN CLASS="ekeyword">end</SPAN>
-			<A CLASS="efeature" HREF="../generated_code/etf_command_interface.html#f_etf_cmd_container">etf_cmd_container</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_abstract_ui_interface.html#f_on_change">on_change</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_event.html#f_notify">notify</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/etf_new_tracker.html">ETF_NEW_TRACKER</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_new_tracker_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_new_tracker"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_new_tracker"><A HREF="../tracker/etf_new_tracker.html#f_new_tracker">new_tracker</A> (max_phase_radiation: VALUE; max_container_radiation: VALUE)
+        <B>local</B>
+            new_tracker_oper: <A HREF="../tracker/new_tracker.html">NEW_TRACKER</A>
+            message_oper: <A HREF="../tracker/message.html">MESSAGE</A>
+        <B>do</B>
+            <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_default_update">default_update</A>
+            <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A> (<B>False</B>)
+            <B>create</B> new_tracker_oper.<A HREF="../tracker/new_tracker.html#f_make">make</A> (max_phase_radiation, max_container_radiation, <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_get_i">get_i</A>, <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_get_last_valid_i">get_last_valid_i</A>)
+            <B>if</B> <B>not</B> new_tracker_oper.<A HREF="../tracker/new_tracker.html#f_is_invalid">is_invalid</A> <B>then</B>
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_clear">clear</A>
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_extend_history">extend_history</A> (new_tracker_oper)
+                new_tracker_oper.<A HREF="../tracker/new_tracker.html#f_execute">execute</A>
+            <B>else</B>
+                new_tracker_oper.<A HREF="../tracker/new_tracker.html#f_error_check">error_check</A>
+                <B>create</B> message_oper.<A HREF="../tracker/message.html#f_make">make</A> (<A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_get_state_msg">get_state_msg</A>, new_tracker_oper.<A HREF="../tracker/operation.html#f_get_error">get_error</A>, <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_get_i">get_i</A>, <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_state">state</A>.<A HREF="../tracker/state.html#f_get_last_valid_i">get_last_valid_i</A>)
+                <A HREF="../tracker/etf_command.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_history">history</A>.<A HREF="../tracker/history.html#f_extend_history">extend_history</A> (message_oper)
+                message_oper.<A HREF="../tracker/message.html#f_execute">execute</A>
+            <B>end</B>
+            etf_cmd_container.on_change.notify ([<B>Current</B>])
+        <B>end</B></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/etf_new_tracker.html">ETF_NEW_TRACKER</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_new_tracker_chart.html">Chart</A></TD><TD><A HREF="etf_new_tracker_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_new_tracker_flat.html">Flat</A></TD><TD><A HREF="etf_new_tracker_short.html">Contracts</A></TD><TD><A HREF="etf_new_tracker_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

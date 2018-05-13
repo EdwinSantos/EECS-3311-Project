@@ -1,152 +1,125 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {REMOVE_PHASE}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>remove_phase Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>remove_phase Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="remove_phase"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/remove_phase.html">REMOVE_PHASE</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="remove_phase_chart.html">Chart</A></TD><TD><A HREF="remove_phase_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="remove_phase_flat.html">Flat</A></TD><TD><A HREF="remove_phase_short.html">Contracts</A></TD><TD><A HREF="remove_phase_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/remove_phase.html">REMOVE_PHASE</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/remove_phase.html">REMOVE_PHASE</A>
+<B>class</B> 
+    <A HREF="../tracker/remove_phase.html">REMOVE_PHASE</A>
 
-<SPAN CLASS="ekeyword">inherit</SPAN>
-	<A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A>
-		<SPAN CLASS="ekeyword">redefine</SPAN>
-			<A CLASS="efeature" HREF="../tracker/remove_phase.html#f_out">out</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+<B>inherit</B>
+    <A HREF="../tracker/operation.html">OPERATION</A>
+        <B>redefine</B>
+            <A HREF="../tracker/remove_phase.html#f_out">out</A>
+        <B>end</B>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../tracker/remove_phase.html#f_make">make</A>
+<B>create</B> 
+    <A HREF="../tracker/remove_phase.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+<B>feature</B> {NONE} 
 
-	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">pid_given</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">st_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">val_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/remove_phase.html#f_pid">pid</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">pid_given</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">msg</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">st_id</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">val_id</SPAN>
-			<A CLASS="efeature" HREF="../tracker/remove_phase.html#f_fillernum">fillernum</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">-1</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_fillerarr">fillerarr</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_phases">phases</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">at</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">pid_given</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">as</SPAN> phat <SPAN CLASS="ekeyword">then</SPAN>
-				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">phat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_pid">pid</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">phat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_phase_name">phase_name</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">phat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_container_capacity">container_capacity</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">phat</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_expected_materials">expected_materials</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;-1&quot;<SPAN CLASS="esymbol">,</SPAN> &quot;-1&quot;<SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_fillernum">fillernum</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_fillerarr">fillerarr</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> 
+    <A NAME="f_make"><A HREF="../tracker/remove_phase.html#f_make">make</A> (pid_given: STRING_8; msg: STRING_8; st_id: INTEGER_32; val_id: INTEGER_32)
+        <B>do</B>
+            <A HREF="../tracker/remove_phase.html#f_pid">pid</A> := pid_given
+            <A HREF="../tracker/operation.html#f_item">item</A> := msg
+            <A HREF="../tracker/operation.html#f_state_id">state_id</A> := st_id
+            <A HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A> := val_id
+            <A HREF="../tracker/remove_phase.html#f_fillernum">fillernum</A> := -1
+            <B>create</B> <A HREF="../tracker/remove_phase.html#f_fillerarr">fillerarr</A>.make_empty
+            <B>create</B> <A HREF="../tracker/remove_phase.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_make">make</A>
+            <A HREF="../tracker/operation.html#f_error_string">error_string</A> := ""
+            <B>if</B> <B>attached</B> <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_phases">phases</A>.at (pid_given) <B>as</B> phat <B>then</B>
+                <B>create</B> <A HREF="../tracker/remove_phase.html#f_ph">ph</A>.<A HREF="../tracker/phase.html#f_make">make</A> (phat.<A HREF="../tracker/phase.html#f_pid">pid</A>, phat.<A HREF="../tracker/phase.html#f_phase_name">phase_name</A>, phat.<A HREF="../tracker/phase.html#f_container_capacity">container_capacity</A>, phat.<A HREF="../tracker/phase.html#f_expected_materials">expected_materials</A>)
+            <B>else</B>
+                <B>create</B> <A HREF="../tracker/remove_phase.html#f_ph">ph</A>.<A HREF="../tracker/phase.html#f_make">make</A> ("-1", "-1", <A HREF="../tracker/remove_phase.html#f_fillernum">fillernum</A>.to_integer_64, <A HREF="../tracker/remove_phase.html#f_fillerarr">fillerarr</A>)
+            <B>end</B>
+        <B>end</B></A>
+    
+<B>feature</B> 
 
-	<A NAME="f_error"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error">error</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A>
+    <A NAME="f_errors"><A HREF="../tracker/remove_phase.html#f_errors">errors</A>: <A HREF="../tracker/errors.html">ERRORS</A></A>
 
-	<A NAME="f_pid"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_pid">pid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+    <A NAME="f_pid"><A HREF="../tracker/remove_phase.html#f_pid">pid</A>: STRING_8</A>
 
-	<A NAME="f_fillernum"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_fillernum">fillernum</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+    <A NAME="f_fillernum"><A HREF="../tracker/remove_phase.html#f_fillernum">fillernum</A>: INTEGER_32</A>
 
-	<A NAME="f_fillerarr"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_fillerarr">fillerarr</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">]</SPAN>
+    <A NAME="f_fillerarr"><A HREF="../tracker/remove_phase.html#f_fillerarr">fillerarr</A>: ARRAY [INTEGER_64]</A>
 
-	<A NAME="f_ph"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/phase.html">PHASE</A>
+    <A NAME="f_ph"><A HREF="../tracker/remove_phase.html#f_ph">ph</A>: <A HREF="../tracker/phase.html">PHASE</A></A>
 
-	<A NAME="f_is_invalid"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_is_invalid">is_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_does_tracker_exist">does_tracker_exist</A> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_does_phase_exist">does_phase_exist</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_invalid"><A HREF="../tracker/remove_phase.html#f_is_invalid">is_invalid</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/remove_phase.html#f_does_tracker_exist">does_tracker_exist</A> <B>or</B> <B>not</B> <A HREF="../tracker/remove_phase.html#f_does_phase_exist">does_phase_exist</A>
+        <B>end</B></A>
 
-	<A NAME="f_does_tracker_exist"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_does_tracker_exist">does_tracker_exist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_does_tracker_exist"><A HREF="../tracker/remove_phase.html#f_does_tracker_exist">does_tracker_exist</A>: BOOLEAN
+        <B>do</B>
+            <B>if</B> <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_containers">containers</A>.count &gt;= 1 <B>then</B>
+                <B>Result</B> := <B>True</B>
+            <B>else</B>
+                <B>Result</B> := <B>False</B>
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_does_phase_exist"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_does_phase_exist">does_phase_exist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_phases">phases</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">at</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">as</SPAN> ph_exists <SPAN CLASS="ekeyword">then</SPAN>
-				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_does_phase_exist"><A HREF="../tracker/remove_phase.html#f_does_phase_exist">does_phase_exist</A>: BOOLEAN
+        <B>do</B>
+            <B>if</B> <B>attached</B> <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_phases">phases</A>.at (<A HREF="../tracker/remove_phase.html#f_pid">pid</A>) <B>as</B> ph_exists <B>then</B>
+                <B>Result</B> := <B>True</B>
+            <B>else</B>
+                <B>Result</B> := <B>False</B>
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error_check">error_check</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_does_tracker_exist">does_tracker_exist</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e1">e1</A>
-			<SPAN CLASS="ekeyword">elseif</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_does_phase_exist">does_phase_exist</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e9">e9</A>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_error_check"><A HREF="../tracker/remove_phase.html#f_error_check">error_check</A>
+        <B>do</B>
+            <B>if</B> <A HREF="../tracker/remove_phase.html#f_does_tracker_exist">does_tracker_exist</A> <B>then</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/remove_phase.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_e1">e1</A>
+            <B>elseif</B> <B>not</B> <A HREF="../tracker/remove_phase.html#f_does_phase_exist">does_phase_exist</A> <B>then</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/remove_phase.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_e9">e9</A>
+            <B>else</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/remove_phase.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_ok">ok</A>
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_execute">execute</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_error">error</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_remove_phase">remove_phase</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_pid">pid</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_execute"><A HREF="../tracker/remove_phase.html#f_execute">execute</A>
+        <B>do</B>
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> (<A HREF="../tracker/remove_phase.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_ok">ok</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_remove_phase">remove_phase</A> (<A HREF="../tracker/remove_phase.html#f_pid">pid</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A> (<A HREF="../tracker/operation.html#f_state_id">state_id</A>)
+        <B>end</B></A>
 
-	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_undo">undo</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_new_phase">new_phase</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_pid">pid</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_phase_name">phase_name</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_container_capacity">container_capacity</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/remove_phase.html#f_ph">ph</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/phase.html#f_expected_materials">expected_materials</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_state_i">set_state_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_undo"><A HREF="../tracker/remove_phase.html#f_undo">undo</A>
+        <B>do</B>
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_new_phase">new_phase</A> (<A HREF="../tracker/remove_phase.html#f_ph">ph</A>.<A HREF="../tracker/phase.html#f_pid">pid</A>, <A HREF="../tracker/remove_phase.html#f_ph">ph</A>.<A HREF="../tracker/phase.html#f_phase_name">phase_name</A>, <A HREF="../tracker/remove_phase.html#f_ph">ph</A>.<A HREF="../tracker/phase.html#f_container_capacity">container_capacity</A>, <A HREF="../tracker/remove_phase.html#f_ph">ph</A>.<A HREF="../tracker/phase.html#f_expected_materials">expected_materials</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> (<A HREF="../tracker/operation.html#f_item">item</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_set_state_i">set_state_i</A> (<A HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A>)
+        <B>end</B></A>
 
-	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_redo">redo</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/remove_phase.html#f_execute">execute</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> 
+    <A NAME="f_redo"><A HREF="../tracker/remove_phase.html#f_redo">redo</A>
+        <B>do</B>
+            <A HREF="../tracker/remove_phase.html#f_execute">execute</A>
+        <B>end</B></A>
+    
+<B>feature</B> 
 
-	<A NAME="f_out"></A><A CLASS="efeature" HREF="../tracker/remove_phase.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/remove_phase.html">REMOVE_PHASE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="remove_phase_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="remove_phase"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_out"><A HREF="../tracker/remove_phase.html#f_out">out</A>: STRING_8
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New string containing terse printable representation</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of current object</FONT>
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/operation.html#f_item">item</A>
+        <B>end</B></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/remove_phase.html">REMOVE_PHASE</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="remove_phase_chart.html">Chart</A></TD><TD><A HREF="remove_phase_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="remove_phase_flat.html">Flat</A></TD><TD><A HREF="remove_phase_short.html">Contracts</A></TD><TD><A HREF="remove_phase_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

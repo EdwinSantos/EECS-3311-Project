@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\deflang1033{\fonttbl{\f0\fscript\fcharset0 Courier;}}{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red128\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;\red0\green0\blue128;}
+{\cf3\f0\fs16 {\tab}{\tab}{\tab}-- Automatic generation produced by ISE Eiffel --
+{\line}
+{{\b\cf6 note}{\line}
+{\tab}{\cf1 description}{\cf1 :} "Summary description for {\cf1 \{}{\cf4 NEW_CONTAINER}{\cf1 \}}."{\line}
+{\tab}{\cf1 author}{\cf1 :} ""{\line}
+{\tab}{\cf1 date}{\cf1 :} "$Date$"{\line}
+{\tab}{\cf1 revision}{\cf1 :} "$Revision$"{\line}
+{\line}
+{\b\cf6 class} {\line}
+{\tab}{\cf4 NEW_CONTAINER}{\line}
+{\line}
+{\b\cf6 inherit}{\line}
+{\tab}{\cf4 OPERATION}{\line}
+{\tab}{\tab}{\b\cf6 redefine}{\line}
+{\tab}{\tab}{\tab}{\cf5 out}{\line}
+{\tab}{\tab}{\b\cf6 end}{\line}
+{\line}
+{\b\cf6 create} {\line}
+{\tab}{\cf5 make}{\line}
+{\line}
+{\b\cf6 feature} {\cf1 \{}NONE{\cf1 \}} {\line}
+{\line}
+{\tab}{\cf5 {\cf5 make} {\cf1 (}{\cf5 cid_given}{\cf1 :} {\cf4 STRING_8}{\cf1 ;} {\cf5 material_given}{\cf1 :} {\cf4 INTEGER_64}{\cf1 ;} {\cf5 rad_given}{\cf1 :} {\cf4 VALUE}{\cf1 ;} {\cf5 pid_given}{\cf1 :} {\cf4 STRING_8}{\cf1 ;} {\cf5 msg}{\cf1 :} {\cf4 STRING_8}{\cf1 ;} {\cf5 st_id}{\cf1 :} {\cf4 INTEGER_32}{\cf1 ;} {\cf5 val_id}{\cf1 :} {\cf4 INTEGER_32}{\cf1 )}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\cf5 cid} {\cf1 :=} {\cf5 cid_given}{\line}
+{\tab}{\tab}{\tab}{\cf5 material} {\cf1 :=} {\cf5 material_given}{\line}
+{\tab}{\tab}{\tab}{\cf5 rad} {\cf1 :=} {\cf5 rad_given}{\line}
+{\tab}{\tab}{\tab}{\cf5 pid} {\cf1 :=} {\cf5 pid_given}{\line}
+{\tab}{\tab}{\tab}{\cf5 state_id} {\cf1 :=} {\cf5 st_id}{\line}
+{\tab}{\tab}{\tab}{\cf5 last_valid_id} {\cf1 :=} {\cf5 val_id}{\line}
+{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} ""{\line}
+{\tab}{\tab}{\tab}{\cf5 item} {\cf1 :=} {\cf5 msg}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 create} {\cf5 errors}{\b\cf1 .}{\cf5 make}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\tab}{\line}
+{\b\cf6 feature} {\line}
+{\line}
+{\tab}{\cf5 {\cf5 cid}{\cf1 :} {\cf4 STRING_8}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 pid}{\cf1 :} {\cf4 STRING_8}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 material}{\cf1 :} {\cf4 INTEGER_64}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 rad}{\cf1 :} {\cf4 VALUE}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 errors}{\cf1 :} {\cf4 ERRORS}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 is_invalid}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 is_not_alphanumeric_start}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\b\cf6 not} {\cf5 does_pid_exist}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\cf5 does_cid_exist}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\cf5 is_container_rad_neg}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\cf5 is_phase_capacity_exceeded}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\cf5 is_max_phase_rad_exceeded}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\b\cf6 not} {\cf5 does_phase_expect_material}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 Result} {\b\cf6 or} {\cf5 is_container_rad_over_limit}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 is_not_alphanumeric_start}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 not} {\cf5 pid}{\b\cf1 .}{\cf5 at}{\cf1  }{\cf1 (}1{\cf1 )}{\b\cf1 .}{\cf5 is_alpha_numeric} {\b\cf6 or} {\b\cf6 not} {\cf5 cid}{\b\cf1 .}{\cf5 at}{\cf1  }{\cf1 (}1{\cf1 )}{\b\cf1 .}{\cf5 is_alpha_numeric}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 does_pid_exist}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 State}{\b\cf1 .}{\cf5 does_phase_exist}{\cf1  }{\cf1 (}{\cf5 pid}{\cf1 )}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 does_cid_exist}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 across}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 containers} {\b\cf6 as} current_container{\line}
+{\tab}{\tab}{\tab}{\b\cf6 some}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 current_container}{\b\cf1 .}{\cf5 item}{\b\cf1 .}{\cf5 cid} {\cf1 ~} {\cf5 cid}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 end}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 is_phase_capacity_exceeded}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 State}{\b\cf1 .}{\cf5 get_phase_with_pid}{\cf1  }{\cf1 (}{\cf5 pid}{\cf1 )}{\b\cf1 .}{\cf5 is_full}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 is_max_phase_rad_exceeded}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 rad} {\cf1 +} {\cf5 State}{\b\cf1 .}{\cf5 get_phase_with_pid}{\cf1  }{\cf1 (}{\cf5 pid}{\cf1 )}{\b\cf1 .}{\cf5 currentrad} {\cf1 >} {\cf5 State}{\b\cf1 .}{\cf5 tracker}{\b\cf1 .}{\cf5 max_phase_radiation}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 does_phase_expect_material}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 if} {\b\cf6 attached} {\cf5 State}{\b\cf1 .}{\cf5 phases}{\b\cf1 .}{\cf5 at}{\cf1  }{\cf1 (}{\cf5 pid}{\cf1 )} {\b\cf6 as} ph_mat {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\b\cf6 if} {\cf5 ph_mat}{\b\cf1 .}{\cf5 accepts_material}{\cf1  }{\cf1 (}{\cf5 material}{\cf1 )} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 True}{\line}
+{\tab}{\tab}{\tab}{\tab}{\b\cf6 else}{\line}
+{\tab}{\tab}{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 False}{\line}
+{\tab}{\tab}{\tab}{\tab}{\b\cf6 end}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 else}{\line}
+{\tab}{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\b\cf6 False}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 end}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 is_container_rad_over_limit}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 rad} {\cf1 >} {\cf5 State}{\b\cf1 .}{\cf5 tracker}{\b\cf1 .}{\cf5 max_container_radiation}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 is_container_rad_neg}{\cf1 :} {\cf4 BOOLEAN}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 rad}{\b\cf1 .}{\cf5 as_double} {\cf1 <} 0.000{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 error_check}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 if} {\cf5 is_not_alphanumeric_start} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e5}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\b\cf6 not} {\cf5 does_pid_exist} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e9}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\cf5 does_cid_exist} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e10}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\cf5 is_phase_capacity_exceeded} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e11}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\b\cf6 not} {\cf5 does_phase_expect_material} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e13}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\cf5 is_container_rad_over_limit} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e14}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\cf5 is_container_rad_neg} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e18}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 elseif} {\cf5 is_max_phase_rad_exceeded} {\b\cf6 then}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 e12}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 else}{\line}
+{\tab}{\tab}{\tab}{\tab}{\cf5 error_string} {\cf1 :=} {\cf5 errors}{\b\cf1 .}{\cf5 ok}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 end}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 execute}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 state_msg_update}{\cf1  }{\cf1 (}{\cf5 errors}{\b\cf1 .}{\cf5 ok}{\cf1 )}{\line}
+{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 new_container}{\cf1  }{\cf1 (}{\cf5 cid}{\cf1 ,} {\cf5 material}{\cf1 ,} {\cf5 rad}{\cf1 ,} {\cf5 pid}{\cf1 )}{\line}
+{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 set_last_valid_i}{\cf1  }{\cf1 (}{\cf5 state_id}{\cf1 )}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 undo}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 remove_container}{\cf1  }{\cf1 (}{\cf5 cid}{\cf1 )}{\line}
+{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 state_msg_update}{\cf1  }{\cf1 (}{\cf5 item}{\cf1 )}{\line}
+{\tab}{\tab}{\tab}{\cf5 State}{\b\cf1 .}{\cf5 set_state_i}{\cf1  }{\cf1 (}{\cf5 last_valid_id}{\cf1 )}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\line}
+{\tab}{\cf5 {\cf5 redo}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\cf5 execute}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\tab}{\line}
+{\b\cf6 feature} {\line}
+{\line}
+{\tab}{\cf5 {\cf5 out}{\cf1 :} {\cf4 STRING_8}{\line}
+{\tab}{\tab}{\tab}{\cf3 --}{\cf3  New string containing terse printable representation}{\line}
+{\tab}{\tab}{\tab}{\cf3 --}{\cf3  of current object}{\line}
+{\tab}{\tab}{\b\cf6 do}{\line}
+{\tab}{\tab}{\tab}{\b\cf6 Result} {\cf1 :=} {\cf5 item}{\line}
+{\tab}{\tab}{\b\cf6 end}}{\line}
+{\tab}{\line}
+{\b\cf6 end} {\cf3 --} {\cf3 class }{\cf4 NEW_CONTAINER}}
+{\line}
+{\cf3 {\tab}{\tab}{\tab}-- Generated by ISE Eiffel --}
+{\line}
+{\cf3{\tab}{\tab}{\tab}-- For more details: http://www.eiffel.com --}
+}}
+{\line}

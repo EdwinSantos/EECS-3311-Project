@@ -1,222 +1,195 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Main window of ETF project."/>
 <meta name="generator" content="EiffelBuild"/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>etf_main_window Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>etf_main_window Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_main_window"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Main window of ETF project.&quot;</SPAN>
-	<SPAN CLASS="eitag">generator</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;EiffelBuild&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date: 2010-12-22 10:39:24 -0800 (Wed, 22 Dec 2010) $&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision: 85202 $&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_main_window_chart.html">Chart</A></TD><TD><A HREF="etf_main_window_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_main_window_flat.html">Flat</A></TD><TD><A HREF="etf_main_window_short.html">Contracts</A></TD><TD><A HREF="etf_main_window_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Main window of ETF project."
+    generator: "EiffelBuild"
+    date: "$Date: 2010-12-22 10:39:24 -0800 (Wed, 22 Dec 2010) $"
+    revision: "$Revision: 85202 $"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/etf_main_window.html">ETF_MAIN_WINDOW</A>
+<B>class</B> 
+    <A HREF="../tracker/etf_main_window.html">ETF_MAIN_WINDOW</A>
 
-<SPAN CLASS="ekeyword">inherit</SPAN>
-	<A CLASS="eclass" HREF="../tracker/etf_main_window_imp.html">ETF_MAIN_WINDOW_IMP</A>
-		<SPAN CLASS="ekeyword">rename</SPAN>
-			<SPAN CLASS="nefeature">raise</SPAN> <SPAN CLASS="ekeyword">as</SPAN> <SPAN CLASS="nefeature">main_window_raise</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+<B>inherit</B>
+    <A HREF="../tracker/etf_main_window_imp.html">ETF_MAIN_WINDOW_IMP</A>
+        <B>rename</B>
+            raise <B>as</B> main_window_raise
+        <B>end</B>
 
-	<SPAN CLASS="neclass">EXCEPTIONS</SPAN>
-		<SPAN CLASS="ekeyword">rename</SPAN>
-			<SPAN CLASS="nefeature">raise</SPAN> <SPAN CLASS="ekeyword">as</SPAN> <SPAN CLASS="nefeature">exceptions_raise</SPAN>
-		<SPAN CLASS="ekeyword">undefine</SPAN>
-			<SPAN CLASS="nefeature">default_create</SPAN><SPAN CLASS="esymbol">,</SPAN>
-			<SPAN CLASS="nefeature">copy</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    EXCEPTIONS
+        <B>rename</B>
+            raise <B>as</B> exceptions_raise
+        <B>undefine</B>
+            default_create,
+            copy
+        <B>end</B>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<SPAN CLASS="nefeature">default_create</SPAN>
+<B>create</B> 
+    default_create
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization</SPAN>
+<B>feature</B> {NONE} <FONT COLOR="red">--</FONT><FONT COLOR="red"> Initialization</FONT>
 
-	<A NAME="f_user_create_interface_objects"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_user_create_interface_objects">user_create_interface_objects</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Create any auxilliary objects needed for MAIN_WINDOW.</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization for these objects must be performed in </SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_user_initialization">user_initialization</A><SPAN CLASS="ecomment">.</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_make">make</A>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file">session_file</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_with_name</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file_path">Session_file_path</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_model">model</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model.html#f_out">out</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;List of commands: %N&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;================= %N&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_man_page">Man_page</A><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_user_create_interface_objects"><A HREF="../tracker/etf_main_window.html#f_user_create_interface_objects">user_create_interface_objects</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Create any auxilliary objects needed for MAIN_WINDOW.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Initialization for these objects must be performed in </FONT><A HREF="../tracker/etf_main_window.html#f_user_initialization">user_initialization</A><FONT COLOR="red">.</FONT>
+        <B>do</B>
+            <B>create</B> <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_make">make</A>
+            <B>create</B> <A HREF="../tracker/etf_main_window.html#f_session_file">session_file</A>.make_with_name (<A HREF="../tracker/etf_main_window.html#f_session_file_path">Session_file_path</A>)
+            <A HREF="../tracker/etf_main_window_imp.html#f_output">output</A>.insert_text (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_model">model</A>.<A HREF="../tracker/etf_model.html#f_out">out</A>)
+            <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.insert_text ("List of commands: %N")
+            <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.insert_text ("================= %N")
+            <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.insert_text (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_man_page">Man_page</A>)
+        <B>end</B></A>
 
-	<A NAME="f_user_initialization"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_user_initialization">user_initialization</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Perform any initialization on objects created by </SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_user_create_interface_objects">user_create_interface_objects</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and from within current class itself.</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Business Object</SPAN>
+    <A NAME="f_user_initialization"><A HREF="../tracker/etf_main_window.html#f_user_initialization">user_initialization</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Perform any initialization on objects created by </FONT><A HREF="../tracker/etf_main_window.html#f_user_create_interface_objects">user_create_interface_objects</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> and from within current class itself.</FONT>
+        <B>do</B>
+        <B>end</B></A>
+    
+<B>feature</B> {NONE} <FONT COLOR="red">--</FONT><FONT COLOR="red"> Business Object</FONT>
 
-	<A NAME="f_business_obj"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_model_facade.html">ETF_MODEL_FACADE</A>
+    <A NAME="f_business_obj"><A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>: <A HREF="../tracker/etf_model_facade.html">ETF_MODEL_FACADE</A></A>
 
-	<A NAME="f_session_file"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file">session_file</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">PLAIN_TEXT_FILE</SPAN>
+    <A NAME="f_session_file"><A HREF="../tracker/etf_main_window.html#f_session_file">session_file</A>: PLAIN_TEXT_FILE</A>
 
-	<A NAME="f_session_file_path"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file_path">Session_file_path</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN> <SPAN CLASS="esymbol">=</SPAN> &quot;./session.txt&quot;
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Auxiliary Commands</SPAN>
+    <A NAME="f_session_file_path"><A HREF="../tracker/etf_main_window.html#f_session_file_path">Session_file_path</A>: STRING_8 = "./session.txt"</A>
+    
+<B>feature</B> {NONE} <FONT COLOR="red">--</FONT><FONT COLOR="red"> Auxiliary Commands</FONT>
 
-	<A NAME="f_clear_display"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_command">command</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;&quot;<SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;&quot;<SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_clear_display"><A HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
+        <B>do</B>
+            <A HREF="../tracker/etf_main_window_imp.html#f_output">output</A>.set_text ("")
+            <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.set_text ("")
+            <A HREF="../tracker/etf_main_window_imp.html#f_command">command</A>.set_text ("")
+            <A HREF="../tracker/etf_main_window_imp.html#f_history">history</A>.set_text ("")
+        <B>end</B></A>
 
-	<A NAME="f_display_history"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_display_history">display_history</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">trace</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">LIST</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">i</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">from</SPAN>
-				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
-				<SPAN CLASS="elocal">trace</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">start</SPAN>
-			<SPAN CLASS="ekeyword">until</SPAN>
-				<SPAN CLASS="elocal">trace</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">after</SPAN>
-			<SPAN CLASS="ekeyword">loop</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">trace</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">&lt;</SPAN> <SPAN CLASS="elocal">trace</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-				<SPAN CLASS="elocal">trace</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">forth</SPAN>
-				<SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">i</SPAN> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Implementation</SPAN>
+    <A NAME="f_display_history"><A HREF="../tracker/etf_main_window.html#f_display_history">display_history</A> (trace: LIST [STRING_8])
+        <B>local</B>
+            i: INTEGER_32
+        <B>do</B>
+            <B>from</B>
+                i := 1
+                trace.start
+            <B>until</B>
+                trace.after
+            <B>loop</B>
+                <A HREF="../tracker/etf_main_window_imp.html#f_history">history</A>.append_text (trace.item)
+                <B>if</B> i &lt; trace.count <B>then</B>
+                    <A HREF="../tracker/etf_main_window_imp.html#f_history">history</A>.append_text ("%N")
+                <B>end</B>
+                trace.forth
+                i := i + 1
+            <B>end</B>
+        <B>end</B></A>
+    
+<B>feature</B> {NONE} <FONT COLOR="red">--</FONT><FONT COLOR="red"> Implementation</FONT>
 
-	<A NAME="f_command_return_key_pressed"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_command_return_key_pressed">command_return_key_pressed</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Hit the return key to execute the typed command.</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_execute_pressed">execute_pressed</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_command_return_key_pressed"><A HREF="../tracker/etf_main_window.html#f_command_return_key_pressed">command_return_key_pressed</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Hit the return key to execute the typed command.</FONT>
+        <B>do</B>
+            <A HREF="../tracker/etf_main_window.html#f_execute_pressed">execute_pressed</A>
+        <B>end</B></A>
 
-	<A NAME="f_execute_pressed"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_execute_pressed">execute_pressed</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Called by </SPAN><SPAN CLASS="equoted">select_actions</SPAN><SPAN CLASS="ecomment"> of </SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_execute">execute</A><SPAN CLASS="ecomment">.</SPAN>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_command">command</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">text</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">as_string_8</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_execute_command">execute_command</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file">session_file</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">wipe_out</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file">session_file</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">open_append</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file">session_file</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file">session_file</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">close</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_execute_pressed"><A HREF="../tracker/etf_main_window.html#f_execute_pressed">execute_pressed</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Called by </FONT><I>select_actions</I><FONT COLOR="red"> of </FONT><A HREF="../tracker/etf_main_window_imp.html#f_execute">execute</A><FONT COLOR="red">.</FONT>
+        <B>local</B>
+            cmd: STRING_8
+        <B>do</B>
+            cmd := <A HREF="../tracker/etf_main_window_imp.html#f_command">command</A>.text.as_string_8
+            <A HREF="../tracker/etf_main_window.html#f_execute_command">execute_command</A> (cmd)
+            <B>if</B> <B>not</B> <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_error">error</A> <B>then</B>
+                <B>if</B> <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_history">history</A>.count = 1 <B>then</B>
+                    <A HREF="../tracker/etf_main_window.html#f_session_file">session_file</A>.wipe_out
+                <B>end</B>
+                <A HREF="../tracker/etf_main_window.html#f_session_file">session_file</A>.open_append
+                <A HREF="../tracker/etf_main_window.html#f_session_file">session_file</A>.put_string (cmd + "%N")
+                <A HREF="../tracker/etf_main_window.html#f_session_file">session_file</A>.close
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_reset_pressed"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_reset_pressed">reset_pressed</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Reset the history.</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Two consecutive clicks of 'reset' will also</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> wipe out the session file.</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_reset">reset</A>
-			<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_reset_pressed"><A HREF="../tracker/etf_main_window.html#f_reset_pressed">reset_pressed</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Reset the history.</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Two consecutive clicks of 'reset' will also</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> wipe out the session file.</FONT>
+        <B>do</B>
+            <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_reset">reset</A>
+            <A HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
+        <B>end</B></A>
 
-	<A NAME="f_load_pressed"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_load_pressed">load_pressed</A>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Load the session file if it exists.</SPAN>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">fu</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_file_utility.html">ETF_FILE_UTILITY</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">fu</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_read_text_from">read_text_from</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_session_file_path">Session_file_path</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">fu</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">fu</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_error_string">error_string</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_history">history</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">is_empty</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_reset_pressed">reset_pressed</A>
-				<SPAN CLASS="ekeyword">end</SPAN>
-				<SPAN CLASS="elocal">fu</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_remove_comment_lines">remove_comment_lines</A>
-				<SPAN CLASS="ekeyword">across</SPAN>
-					<SPAN CLASS="elocal">fu</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../generated_code/etf_file_utility.html#f_items">items</A> <SPAN CLASS="ekeyword">as</SPAN> cmd
-				<SPAN CLASS="ekeyword">loop</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_execute_command">execute_command</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+    <A NAME="f_load_pressed"><A HREF="../tracker/etf_main_window.html#f_load_pressed">load_pressed</A>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Load the session file if it exists.</FONT>
+        <B>local</B>
+            fu: ETF_FILE_UTILITY
+        <B>do</B>
+            <B>create</B> fu.read_text_from (<A HREF="../tracker/etf_main_window.html#f_session_file_path">Session_file_path</A>)
+            <B>if</B> fu.error <B>then</B>
+                <A HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
+                <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.insert_text (fu.error_string)
+            <B>else</B>
+                <B>if</B> <B>not</B> <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_history">history</A>.is_empty <B>then</B>
+                    <A HREF="../tracker/etf_main_window.html#f_reset_pressed">reset_pressed</A>
+                <B>end</B>
+                fu.remove_comment_lines
+                <B>across</B>
+                    fu.items <B>as</B> cmd
+                <B>loop</B>
+                    <A HREF="../tracker/etf_main_window.html#f_execute_command">execute_command</A> (cmd.item)
+                <B>end</B>
+            <B>end</B>
+        <B>end</B></A>
+    
+<B>feature</B> {NONE} 
 
-	<A NAME="f_execute_command"></A><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_execute_command">execute_command</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Execute 'cmd' and</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> print off stack trace if there's any contract violation.</SPAN>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-			<SPAN CLASS="elocal">error</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_empty</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">not</SPAN> <SPAN CLASS="elocal">error</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_execute_cmd">execute_cmd</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_display_history">display_history</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_history">history</A><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_status_message">status_message</A><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_output_message">output_message</A><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_error">error</A> <SPAN CLASS="ekeyword">then</SPAN>
-					<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_command">command</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cmd</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;%NThere was a problem:%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <SPAN CLASS="nefeature">meaning</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="nefeature">exception</SPAN><SPAN CLASS="esymbol">)</SPAN> <SPAN CLASS="ekeyword">as</SPAN> s <SPAN CLASS="ekeyword">then</SPAN>
-					<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;  &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">s</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <SPAN CLASS="nefeature">tag_name</SPAN> <SPAN CLASS="ekeyword">as</SPAN> s <SPAN CLASS="ekeyword">then</SPAN>
-					<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;  Tag: &quot; <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="elocal">s</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="ekeyword">attached</SPAN> <SPAN CLASS="nefeature">exception_trace</SPAN> <SPAN CLASS="ekeyword">as</SPAN> s <SPAN CLASS="ekeyword">then</SPAN>
-					<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;%NHere is the stack trace%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-					<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">s</SPAN><SPAN CLASS="esymbol">)</SPAN>
-					<SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">append</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;%NEnd of stack trace...%N&quot;<SPAN CLASS="esymbol">)</SPAN>
-				<SPAN CLASS="ekeyword">end</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_display_history">display_history</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_history">history</A><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_status">status</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">problem</SPAN><SPAN CLASS="esymbol">)</SPAN>
-				<A CLASS="efeature" HREF="../tracker/etf_main_window_imp.html#f_output">output</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">insert_text</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_facade.html#f_output_message">output_message</A><SPAN CLASS="esymbol">)</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">rescue</SPAN>
-			<SPAN CLASS="elocal">error</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
-			<SPAN CLASS="ekeyword">retry</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/etf_main_window.html">ETF_MAIN_WINDOW</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_main_window_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_main_window"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_execute_command"><A HREF="../tracker/etf_main_window.html#f_execute_command">execute_command</A> (cmd: STRING_8)
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> Execute 'cmd' and</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> print off stack trace if there's any contract violation.</FONT>
+        <B>local</B>
+            problem: STRING_8
+            error: BOOLEAN
+        <B>do</B>
+            <B>create</B> problem.make_empty
+            <B>if</B> <B>not</B> error <B>then</B>
+                <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_execute_cmd">execute_cmd</A> (cmd)
+                <A HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
+                <A HREF="../tracker/etf_main_window.html#f_display_history">display_history</A> (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_history">history</A>)
+                <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.insert_text (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_status_message">status_message</A>)
+                <A HREF="../tracker/etf_main_window_imp.html#f_output">output</A>.insert_text (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_output_message">output_message</A>)
+                <B>if</B> <A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_error">error</A> <B>then</B>
+                    <A HREF="../tracker/etf_main_window_imp.html#f_command">command</A>.set_text (cmd)
+                <B>end</B>
+            <B>else</B>
+                problem.append ("%NThere was a problem:%N")
+                <B>if</B> <B>attached</B> meaning (exception) <B>as</B> s <B>then</B>
+                    problem.append ("  " + s + "%N")
+                <B>end</B>
+                <B>if</B> <B>attached</B> tag_name <B>as</B> s <B>then</B>
+                    problem.append ("  Tag: " + s + "%N")
+                <B>end</B>
+                <B>if</B> <B>attached</B> exception_trace <B>as</B> s <B>then</B>
+                    problem.append ("%NHere is the stack trace%N")
+                    problem.append (s)
+                    problem.append ("%NEnd of stack trace...%N")
+                <B>end</B>
+                <A HREF="../tracker/etf_main_window.html#f_clear_display">clear_display</A>
+                <A HREF="../tracker/etf_main_window.html#f_display_history">display_history</A> (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_history">history</A>)
+                <A HREF="../tracker/etf_main_window_imp.html#f_status">status</A>.insert_text (problem)
+                <A HREF="../tracker/etf_main_window_imp.html#f_output">output</A>.insert_text (<A HREF="../tracker/etf_main_window.html#f_business_obj">business_obj</A>.<A HREF="../tracker/etf_model_facade.html#f_output_message">output_message</A>)
+            <B>end</B>
+        <B>rescue</B>
+            error := <B>True</B>
+            <B>retry</B>
+        <B>end</B></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/etf_main_window.html">ETF_MAIN_WINDOW</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_main_window_chart.html">Chart</A></TD><TD><A HREF="etf_main_window_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_main_window_flat.html">Flat</A></TD><TD><A HREF="etf_main_window_short.html">Contracts</A></TD><TD><A HREF="etf_main_window_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

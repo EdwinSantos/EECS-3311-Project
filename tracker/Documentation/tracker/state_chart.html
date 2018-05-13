@@ -1,90 +1,70 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {STATE}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>state Chart</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>state Chart</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="nolink2">Chart</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="state"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">class</SPAN>
-	<A CLASS="eclass" HREF="../tracker/state_chart.html">STATE</A>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD>Chart</TD><TD><A HREF="state_links.html">Relations</A></TD><TD><A HREF="state.html">Text</A></TD><TD><A HREF="state_flat.html">Flat</A></TD><TD><A HREF="state_short.html">Contracts</A></TD><TD><A HREF="state_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>class</B>
+    <A HREF="../tracker/state_chart.html">STATE</A>
 
-<SPAN CLASS="ekeyword">General</SPAN>
-	<SPAN CLASS="eitag">cluster</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="ecluster" HREF="../tracker/index.html">tracker</A>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/state_chart.html">STATE</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">create</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="efeature" HREF="../tracker/state.html#f_make">make</A>
+<B>General</B>
+    cluster: <A HREF="../tracker/index.html">tracker</A>
+    description: "Summary description for {<A HREF="../tracker/state_chart.html">STATE</A>}."
+    create: <A HREF="../tracker/state.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">Ancestors</SPAN>
-	<SPAN CLASS="neclass">ANY</SPAN>
+<B>Ancestors</B>
+    ANY
 
-<SPAN CLASS="ekeyword">Queries</SPAN>
-	<SPAN TITLE="`containerlist' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_containerlist">containerlist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
-	<SPAN TITLE="`containers' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">HASH_TABLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../tracker/material_container_chart.html">MATERIAL_CONTAINER</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
-	<SPAN TITLE="`does_phase_exist' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_does_phase_exist">does_phase_exist</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">pid</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN></SPAN>
-	<SPAN TITLE="`errors' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_errors">errors</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors_chart.html">ERRORS</A></SPAN>
-	<SPAN TITLE="`first_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_first_i">first_i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
-	<SPAN TITLE="`get_first_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_get_first_i">get_first_i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
-	<SPAN TITLE="`get_last_valid_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_get_last_valid_i">get_last_valid_i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
-	<SPAN TITLE="`get_phase_with_pid' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_get_phase_with_pid">get_phase_with_pid</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">pid</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/phase_chart.html">PHASE</A></SPAN>
-	<SPAN TITLE="`get_state_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_get_state_i">get_state_i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
-	<SPAN TITLE="`get_state_msg' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_get_state_msg">get_state_msg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
-	<SPAN TITLE="`invalid_redo' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_invalid_redo">invalid_redo</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN></SPAN>
-	<SPAN TITLE="`invalid_undo' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_invalid_undo">invalid_undo</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN></SPAN>
-	<SPAN TITLE="`last_valid_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_last_valid_i">last_valid_i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
-	<SPAN TITLE="`model_access' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_model_access">model_access</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_model_access_chart.html">ETF_MODEL_ACCESS</A></SPAN>
-	<SPAN TITLE="`out' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
-	<SPAN TITLE="`phaselist' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_phaselist">phaselist</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
-	<SPAN TITLE="`phases' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_phases">phases</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">HASH_TABLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../tracker/phase_chart.html">PHASE</A><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
-	<SPAN TITLE="`state_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_state_i">state_i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
-	<SPAN TITLE="`state_message' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_state_message">state_message</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
-	<SPAN TITLE="`tracker' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_tracker">tracker</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/tracker_chart.html">TRACKER</A></SPAN>
-	<SPAN TITLE="`undo_redo' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_undo_redo">undo_redo</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN></SPAN>
+<B>Queries</B>
+    <A HREF="../tracker/state.html#f_containerlist">containerlist</A>: ARRAY [STRING_8]
+    <A HREF="../tracker/state.html#f_containers">containers</A>: HASH_TABLE [<A HREF="../tracker/material_container_chart.html">MATERIAL_CONTAINER</A>, STRING_8]
+    <A HREF="../tracker/state.html#f_does_phase_exist">does_phase_exist</A> (pid: STRING_8): BOOLEAN
+    <A HREF="../tracker/state.html#f_errors">errors</A>: <A HREF="../tracker/errors_chart.html">ERRORS</A>
+    <A HREF="../tracker/state.html#f_first_i">first_i</A>: INTEGER_32
+    <A HREF="../tracker/state.html#f_get_first_i">get_first_i</A>: INTEGER_32
+    <A HREF="../tracker/state.html#f_get_last_valid_i">get_last_valid_i</A>: INTEGER_32
+    <A HREF="../tracker/state.html#f_get_phase_with_pid">get_phase_with_pid</A> (pid: STRING_8): <A HREF="../tracker/phase_chart.html">PHASE</A>
+    <A HREF="../tracker/state.html#f_get_state_i">get_state_i</A>: INTEGER_32
+    <A HREF="../tracker/state.html#f_get_state_msg">get_state_msg</A>: STRING_8
+    <A HREF="../tracker/state.html#f_invalid_redo">invalid_redo</A>: BOOLEAN
+    <A HREF="../tracker/state.html#f_invalid_undo">invalid_undo</A>: BOOLEAN
+    <A HREF="../tracker/state.html#f_last_valid_i">last_valid_i</A>: INTEGER_32
+    <A HREF="../tracker/state.html#f_model_access">model_access</A>: <A HREF="../tracker/etf_model_access_chart.html">ETF_MODEL_ACCESS</A>
+    <A HREF="../tracker/state.html#f_out">out</A>: STRING_8
+    <A HREF="../tracker/state.html#f_phaselist">phaselist</A>: ARRAY [STRING_8]
+    <A HREF="../tracker/state.html#f_phases">phases</A>: HASH_TABLE [<A HREF="../tracker/phase_chart.html">PHASE</A>, STRING_8]
+    <A HREF="../tracker/state.html#f_state_i">state_i</A>: INTEGER_32
+    <A HREF="../tracker/state.html#f_state_message">state_message</A>: STRING_8
+    <A HREF="../tracker/state.html#f_tracker">tracker</A>: <A HREF="../tracker/tracker_chart.html">TRACKER</A>
+    <A HREF="../tracker/state.html#f_undo_redo">undo_redo</A>: BOOLEAN
+    <A HREF="../tracker/state.html#f_zero_value">zero_value</A>: VALUE
 
-<SPAN CLASS="ekeyword">Commands</SPAN>
-	<SPAN TITLE="`new_container' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_new_container">new_container</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cid</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">material</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">rad</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">pid</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`new_phase' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_new_phase">new_phase</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">ph_id</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">name</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">cap</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">expec</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`new_tracker' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_new_tracker">new_tracker</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">max_p</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">max_c</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`remove_container' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_remove_container">remove_container</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">cid</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`remove_phase' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_remove_phase">remove_phase</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">pid</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`set_first_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_set_first_i">set_first_i</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">setter</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`set_invalid_redo' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_set_invalid_redo">set_invalid_redo</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">setter</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`set_invalid_undo' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_set_invalid_undo">set_invalid_undo</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">setter</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`set_last_valid_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">setter</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`set_state_i' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_set_state_i">set_state_i</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">setter</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`set_undo_redo' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">setter</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
-	<SPAN TITLE="`sort_containers' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_sort_containers">sort_containers</A></SPAN>
-	<SPAN TITLE="`sort_phases' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_sort_phases">sort_phases</A></SPAN>
-	<SPAN TITLE="`state_msg_update' is declared in `Current'"><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">msg</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
+<B>Commands</B>
+    <A HREF="../tracker/state.html#f_new_container">new_container</A> (cid: STRING_8; material: INTEGER_64; rad: VALUE; pid: STRING_8)
+    <A HREF="../tracker/state.html#f_new_phase">new_phase</A> (ph_id, name: STRING_8; cap: INTEGER_64; expec: ARRAY [INTEGER_64])
+    <A HREF="../tracker/state.html#f_new_tracker">new_tracker</A> (max_p, max_c: VALUE)
+    <A HREF="../tracker/state.html#f_remove_container">remove_container</A> (cid: STRING_8)
+    <A HREF="../tracker/state.html#f_remove_phase">remove_phase</A> (pid: STRING_8)
+    <A HREF="../tracker/state.html#f_set_first_i">set_first_i</A> (setter: INTEGER_32)
+    <A HREF="../tracker/state.html#f_set_invalid_redo">set_invalid_redo</A> (setter: BOOLEAN)
+    <A HREF="../tracker/state.html#f_set_invalid_undo">set_invalid_undo</A> (setter: BOOLEAN)
+    <A HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A> (setter: INTEGER_32)
+    <A HREF="../tracker/state.html#f_set_state_i">set_state_i</A> (setter: INTEGER_32)
+    <A HREF="../tracker/state.html#f_set_undo_redo">set_undo_redo</A> (setter: BOOLEAN)
+    <A HREF="../tracker/state.html#f_sort_containers">sort_containers</A>
+    <A HREF="../tracker/state.html#f_sort_phases">sort_phases</A>
+    <A HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> (msg: STRING_8)
 
-<FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="nolink2">Chart</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state_links.html">Relations</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state.html">Text</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="state_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="state"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+<B>Constraints</B>
+    valid phases
+    valid containers
+    valid tracker ph max
+    valid tracker cn max
+
+<TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD>Chart</TD><TD><A HREF="state_links.html">Relations</A></TD><TD><A HREF="state.html">Text</A></TD><TD><A HREF="state_flat.html">Flat</A></TD><TD><A HREF="state_short.html">Contracts</A></TD><TD><A HREF="state_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>

@@ -1,154 +1,127 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="Summary description for {NEW_TRACKER}."/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>new_tracker Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>new_tracker Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="new_tracker"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../tracker/new_tracker.html">NEW_TRACKER</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="new_tracker_chart.html">Chart</A></TD><TD><A HREF="new_tracker_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="new_tracker_flat.html">Flat</A></TD><TD><A HREF="new_tracker_short.html">Contracts</A></TD><TD><A HREF="new_tracker_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "Summary description for {<A HREF="../tracker/new_tracker.html">NEW_TRACKER</A>}."
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/new_tracker.html">NEW_TRACKER</A>
+<B>class</B> 
+    <A HREF="../tracker/new_tracker.html">NEW_TRACKER</A>
 
-<SPAN CLASS="ekeyword">inherit</SPAN>
-	<A CLASS="eclass" HREF="../tracker/operation.html">OPERATION</A>
-		<SPAN CLASS="ekeyword">redefine</SPAN>
-			<A CLASS="efeature" HREF="../tracker/new_tracker.html#f_out">out</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+<B>inherit</B>
+    <A HREF="../tracker/operation.html">OPERATION</A>
+        <B>redefine</B>
+            <A HREF="../tracker/new_tracker.html#f_out">out</A>
+        <B>end</B>
 
-<SPAN CLASS="ekeyword">create</SPAN> 
-	<A CLASS="efeature" HREF="../tracker/new_tracker.html#f_make">make</A>
+<B>create</B> 
+    <A HREF="../tracker/new_tracker.html#f_make">make</A>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+<B>feature</B> {NONE} 
 
-	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">max_ph</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">max_c</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">st_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">val_id</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
-			<A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">max_ph</SPAN>
-			<A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">max_c</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> &quot;&quot;
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">st_id</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">val_id</SPAN>
-			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_make">make</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> attributes</SPAN>
+    <A NAME="f_make"><A HREF="../tracker/new_tracker.html#f_make">make</A> (max_ph, max_c: VALUE; st_id: INTEGER_32; val_id: INTEGER_32)
+        <B>do</B>
+            <A HREF="../tracker/operation.html#f_item">item</A> := ""
+            <A HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A> := max_ph
+            <A HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A> := max_c
+            <A HREF="../tracker/operation.html#f_error_string">error_string</A> := ""
+            <A HREF="../tracker/operation.html#f_state_id">state_id</A> := st_id
+            <A HREF="../tracker/operation.html#f_last_valid_id">last_valid_id</A> := val_id
+            <B>create</B> <A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_make">make</A>
+        <B>end</B></A>
+    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> attributes</FONT>
 
-	<A NAME="f_errors"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/errors.html">ERRORS</A>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+    <A NAME="f_errors"><A HREF="../tracker/new_tracker.html#f_errors">errors</A>: <A HREF="../tracker/errors.html">ERRORS</A></A>
+    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> queries</FONT>
 
-	<A NAME="f_max_phase"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN>
+    <A NAME="f_max_phase"><A HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A>: VALUE</A>
 
-	<A NAME="f_max_cont"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">VALUE</SPAN>
+    <A NAME="f_max_cont"><A HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A>: VALUE</A>
 
-	<A NAME="f_is_invalid"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_invalid">is_invalid</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_already_in_use">is_already_in_use</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_max_phase_neg">is_max_phase_neg</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_container_neg">is_container_neg</A> <SPAN CLASS="ekeyword">or</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_container_greater_phase">is_container_greater_phase</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_invalid"><A HREF="../tracker/new_tracker.html#f_is_invalid">is_invalid</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/new_tracker.html#f_is_already_in_use">is_already_in_use</A> <B>or</B> <A HREF="../tracker/new_tracker.html#f_is_max_phase_neg">is_max_phase_neg</A> <B>or</B> <A HREF="../tracker/new_tracker.html#f_is_container_neg">is_container_neg</A> <B>or</B> <A HREF="../tracker/new_tracker.html#f_is_container_greater_phase">is_container_greater_phase</A>
+        <B>end</B></A>
 
-	<A NAME="f_is_already_in_use"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_already_in_use">is_already_in_use</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_containers">containers</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">&gt;=</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
-				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_already_in_use"><A HREF="../tracker/new_tracker.html#f_is_already_in_use">is_already_in_use</A>: BOOLEAN
+        <B>do</B>
+            <B>if</B> <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_containers">containers</A>.count &gt;= 1 <B>then</B>
+                <B>Result</B> := <B>True</B>
+            <B>else</B>
+                <B>Result</B> := <B>False</B>
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_is_max_phase_neg"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_max_phase_neg">is_max_phase_neg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">as_double</SPAN> <SPAN CLASS="esymbol">&lt;</SPAN> <SPAN CLASS="enumber">0.000</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_max_phase_neg"><A HREF="../tracker/new_tracker.html#f_is_max_phase_neg">is_max_phase_neg</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A>.as_double &lt; 0.000
+        <B>end</B></A>
 
-	<A NAME="f_is_container_neg"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_container_neg">is_container_neg</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">as_double</SPAN> <SPAN CLASS="esymbol">&lt;</SPAN> <SPAN CLASS="enumber">0.000</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_is_container_neg"><A HREF="../tracker/new_tracker.html#f_is_container_neg">is_container_neg</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A>.as_double &lt; 0.000
+        <B>end</B></A>
 
-	<A NAME="f_is_container_greater_phase"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_container_greater_phase">is_container_greater_phase</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A> <SPAN CLASS="esymbol">&gt;</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> commands</SPAN>
+    <A NAME="f_is_container_greater_phase"><A HREF="../tracker/new_tracker.html#f_is_container_greater_phase">is_container_greater_phase</A>: BOOLEAN
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A> &gt; <A HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A>
+        <B>end</B></A>
+    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> commands</FONT>
 
-	<A NAME="f_error_check"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_error_check">error_check</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_already_in_use">is_already_in_use</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e1">e1</A>
-			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_max_phase_neg">is_max_phase_neg</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e2">e2</A>
-			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_container_neg">is_container_neg</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e3">e3</A>
-			<SPAN CLASS="ekeyword">elseif</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_is_container_greater_phase">is_container_greater_phase</A> <SPAN CLASS="ekeyword">then</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_e4">e4</A>
-			<SPAN CLASS="ekeyword">else</SPAN>
-				<A CLASS="efeature" HREF="../tracker/operation.html#f_error_string">error_string</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A>
-			<SPAN CLASS="ekeyword">end</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_error_check"><A HREF="../tracker/new_tracker.html#f_error_check">error_check</A>
+        <B>do</B>
+            <B>if</B> <A HREF="../tracker/new_tracker.html#f_is_already_in_use">is_already_in_use</A> <B>then</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_e1">e1</A>
+            <B>elseif</B> <A HREF="../tracker/new_tracker.html#f_is_max_phase_neg">is_max_phase_neg</A> <B>then</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_e2">e2</A>
+            <B>elseif</B> <A HREF="../tracker/new_tracker.html#f_is_container_neg">is_container_neg</A> <B>then</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_e3">e3</A>
+            <B>elseif</B> <A HREF="../tracker/new_tracker.html#f_is_container_greater_phase">is_container_greater_phase</A> <B>then</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_e4">e4</A>
+            <B>else</B>
+                <A HREF="../tracker/operation.html#f_error_string">error_string</A> := <A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_ok">ok</A>
+            <B>end</B>
+        <B>end</B></A>
 
-	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_execute">execute</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_new_tracker">new_tracker</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_set_first_i">set_first_i</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/operation.html#f_state_id">state_id</A><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_execute"><A HREF="../tracker/new_tracker.html#f_execute">execute</A>
+        <B>do</B>
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> (<A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_ok">ok</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_new_tracker">new_tracker</A> (<A HREF="../tracker/new_tracker.html#f_max_phase">max_phase</A>, <A HREF="../tracker/new_tracker.html#f_max_cont">max_cont</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_set_last_valid_i">set_last_valid_i</A> (<A HREF="../tracker/operation.html#f_state_id">state_id</A>)
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_set_first_i">set_first_i</A> (<A HREF="../tracker/operation.html#f_state_id">state_id</A>)
+        <B>end</B></A>
 
-	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_undo">undo</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="efeature" HREF="../tracker/operation.html#f_state">State</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_errors">errors</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/errors.html#f_ok">ok</A><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
+    <A NAME="f_undo"><A HREF="../tracker/new_tracker.html#f_undo">undo</A>
+        <B>do</B>
+            <A HREF="../tracker/operation.html#f_state">State</A>.<A HREF="../tracker/state.html#f_state_msg_update">state_msg_update</A> (<A HREF="../tracker/new_tracker.html#f_errors">errors</A>.<A HREF="../tracker/errors.html#f_ok">ok</A>)
+        <B>end</B></A>
 
-	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_redo">redo</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> 
+    <A NAME="f_redo"><A HREF="../tracker/new_tracker.html#f_redo">redo</A>
+        <B>do</B>
+        <B>end</B></A>
+    
+<B>feature</B> 
 
-	<A NAME="f_out"></A><A CLASS="efeature" HREF="../tracker/new_tracker.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
-			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../tracker/operation.html#f_item">item</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/new_tracker.html">NEW_TRACKER</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="new_tracker_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="new_tracker"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_out"><A HREF="../tracker/new_tracker.html#f_out">out</A>: STRING_8
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> New string containing terse printable representation</FONT>
+            <FONT COLOR="red">--</FONT><FONT COLOR="red"> of current object</FONT>
+        <B>do</B>
+            <B>Result</B> := <A HREF="../tracker/operation.html#f_item">item</A>
+        <B>end</B></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/new_tracker.html">NEW_TRACKER</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="new_tracker_chart.html">Chart</A></TD><TD><A HREF="new_tracker_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="new_tracker_flat.html">Flat</A></TD><TD><A HREF="new_tracker_short.html">Contracts</A></TD><TD><A HREF="new_tracker_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 

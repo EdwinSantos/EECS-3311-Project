@@ -1,71 +1,44 @@
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - linux-x86-64">
+<HTML><HEAD>
 <meta name="description" content="The interface for an input COMMAND"/>
 <meta name="author" content=""/>
 <meta name="keywords" content="Eiffel class"/>
 <meta name="keywords" content="Eiffel class"/>
-<TITLE>etf_command Text</TITLE>
-<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
-<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
-</HEAD>
-<BODY>
+<TITLE>etf_command Text</TITLE></HEAD>
+<BODY BGCOLOR="white">
 <P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
-<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_command"></TD>
-</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
-	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;The interface for an input COMMAND&quot;</SPAN>
-	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
-	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
-	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+<PRE><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_command_chart.html">Chart</A></TD><TD><A HREF="etf_command_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_command_flat.html">Flat</A></TD><TD><A HREF="etf_command_short.html">Contracts</A></TD><TD><A HREF="etf_command_flatshort.html">Flat contracts</A></TD></TR></TABLE><B>note</B>
+    description: "The interface for an input COMMAND"
+    author: ""
+    date: "$Date$"
+    revision: "$Revision$"
 
-<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> 
-	<A CLASS="eclass" HREF="../tracker/etf_command.html">ETF_COMMAND</A>
+<B>deferred</B> <B>class</B> 
+    <A HREF="../tracker/etf_command.html">ETF_COMMAND</A>
 
-<SPAN CLASS="ekeyword">inherit</SPAN>
-	<A CLASS="eclass" HREF="../generated_code/etf_command_interface.html">ETF_COMMAND_INTERFACE</A>
-		<SPAN CLASS="ekeyword">redefine</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_command.html#f_make">make</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
+<B>inherit</B>
+    ETF_COMMAND_INTERFACE
+        <B>redefine</B>
+            <A HREF="../tracker/etf_command.html#f_make">make</A>
+        <B>end</B>
 
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+<B>feature</B> {NONE} 
 
-	<A NAME="f_make"></A><A CLASS="efeature" HREF="../tracker/etf_command.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">an_etf_cmd_name</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">etf_cmd_args</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">an_etf_cmd_container</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../generated_code/etf_abstract_ui_interface.html">ETF_ABSTRACT_UI_INTERFACE</A><SPAN CLASS="esymbol">)</SPAN>
-		<SPAN CLASS="ekeyword">local</SPAN>
-			<SPAN CLASS="elocal">model_access</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_model_access.html">ETF_MODEL_ACCESS</A>
-		<SPAN CLASS="ekeyword">do</SPAN>
-			<A CLASS="ekeyword" HREF="../generated_code/etf_command_interface.html#f_make">Precursor</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">an_etf_cmd_name</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">etf_cmd_args</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">an_etf_cmd_container</SPAN><SPAN CLASS="esymbol">)</SPAN>
-			<A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">model_access</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../tracker/etf_model_access.html#f_m">M</A>
-		<SPAN CLASS="ekeyword">end</SPAN>
-	
-<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Attributes</SPAN>
-<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> may declare your own model state here</SPAN>
+    <A NAME="f_make"><A HREF="../tracker/etf_command.html#f_make">make</A> (an_etf_cmd_name: STRING_8; etf_cmd_args: TUPLE; an_etf_cmd_container: ETF_ABSTRACT_UI_INTERFACE)
+        <B>local</B>
+            model_access: <A HREF="../tracker/etf_model_access.html">ETF_MODEL_ACCESS</A>
+        <B>do</B>
+            <B>Precursor</B> (an_etf_cmd_name, etf_cmd_args, an_etf_cmd_container)
+            <A HREF="../tracker/etf_command.html#f_model">model</A> := model_access.<A HREF="../tracker/etf_model_access.html#f_m">M</A>
+        <B>end</B></A>
+    
+<B>feature</B> <FONT COLOR="red">--</FONT><FONT COLOR="red"> Attributes</FONT>
+<FONT COLOR="red">--</FONT><FONT COLOR="red"> may declare your own model state here</FONT>
 
-	<A NAME="f_model"></A><A CLASS="efeature" HREF="../tracker/etf_command.html#f_model">model</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../tracker/etf_model.html">ETF_MODEL</A>
-	
-<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../tracker/etf_command.html">ETF_COMMAND</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
-<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
-<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
-<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_chart.html">Chart</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_links.html">Relations</A></TD>
-<TD CLASS="nolink2">Text</TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_flat.html">Flat</A></TD>
-<TD CLASS="link2"><A CLASS="link2" HREF="etf_command_short.html">Contracts</A></TD>
-<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="etf_command"></TD>
-</TR></TABLE></FORM></pre>
-<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
-<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+    <A NAME="f_model"><A HREF="../tracker/etf_command.html#f_model">model</A>: <A HREF="../tracker/etf_model.html">ETF_MODEL</A></A>
+    
+<B>end</B> <FONT COLOR="red">--</FONT> <FONT COLOR="red">class </FONT><A HREF="../tracker/etf_command.html">ETF_COMMAND</A><TABLE BORDER="1" ALIGN="CENTER"><TR><TD><A HREF="../class_list.html">Classes</A></TD><TD><A HREF="../cluster_list.html">Clusters</A></TD><TD><A HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD><TD><A HREF="etf_command_chart.html">Chart</A></TD><TD><A HREF="etf_command_links.html">Relations</A></TD><TD>Text</TD><TD><A HREF="etf_command_flat.html">Flat</A></TD><TD><A HREF="etf_command_short.html">Contracts</A></TD><TD><A HREF="etf_command_flatshort.html">Flat contracts</A></TD></TR></TABLE></PRE>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045 </P>
+<P ALIGN="CENTER">For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
 </BODY>
 </HTML>
 
